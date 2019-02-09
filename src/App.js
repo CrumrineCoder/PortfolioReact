@@ -7,7 +7,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      logo: "Images/votingAppLogo.png",
+      logo: "Images/calculatorApp.png",
       color: "#A61C88",
       title: "Polling",
       shortDesc: "This React.js & Redux fullstack website lets users create, view, and vote on polls.",
@@ -18,7 +18,7 @@ class App extends Component {
       websiteLink: "https://crumrinepolling.herokuapp.com/#/",
       prevWebsiteLink: "https://joinordie.glitch.me/",
       caseStudyLink: "https://nicolascrumrine.herokuapp.com/#/posts/5c253ffad802b53cdcc17e00",
-      video: "./Videos/pollingReactEdited.mp4"
+      video: "Videos/c4Edited.mp4"
     }
     this.toggleOverlay = this.toggleOverlay.bind(this);
     this.pause = this.pause.bind(this);
@@ -94,17 +94,16 @@ class App extends Component {
           <div id="projectSelectBoxes">
             <button type="image" className="projectSelectButton" id="" ng-click="changeProject(project.id)"
               ng-mouseover="changePreview(project.id)" ng-style="{'background-color': project.color}" ng-repeat="project in buttons">
-              <img ng-src="" className="projectSelectImage" ng-style="{'background-color': project.color}" alt="Project Select" />
+              <img src={this.state.logo} className="projectSelectImage" ng-style="{'background-color': project.color}" alt="Project Select" />
               <p className="logoText">  {this.state.title} </p>
             </button>
           </div>
 
           <div id="projects">
             <div id="video-jumbotron">
-              <video id="projectPicture" autoPlay muted loop src="">
-                <source src="../public/Videos/pollingReactEdited.mp4" type="video/mp4" /> Your browser does not support HTML5 video.
+              <video id="projectPicture" autoPlay muted loop  src={this.state.video}>
+                <source type="video/mp4" /> Your browser does not support HTML5 video.
               </video>
-              <img src="../public/Images/calculatorApp.png" alt="Test"></img>
             </div>
             <div id="projectInfoText">
               <div id="content">
@@ -164,10 +163,6 @@ class App extends Component {
             <h1>Let's start</h1>
             <h3> a new project together</h3>
             <a id="emailButton" href="mailto:crumrinecoding@gmail.com">Email Me</a>
-            <video id="projectPicture" autoPlay muted loop src="">
-              <source src="../src/Videos/pollingReactEdited.mp4" type="video/mp4" /> Your browser does not support HTML5 video.
-              </video>
-            <img src={require('C:/Users/NicLaptop/Desktop/Web Development/PortfolioReact/src/Images/calculatorApp.png')} alt="Test"></img>
           </div>
         </div>
       </div>
