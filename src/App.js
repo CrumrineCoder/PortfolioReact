@@ -165,9 +165,9 @@ class App extends Component {
             <h3> a new project together</h3>
             <a id="emailButton" href="mailto:crumrinecoding@gmail.com">Email Me</a>
             <video id="projectPicture" autoPlay muted loop src="">
-              <source src="../public/Videos/pollingReactEdited.mp4" type="video/mp4" /> Your browser does not support HTML5 video.
+              <source src="../src/Videos/pollingReactEdited.mp4" type="video/mp4" /> Your browser does not support HTML5 video.
               </video>
-            <img src="C:/Users/NicLaptop/Desktop/Web Development/PortfolioReact/public/Images/calculatorApp.png" alt="Test"></img>
+            <img src={require('C:/Users/NicLaptop/Desktop/Web Development/PortfolioReact/src/Images/calculatorApp.png')} alt="Test"></img>
           </div>
         </div>
       </div>
