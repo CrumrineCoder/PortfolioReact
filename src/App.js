@@ -5,7 +5,7 @@ import './App.css';
 class App extends Component {
 
   constructor(props) {
-		super(props);
+    super(props);
     this.state = {
       logo: "Images/votingAppLogo.png",
       color: "#A61C88",
@@ -17,23 +17,23 @@ class App extends Component {
       codeLink: "https://github.com/CrumrineCoder/Polling",
       websiteLink: "https://crumrinepolling.herokuapp.com/#/",
       prevWebsiteLink: "https://joinordie.glitch.me/",
-      caseStudyLink: "https://nicolascrumrine.herokuapp.com/#/posts/5c253ffad802b53cdcc17e00", 
+      caseStudyLink: "https://nicolascrumrine.herokuapp.com/#/posts/5c253ffad802b53cdcc17e00",
       video: "./Videos/pollingReactEdited.mp4"
     }
     this.toggleOverlay = this.toggleOverlay.bind(this);
     this.pause = this.pause.bind(this);
     this.play = this.play.bind(this);
   }
-  
-  toggleOverlay(){
+
+  toggleOverlay() {
     console.log("test");
   }
 
-  pause(){
+  pause() {
     console.log("test");
   }
 
-  play(){
+  play() {
     console.log("test");
   }
 
@@ -46,30 +46,30 @@ class App extends Component {
             <li id="nameNavContainer">
               <p id="nic"> Nicolas Crumrine </p>
               <p id="nicJob">Front End Web Developer based in NYC
-                  <a id="aboutMeButton" href="https://nicolascrumrine.herokuapp.com/#/about" target="_blank">About
-                Me
+                  <a id="aboutMeButton" href="https://nicolascrumrine.herokuapp.com/#/about" rel="noopener noreferrer" target="_blank">About
+              Me
                   </a>
               </p>
             </li>
             <li>
-              <a href="https://github.com/CrumrineCoder" id="github" title="Github" target="_blank">
+              <a href="https://github.com/CrumrineCoder" id="github" title="Github" rel="noopener noreferrer" target="_blank">
                 <i className="fab fa-github navIcon" border="0"></i>
               </a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/nicolas-crumrine-50899b120/" title="link" target="_blank">
+              <a href="https://www.linkedin.com/in/nicolas-crumrine-50899b120/" title="link" rel="noopener noreferrer" target="_blank">
                 <i className="fab fa-linkedin-in navIcon" border="0"></i>
               </a>
             </li>
             <li>
-              <a href="mailto:crumrinecoding@gmail.com" title="Email" target="_blank">
+              <a href="mailto:crumrinecoding@gmail.com" title="Email" rel="noopener noreferrer" target="_blank">
                 <i className="fas fa-envelope navIcon" border="0"></i>
               </a>
             </li>
           </ul>
         </nav>
 
-      
+
         <div id="overlay" className="hiddenOverlay">
           <button id="toggleOverlayButton" onClick={this.toggleOverlay}>
             <i id="toggleOverlayButtonIcon" className="fas fa-chevron-down"></i>
@@ -94,7 +94,7 @@ class App extends Component {
           <div id="projectSelectBoxes">
             <button type="image" className="projectSelectButton" id="" ng-click="changeProject(project.id)"
               ng-mouseover="changePreview(project.id)" ng-style="{'background-color': project.color}" ng-repeat="project in buttons">
-              <img ng-src="" className="projectSelectImage" ng-style="{'background-color': project.color}" />
+              <img ng-src="" className="projectSelectImage" ng-style="{'background-color': project.color}" alt="Project Select" />
               <p className="logoText">  {this.state.title} </p>
             </button>
           </div>
@@ -104,7 +104,7 @@ class App extends Component {
               <video id="projectPicture" autoPlay muted loop src="">
                 <source src="../public/Videos/pollingReactEdited.mp4" type="video/mp4" /> Your browser does not support HTML5 video.
               </video>
-              <img src="../public/Images/calculatorApp.png"></img>
+              <img src="../public/Images/calculatorApp.png" alt="Test"></img>
             </div>
             <div id="projectInfoText">
               <div id="content">
@@ -125,26 +125,26 @@ class App extends Component {
                     </ul>
                     <p>  {this.state.projectDescription}</p>
                     <p> {this.state.productPaper} </p>
-                    <a ng-if="projectInfo.prevWebsiteLink != undefined" className="externalLinks" href="" target="_blank">
+                    <a ng-if="projectInfo.prevWebsiteLink != undefined" className="externalLinks" rel="noopener noreferrer" target="_blank">
                       <div id="prev-code-link">
                         <i className="fas fa-external-link-alt fontIcon" rgb="(0,0,0)"> </i>See Previous Version of Website
                            </div>
                     </a>
                   </div>
-                  <button id="toggleButton" onClick="toggleInfo();" value="Show More">Toggle Info</button>
+                  <button id="toggleButton" onClick={this.toggleInfo} value="Show More">Toggle Info</button>
                 </div>
                 <ul id="projectLinks">
-                  <a href="" className="externalLinks" target="_blank">
+                  <a className="externalLinks" rel="noopener noreferrer" target="_blank">
                     <li id="code-link">
                       <i className="fas fa-code fontIcon"></i>See Code
                         </li>
                   </a>
-                  <a href="" className="externalLinks" target="_blank">
+                  <a className="externalLinks" rel="noopener noreferrer" target="_blank">
                     <li id="website-link">
                       <i className="fas fa-external-link-alt fontIcon"></i>Visit Website
                         </li>
                   </a>
-                  <a ng-if="projectInfo.caseStudyLink != undefined" href="" class="externalLinks" target="_blank">
+                  <a ng-if="projectInfo.caseStudyLink != undefined" className="externalLinks" rel="noopener noreferrer" target="_blank">
                     <li id="case-link">
                       <i className="fas fa-book-open fontIcon"></i>Read Case Study
                         </li>
@@ -164,6 +164,10 @@ class App extends Component {
             <h1>Let's start</h1>
             <h3> a new project together</h3>
             <a id="emailButton" href="mailto:crumrinecoding@gmail.com">Email Me</a>
+            <video id="projectPicture" autoPlay muted loop src="">
+              <source src="../public/Videos/pollingReactEdited.mp4" type="video/mp4" /> Your browser does not support HTML5 video.
+              </video>
+            <img src="C:/Users/NicLaptop/Desktop/Web Development/PortfolioReact/public/Images/calculatorApp.png" alt="Test"></img>
           </div>
         </div>
       </div>
