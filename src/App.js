@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+
+import Boxes from "./Boxes.js";
 import Project from "./Project.js";
 
 class App extends Component {
@@ -92,6 +94,7 @@ class App extends Component {
             </li>
           </ul>
         </nav>
+        <Boxes projects = {this.state} />
         <Project {...this.state[0]} />
 
       </div>

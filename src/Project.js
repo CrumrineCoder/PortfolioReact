@@ -48,14 +48,6 @@ class Project extends Component {
 
                 <div id="index">
 
-                    <div id="projectSelectBoxes">
-                        <button type="image" className="projectSelectButton" id="" ng-click="changeProject(project.id)"
-                            ng-mouseover="changePreview(project.id)" ng-style="{'background-color': project.color}" ng-repeat="project in buttons">
-                            <img src={this.state.logo} className="projectSelectImage" ng-style="{'background-color': project.color}" alt="Project Select" />
-                            <p className="logoText">  {this.state.title} </p>
-                        </button>
-                    </div>
-
                     <div id="projects">
                         <div id="video-jumbotron">
                             <video id="projectPicture" autoPlay muted loop src={this.state.video}>
