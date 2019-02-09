@@ -6,12 +6,16 @@ class Boxes extends Component {
 
     constructor(props) {
         super(props);
-        this.state = this.props;
+     //   this.state = this.props;
         this.handleClick = this.handleClick.bind(this);
     }
 
+    componentWillReceiveProps(nextProps) {
+        this.setState({ projects: nextProps.projects });  
+      }
+
     handleClick() {
-        this.props.onSelectLanguage(1);
+        this.props.handleProjectChange(1);
     }
 
     render() {

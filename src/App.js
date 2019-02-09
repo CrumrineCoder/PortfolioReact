@@ -55,7 +55,7 @@ class App extends Component {
    // this.updateProjectIndexHandler = this.updateProjectIndexHandler.bind(this)
   }
 
-  handleLanguage = (langValue) => {
+  handleProjectChange = (langValue) => {
     console.log(langValue);
     this.setState({index: langValue});
     console.log(this.state);
@@ -105,7 +105,7 @@ class App extends Component {
             </li>
           </ul>
         </nav>
-        <Boxes  onSelectLanguage={this.handleLanguage} projects={this.state.projects} />
+        <Boxes  handleProjectChange={this.handleProjectChange} projects={this.state.projects} />
         <Project {...this.state.projects[this.state.index]} />
 
       </div>
