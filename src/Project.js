@@ -95,17 +95,17 @@ class Project extends Component {
                                     <button id="toggleButton" onClick={this.toggleInfoOverlay} value="Show More">Toggle Info</button>
                                 </div>
                                 <ul id="projectLinks">
-                                    <a className="externalLinks" rel="noopener noreferrer" target="_blank">
+                                    <a href={this.state.currentProject.codeLink} className="externalLinks" rel="noopener noreferrer" target="_blank">
                                         <li id="code-link">
                                             <i className="fas fa-code fontIcon"></i>See Code
                                          </li>
                                     </a>
-                                    <a className="externalLinks" rel="noopener noreferrer" target="_blank">
+                                    <a href={this.state.currentProject.websiteLink} className="externalLinks" rel="noopener noreferrer" target="_blank">
                                         <li id="website-link">
                                             <i className="fas fa-external-link-alt fontIcon"></i>Visit Website
                                        </li>
                                     </a>
-                                    <a ng-if="projectInfo.caseStudyLink != undefined" className="externalLinks" rel="noopener noreferrer" target="_blank">
+                                    <a href={this.state.currentProject.caseStudyLink} style={{ display: this.state.currentProject.caseStudyLink != undefined ? 'block' : 'none' }} className="externalLinks" rel="noopener noreferrer" target="_blank">
                                         <li id="case-link">
                                             <i className="fas fa-book-open fontIcon"></i>Read Case Study
                                        </li>
