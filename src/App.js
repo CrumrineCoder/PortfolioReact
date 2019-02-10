@@ -17,13 +17,14 @@ class App extends Component {
         title: "Polling",
         shortDesc: "This React.js & Redux fullstack website lets users create, view, and vote on polls.",
         backend: "JavaScript, Node.js, Express.js, MongoDB, Mongoose, jwt, Passport",
-        frontend: "React.js, Redux.js, rxJs, react-router, HTML5, CSS3, Bootstrap 4",
+        frontend: "React.js, Redux.js, react-router, HTML5, CSS3, Bootstrap 4",
         productPaper: "This website is an updated version of one I made last year. I taught myself Redux and react-router while developing my React.js fullstack skills. I am still adding new features.",
         codeLink: "https://github.com/CrumrineCoder/Polling",
         websiteLink: "https://crumrinepolling.herokuapp.com/#/",
         prevWebsiteLink: "https://joinordie.glitch.me/",
         caseStudyLink: "https://nicolascrumrine.herokuapp.com/#/posts/5c253ffad802b53cdcc17e00",
-        video: "Videos/pollingReactEdited.mp4"
+        video: "Videos/pollingReactEdited.mp4",
+        class: "Poll"
       }, {
         logo: "Images/tmbgLogo.png ",
         color: "#171E26",
@@ -34,7 +35,8 @@ class App extends Component {
         productPaper: "I built this website as a Capstone project for everything I've learnt in the past year. The website allows users to anonymously comment on the newest album and to find the nearest tour. The website is also a practice in business marketing and design. Links and most buttons are placeholders.",
         codeLink: "https://github.com/CrumrineCoder/TheyMightBeGiantsv3",
         websiteLink: "https://tmbg.herokuapp.com/",
-        video: "Videos/tmbgEdited.mp4"
+        video: "Videos/tmbgEdited.mp4",
+        class: "TMBG"
       }, {
         logo: "Images/cookiesWebsiteLogo.png ",
         color: "#18788C",
@@ -46,7 +48,8 @@ class App extends Component {
         productPaper: "I taught myself about developing a marketing strategy, writing a competitive analysis, scheduling, and writing user stories with a client. I also learned about working with another designer. I taught myself PHP to develop the email forms. I also taught myself a few other minor libraries and services.",
         codeLink: "https://github.com/CrumrineCoder/PJRevised",
         websiteLink: "http://pennyjanescookies.com/",
-        video: "Videos\\pjcEdited.mp4"
+        video: "Videos\\pjcEdited.mp4",
+        class: "Penny"
       }],
       index: 0,
       mouseIndex: 0

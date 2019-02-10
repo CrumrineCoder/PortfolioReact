@@ -221,6 +221,7 @@ nav ul li a:hover {
   width: 100%;
   height: 100%;
 }
+
 #video-controls{
   z-index: 3;
   position: absolute; 
@@ -263,10 +264,23 @@ nav ul li a:hover {
   margin: 10px auto; 
   border-color: white;
 }
-#toggleButton:hover{
+/*#toggleButton:hover{
   color: rgb(180, 180, 180);
   border-color:rgb(180, 180, 180);
+} */
+
+.Poll:hover{
+  background: #730055 !important;
 }
+
+.TMBG:hover{
+  background: #00050D !important;
+}
+
+.Penny:hover{
+  background: #004559 !important;
+}
+
 #projects ul{
   padding: 0px;
 }
@@ -329,11 +343,11 @@ nav ul li a:hover {
   color: white; 
   text-decoration: none;
 }
-
+/*
 #projectLinks li:hover {
  color: rgb(180, 180, 180);
  border-color:rgb(180, 180, 180);
-}
+} */
 
 #video-jumbotron{
   position: absolute;

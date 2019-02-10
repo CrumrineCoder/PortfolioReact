@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class Project extends Component {
@@ -67,7 +66,7 @@ class Project extends Component {
                                     <i style={{ display: this.state.videoIsPlaying ? 'none' : 'block' }} onClick={this.play} className="fas fa-play-circle video-control-button" id="video-play-button"></i>
                                 </div>
                                 <div id="topLeftContent">
-                                    <h1 id="projectTitle">  {this.state.currentProject.title} </h1>
+                                    <h1 id="projectTitle"> {this.state.currentProject.title} </h1>
                                     <div id="projectAdditionalInformation" style={{ display: this.state.showAdditionalInformation ? 'block' : 'none' }}>
                                         <ul>
                                             <div id="projectFrontEnd">
@@ -85,21 +84,21 @@ class Project extends Component {
                                             </div>
                                         </a>
                                     </div>
-                                    <button id="toggleButton"  style={{background: this.state.currentProject.color}} onClick={this.toggleInfoOverlay} value="Show More">Toggle Info</button>
+                                    <button id="toggleButton" style={{background: this.state.currentProject.color}} onClick={this.toggleInfoOverlay} className={this.state.currentProject.class} value="Show More">Toggle Info</button>
                                 </div>
                                 <ul id="projectLinks">
                                     <a href={this.state.currentProject.codeLink} className="externalLinks" rel="noopener noreferrer" target="_blank">
-                                        <li  style={{background: this.state.currentProject.color}} id="code-link">
+                                        <li  className={this.state.currentProject.class} style={{background: this.state.currentProject.color}} id="code-link">
                                             <i className="fas fa-code fontIcon"></i>See Code
                                          </li>
                                     </a>
                                     <a href={this.state.currentProject.websiteLink} className="externalLinks" rel="noopener noreferrer" target="_blank">
-                                        <li  style={{background: this.state.currentProject.color}} id="website-link">
+                                        <li className={this.state.currentProject.class} style={{background: this.state.currentProject.color}} id="website-link">
                                             <i className="fas fa-external-link-alt fontIcon"></i>Visit Website
                                        </li>
                                     </a>
                                     <a href={this.state.currentProject.caseStudyLink} style={{ display: this.state.currentProject.caseStudyLink != undefined ? 'block' : 'none' }} className="externalLinks" rel="noopener noreferrer" target="_blank">
-                                        <li style={{background: this.state.currentProject.color}} id="case-link">
+                                        <li className={this.state.currentProject.class} style={{background: this.state.currentProject.color}} id="case-link">
                                             <i className="fas fa-book-open fontIcon"></i>Read Case Study
                                        </li>
                                     </a>
