@@ -44,8 +44,6 @@ class Project extends Component {
         this.setState({ videoIsPlaying: true });
     }
 
-   
-
     render() {
         return (
             <>

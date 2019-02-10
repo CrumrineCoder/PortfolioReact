@@ -80,7 +80,7 @@ button:focus {
  /* display: none;  */
 }
 
-#toggleOverlayButton{
+.toggleOverlayButton{
   position: absolute;
   right: 10px; 
   background: transparent;
@@ -88,8 +88,17 @@ button:focus {
   border-radius: 2px; 
 }
 
+.toggleOverlayButton:hover{
+  cursor: pointer;
+}
+
 #toggleOverlayButtonIcon{
   color: white; 
+}
+
+#toggleOverlayButtonClosed{
+  position: fixed;
+  bottom: 10px;
 }
 
 /* !Nav! */
@@ -314,7 +323,7 @@ nav ul li a:hover {
 }
 
 .externalLinks{
-  font-size: 14px;
+  font-size: 16px;
   font-family: 'Roboto', sans-serif;
   color: white; 
   text-decoration: none;

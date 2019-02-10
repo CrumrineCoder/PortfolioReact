@@ -53,16 +53,6 @@ class App extends Component {
     };
   }
 
-  /*  $scope.carouselProject = function (increment) {
-        if ($scope.selectedProject == 0 && increment == -1) {
-            $scope.changeProject($scope.projects.length - 1);
-        } else if ($scope.selectedProject == $scope.projects.length - 1 && increment == 1) {
-            $scope.changeProject(0);
-        } else {
-            $scope.changeProject($scope.selectedProject + increment);
-        }
-    } */
-
   handleProjectChange = (idx) => {
     this.setState({ index: idx });
   }
@@ -90,8 +80,7 @@ class App extends Component {
             <li id="nameNavContainer">
               <p id="nic"> Nicolas Crumrine </p>
               <p id="nicJob">Front End Web Developer based in NYC
-                  <a id="aboutMeButton" href="https://nicolascrumrine.herokuapp.com/#/about" rel="noopener noreferrer" target="_blank">About
-        Me
+                  <a id="aboutMeButton" href="https://nicolascrumrine.herokuapp.com/#/about" rel="noopener noreferrer" target="_blank">About Me
                   </a>
               </p>
             </li>

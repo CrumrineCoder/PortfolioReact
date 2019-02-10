@@ -11,17 +11,22 @@ class Project extends Component {
             currentProject: this.props, 
             hiddenOverlay: true 
         }
+        this.toggleOverlay = this.toggleOverlay.bind(this);
     }
 
     componentWillReceiveProps(nextProps) {
         this.setState({ currentProject: nextProps });
     }
 
+    toggleOverlay(){
+        this.setState({ hiddenOverlay: !this.state.hiddenOverlay });
+    }
+
     render() {
         return (
             <>
                 <div id="overlay" className="hiddenOverlay" style={{ display: this.state.hiddenOverlay ? 'block' : 'none' }}>
-                    <button id="toggleOverlayButton" onClick={this.toggleOverlay}>
+                    <button className="toggleOverlayButton" onClick={this.toggleOverlay}>
                         <i id="toggleOverlayButtonIcon" className="fas fa-chevron-down"></i>
                     </button>
                     <div id="overlayText" className="shownOverlay">
@@ -38,6 +43,9 @@ class Project extends Component {
                         <h3>Click on the Project Icon to learn more!</h3>
                     </div>
                 </div>
+                <button id="toggleOverlayButtonClosed" className="toggleOverlayButton" onClick={this.toggleOverlay} style={{ display: this.state.hiddenOverlay ? 'none' : 'block' }}>
+                        <i id="toggleOverlayButtonIcon" className="fas fa-chevron-up"></i>
+                </button>
             </>
         )
     }
