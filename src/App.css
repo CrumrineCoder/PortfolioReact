@@ -314,7 +314,7 @@ nav ul li a:hover {
 }
 
 .externalLinks{
-  font-size: 18px;
+  font-size: 14px;
   font-family: 'Roboto', sans-serif;
   color: white; 
   text-decoration: none;
@@ -324,6 +324,7 @@ nav ul li a:hover {
  color: rgb(180, 180, 180);
  border-color:rgb(180, 180, 180);
 }
+
 #video-jumbotron{
   position: absolute;
   top: 0;

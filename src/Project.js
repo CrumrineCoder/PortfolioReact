@@ -92,7 +92,7 @@ class Project extends Component {
                                         </ul>
                                         <p>  {this.state.currentProject.projectDescription}</p>
                                         <p> {this.state.currentProject.productPaper} </p>
-                                        <a ng-if="projectInfo.prevWebsiteLink != undefined" className="externalLinks" rel="noopener noreferrer" target="_blank">
+                                        <a href={this.state.currentProject.prevWebsiteLink}  style={{ display: this.state.currentProject.prevWebsiteLink != undefined ? 'block' : 'none' }}  className="externalLinks" rel="noopener noreferrer" target="_blank">
                                             <div id="prev-code-link">
                                                 <i className="fas fa-external-link-alt fontIcon" rgb="(0,0,0)"> </i>See Previous Version of Website
                                             </div>
