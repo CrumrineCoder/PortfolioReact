@@ -14,8 +14,8 @@ class Boxes extends Component {
         this.setState({ projects: nextProps.projects });  
       }
 
-    handleClick() {
-        this.props.handleProjectChange(1);
+    handleClick(idx) {
+        this.props.handleProjectChange(idx);
     }
 
     render() {
@@ -23,7 +23,7 @@ class Boxes extends Component {
         return (
             <div id="projectSelectBoxes">
                 {this.props.projects.map((project, idx) => (
-                    <button type="image" className="projectSelectButton" onClick={this.handleClick} >
+                    <button type="image" className="projectSelectButton" onClick={() => this.handleClick(idx)} value={idx} >
                         <img src={project.logo} className="projectSelectImage" ng-style="{'background-color': project.color}" alt="Project Select" />
                         <p className="logoText">  {project.title} </p>
                     </button>
