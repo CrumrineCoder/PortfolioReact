@@ -77,7 +77,7 @@ button:focus {
 }
 
 .hiddenOverlay{
-  display: none;  
+ /* display: none;  */
 }
 
 #toggleOverlayButton{

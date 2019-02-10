@@ -8,6 +8,7 @@ class Boxes extends Component {
         super(props);
      //   this.state = this.props;
         this.handleClick = this.handleClick.bind(this);
+        this.changePreview = this.changePreview.bind(this);
     }
 
     componentWillReceiveProps(nextProps) {
@@ -18,11 +19,15 @@ class Boxes extends Component {
         this.props.handleProjectChange(idx);
     }
 
+    changePreview(idx){
+        this.props.handleProjectPreview(idx);
+    }
+
     render() {
         return (
             <div id="projectSelectBoxes">
                 {this.props.projects.map((project, idx) => (
-                    <button type="image" className="projectSelectButton" onClick={() => this.handleClick(idx)} value={idx} >
+                    <button type="image" onMouseEnter={() => this.changePreview(idx)} value={idx} className="projectSelectButton" onClick={() => this.handleClick(idx)} value={idx} >
                         <img src={project.logo} className="projectSelectImage" ng-style="{'background-color': project.color}" alt="Project Select" />
                         <p className="logoText">  {project.title} </p>
                     </button>

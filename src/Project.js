@@ -7,7 +7,12 @@ class Project extends Component {
     constructor(props) {
         super(props);
         //this.state = this.props;
-        this.state = { currentProject: this.props, videoIsPlaying: true, showAdditionalInformation: false }
+        this.state = { 
+            currentProject: this.props, 
+            videoIsPlaying: true, 
+            showAdditionalInformation: false,
+            hiddenOverlay: true 
+        }
         this.toggleInfoOverlay = this.toggleInfoOverlay.bind(this);
         this.pause = this.pause.bind(this);
         this.play = this.play.bind(this);
@@ -21,51 +26,29 @@ class Project extends Component {
         }
     }
 
-  
-
     carouselProject(incr){
         this.props.handleCarouselProject(incr);
     }
 
     toggleInfoOverlay() {
-        console.log("test1");
         this.setState({showAdditionalInformation: !this.state.showAdditionalInformation})
     }
 
     pause() {
-        console.log("test2");
         this.refs.vidRef.pause();
         this.setState({ videoIsPlaying: false });
     }
 
     play() {
-        console.log("test3");
         this.refs.vidRef.play();
         this.setState({ videoIsPlaying: true });
     }
 
+   
+
     render() {
-        console.log(this.state.currentProject);
         return (
             <>
-                <div id="overlay" className="hiddenOverlay">
-                    <button id="toggleOverlayButton" onClick={this.toggleOverlay}>
-                        <i id="toggleOverlayButtonIcon" className="fas fa-chevron-down"></i>
-                    </button>
-                    <div id="overlayText" className="shownOverlay">
-                        <h4><i>Project Hover Preview</i></h4>
-                        <h1 id="overlayTitle"> {this.state.currentProject.title}  </h1>
-                        <ul>
-                            <div id="overlayFrontEnd">
-                                <li className="frontend">  {this.state.currentProject.frontend} </li>
-                            </div>
-                            <div id="overlayBackEnd">
-                                <li className="backend">  {this.state.currentProject.backend} </li>
-                            </div>
-                        </ul>
-                        <h3>Click on the Project Icon to learn more!</h3>
-                    </div>
-                </div>
                 <div id="index">
                     <div id="projects">
                         <div id="video-jumbotron">

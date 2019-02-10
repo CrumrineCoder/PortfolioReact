@@ -4,6 +4,7 @@ import './App.css';
 
 import Boxes from "./Boxes.js";
 import Project from "./Project.js";
+import ProjectPreview from "./ProjectPreview.js";
 
 class App extends Component {
 
@@ -47,7 +48,8 @@ class App extends Component {
         websiteLink: "http://pennyjanescookies.com/",
         video: "Videos\\pjcEdited.mp4"
       }],
-      index: 0
+      index: 0,
+      mouseIndex: 0
     };
   }
 
@@ -66,8 +68,6 @@ class App extends Component {
   }
 
   handleCarouselProject = (incr) => {
-    console.log(this.state.index);
-    console.log(this.state.projects.length);
     if(this.state.index == (this.state.projects.length-1) && incr == 1){
       this.setState({ index: 0 });
     } else if(this.state.index == 0 && incr == -1){
@@ -75,6 +75,10 @@ class App extends Component {
     } else{
       this.setState({ index: (this.state.index + incr) });
     }
+  }
+
+  handleProjectPreview = (mouseIdx) => {
+    this.setState({ mouseIndex: mouseIdx });
   }
 
   render() {
@@ -108,9 +112,9 @@ class App extends Component {
             </li>
           </ul>
         </nav>
-        <Boxes handleProjectChange={this.handleProjectChange} projects={this.state.projects} />
+        <Boxes handleProjectChange={this.handleProjectChange} handleProjectPreview={this.handleProjectPreview} projects={this.state.projects} />
         <Project handleCarouselProject={this.handleCarouselProject} {...this.state.projects[this.state.index]} />
-
+        <ProjectPreview  {...this.state.projects[this.state.mouseIndex]} />
       </div>
     );
   }
