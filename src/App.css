@@ -671,8 +671,16 @@ button{
   }
 }
 @media screen and (max-width: 500px) {
+  #video-controls{
+    display: none;
+  }
+
+  #toggleOverlayButtonIcon{
+    display: none;
+  }
+
   #overlay{
-      display: none;
+      display: none !important;
   }
 
   #aboutMeText, #credit{
@@ -722,7 +730,7 @@ button{
  }
   #projects{
       height: auto;
-      margin-top: 90px;
+      margin-top: 130px;
  }
   #video-jumbotron{
       display: none;
