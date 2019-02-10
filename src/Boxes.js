@@ -19,7 +19,6 @@ class Boxes extends Component {
     }
 
     render() {
-        console.log(this.props);
         return (
             <div id="projectSelectBoxes">
                 {this.props.projects.map((project, idx) => (

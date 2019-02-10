@@ -49,29 +49,10 @@ class App extends Component {
       }],
       index: 0
     };
-    this.toggleOverlay = this.toggleOverlay.bind(this);
-    this.pause = this.pause.bind(this);
-    this.play = this.play.bind(this);
-   // this.updateProjectIndexHandler = this.updateProjectIndexHandler.bind(this)
   }
 
-  handleProjectChange = (langValue) => {
-    console.log(langValue);
-    this.setState({index: langValue});
-    console.log(this.state);
-}
-
-
-  toggleOverlay() {
-    console.log("test");
-  }
-
-  pause() {
-    console.log("test");
-  }
-
-  play() {
-    console.log("test");
+  handleProjectChange = (idx) => {
+    this.setState({ index: idx });
   }
 
   render() {
@@ -84,7 +65,7 @@ class App extends Component {
               <p id="nic"> Nicolas Crumrine </p>
               <p id="nicJob">Front End Web Developer based in NYC
                   <a id="aboutMeButton" href="https://nicolascrumrine.herokuapp.com/#/about" rel="noopener noreferrer" target="_blank">About
-            Me
+          Me
                   </a>
               </p>
             </li>
@@ -105,7 +86,7 @@ class App extends Component {
             </li>
           </ul>
         </nav>
-        <Boxes  handleProjectChange={this.handleProjectChange} projects={this.state.projects} />
+        <Boxes handleProjectChange={this.handleProjectChange} projects={this.state.projects} />
         <Project {...this.state.projects[this.state.index]} />
 
       </div>

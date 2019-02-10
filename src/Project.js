@@ -7,28 +7,28 @@ class Project extends Component {
     constructor(props) {
         super(props);
         //this.state = this.props;
-        this.state = {currentProject: this.props}
+        this.state = { currentProject: this.props }
         this.toggleOverlay = this.toggleOverlay.bind(this);
         this.pause = this.pause.bind(this);
         this.play = this.play.bind(this);
     }
 
     componentWillReceiveProps(nextProps) {
-        console.log(nextProps);
-        console.log(this.props);
         this.setState({ currentProject: nextProps });
     }
 
     toggleOverlay() {
-        console.log("test");
+        console.log("test1");
     }
 
     pause() {
-        console.log("test");
+        console.log("test2");
+        this.refs.vidRef.pause();
     }
 
     play() {
-        console.log("test");
+        console.log("test3");
+        this.refs.vidRef.play();
     }
 
     render() {
@@ -57,8 +57,8 @@ class Project extends Component {
 
                     <div id="projects">
                         <div id="video-jumbotron">
-                            <video id="projectPicture" autoPlay muted loop src={this.state.currentProject.video}>
-                                <source type="video/mp4" /> Your browser does not support HTML5 video.
+                            <video  ref="vidRef" id="projectPicture" autoPlay muted loop src={this.state.currentProject.video}  type="video/mp4">
+                                Your browser does not support HTML5 video.
               </video>
                         </div>
                         <div id="projectInfoText">
