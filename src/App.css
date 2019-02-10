@@ -237,7 +237,7 @@ nav ul li a:hover {
   left: 10px;
 }
 #projectAdditionalInformation{
-  display: none;
+ /*display: none;*/
   max-width: 40%;
   background: rgba(0, 0, 0, 0.8);
   padding: 5px;
