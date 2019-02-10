@@ -21,6 +21,12 @@ class Project extends Component {
         }
     }
 
+  
+
+    carouselProject(incr){
+        this.props.handleCarouselProject(incr);
+    }
+
     toggleInfoOverlay() {
         console.log("test1");
         this.setState({showAdditionalInformation: !this.state.showAdditionalInformation})
@@ -113,10 +119,10 @@ class Project extends Component {
                                 </ul>
                             </div>
                         </div>
-                        <button ng-click="carouselProject(-1)" className="sliderBtn" id="backBtn">
+                        <button onClick={() => this.carouselProject(-1)} className="sliderBtn" id="backBtn">
                             <i className="fa fa-chevron-left"></i>
                         </button>
-                        <button ng-click="carouselProject(1)" className="sliderBtn" id="nextBtn">
+                        <button  onClick={() => this.carouselProject(1)} className="sliderBtn" id="nextBtn">
                             <i className="fa fa-chevron-right"></i>
                         </button>
                     </div>

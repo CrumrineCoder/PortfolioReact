@@ -51,8 +51,30 @@ class App extends Component {
     };
   }
 
+  /*  $scope.carouselProject = function (increment) {
+        if ($scope.selectedProject == 0 && increment == -1) {
+            $scope.changeProject($scope.projects.length - 1);
+        } else if ($scope.selectedProject == $scope.projects.length - 1 && increment == 1) {
+            $scope.changeProject(0);
+        } else {
+            $scope.changeProject($scope.selectedProject + increment);
+        }
+    } */
+
   handleProjectChange = (idx) => {
     this.setState({ index: idx });
+  }
+
+  handleCarouselProject = (incr) => {
+    console.log(this.state.index);
+    console.log(this.state.projects.length);
+    if(this.state.index == (this.state.projects.length-1) && incr == 1){
+      this.setState({ index: 0 });
+    } else if(this.state.index == 0 && incr == -1){
+      this.setState({ index: (this.state.projects.length-1) });
+    } else{
+      this.setState({ index: (this.state.index + incr) });
+    }
   }
 
   render() {
@@ -65,7 +87,7 @@ class App extends Component {
               <p id="nic"> Nicolas Crumrine </p>
               <p id="nicJob">Front End Web Developer based in NYC
                   <a id="aboutMeButton" href="https://nicolascrumrine.herokuapp.com/#/about" rel="noopener noreferrer" target="_blank">About
-          Me
+        Me
                   </a>
               </p>
             </li>
@@ -87,7 +109,7 @@ class App extends Component {
           </ul>
         </nav>
         <Boxes handleProjectChange={this.handleProjectChange} projects={this.state.projects} />
-        <Project {...this.state.projects[this.state.index]} />
+        <Project handleCarouselProject={this.handleCarouselProject} {...this.state.projects[this.state.index]} />
 
       </div>
     );
