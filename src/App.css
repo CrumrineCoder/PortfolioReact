@@ -281,6 +281,38 @@ nav ul li a:hover {
   background: #004559 !important;
 }
 
+.Twitch:hover{
+  background: #310E71 !important;
+}
+
+.C4:hover{
+  background: #CC4C00 !important;
+}
+
+.Weather:hover{
+  background: #004D00 !important;
+}
+
+.Quote:hover{
+  background: #004D4D !important;
+}
+
+.NPC:hover{
+  background: #BC0000 !important;
+}
+
+.Wiki:hover{
+  background: #004983 !important;
+}
+
+.Calc:hover{
+  background: #532A7C !important;
+}
+
+.Clock:hover{
+  background: #B60000 !important;
+}
+
 #projects ul{
   padding: 0px;
 }

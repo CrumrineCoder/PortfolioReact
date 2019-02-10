@@ -50,6 +50,117 @@ class App extends Component {
         websiteLink: "http://pennyjanescookies.com/",
         video: "Videos\\pjcEdited.mp4",
         class: "Penny"
+      }, {
+        logo: " Images/twitchViewerLogo.png ",
+        color: "#6441A4",
+        picture: " Images/twitchViewer.png ",
+        title: "Twitch Viewer",
+        shortDesc: "This is a website that uses the Twitch.tv API and Angular to display Twitch Streams.",
+        backend: "JavaScript, jQuery, Twitch.tv API",
+        frontend: "HTML5, CSS3, Responsive, Angular",
+        productPaper: "I taught myself one-page Angular design with this project as well as using multiple APIs with Angular.",
+        codeLink: "https://github.com/CrumrineCoder/Twitch-Viewer-Redone",
+        websiteLink: "https://crumrinecoder.github.io/Twitch-Viewer-Redone/",
+        freeCodeCampLink: "https://www.freecodecamp.org/challenges/show-the-local-weather",
+        video: "Videos\\twitchEdited.mp4",
+        class: "Twitch"
+      }, {
+        logo: " Images/npcLookUpLogo.png ",
+        color: "#EF281A",
+        picture: " Images/npcLookUpv2.png ",
+        title: "NPC Lookup",
+        shortDesc: "This fullstack website lets users add Non Playable Characters (NPCs) to a database and view them with Angular.",
+        backend: "JavaScript, Node.js, Express.js, MongoDB, Mongoose, Passport",
+        frontend: "HTML5, CSS3, Responsive, Angular",
+        productPaper: "I refined and expanded on Node.JS and Express.js and experimented with AngularJS alongside a database.",
+        codeLink: "https://github.com/CrumrineCoder/NPC-LOOK-UP",
+        websiteLink: "https://npclookup.glitch.me/",
+        video: "Videos\\npcEdited.mp4",
+        class: "NPC"
+      }, {
+        logo: " Images/connectFourAppLogo.png ",
+        color: "#FF7F11",
+        picture: " Images/connectFourApp.png ",
+        title: "Connect Four",
+        shortDesc: "This is a web app that uses plain JavaScript to play Connect Four either against an AI that uses alpha-beta minimaxing or locally with another player.",
+        backend: "JavaScript, minimax Algorithms",
+        frontend: "HTML5, CSS3",
+        productPaper: "This was practice with independent research, JavaScript algorithm scripting, UI design for games, and artificial intelligence.",
+        codeLink: "https://github.com/CrumrineCoder/connect4-version2",
+        websiteLink: "https://crumrinecoder.github.io/connect4-version2/",
+        freeCodeCampLink: "https://www.freecodecamp.org/challenges/build-a-tic-tac-toe-game",
+        video: "Videos\\c4Edited.mp4",
+        class: "C4"
+      }, {
+        logo: " Images/weatherApp%20logo.png ",
+        color: "#048027",
+        picture: " Images/weatherApp.png ",
+        title: "Weather",
+        shortDesc: "This is a web app that shows the weather based on location.",
+        backend: "JavaScript, jQuery, OpenStreetMap API, Forecast.io API,",
+        frontend: "HTML5, CSS3, Responsive, Angular, Sass",
+        productPaper: "I taught myself multiple APIs, Angular, Sass and Mobile-first design with this project.",
+        codeLink: "https://github.com/CrumrineCoder/Weather-App",
+        websiteLink: "https://crumrinecoder.github.io/Weather-App/",
+        freeCodeCampLink: "https://www.freecodecamp.org/challenges/show-the-local-weather",
+        video: "Videos\\weatherEdited.mp4",
+        class: "Weather"
+      }, {
+        logo: " Images/quotesAppLogo.png ",
+        color: "#008080",
+        picture: " Images/quotesApp.png ",
+        title: "Quotes",
+        shortDesc: "This is a website that uses Angular to display quotes from various sources.",
+        backend: "JavaScript, jQuery",
+        frontend: "HTML5, CSS3, Responsive, Angular",
+        productPaper: "I practiced Functional Programming and one page design in Angular and refined the design and User Experience.",
+        codeLink: "https://github.com/CrumrineCoder/Quote-Generator-Version-2",
+        websiteLink: "https://crumrinecoder.github.io/Quote-Generator-Version-2/",
+        freeCodeCampLink: "https://www.freecodecamp.org/challenges/build-a-random-quote-machine",
+        video: "Videos\\quoteEdited.mp4",
+        class: "Quote"
+      }, {
+        logo: " Images/wikipediaViewerLogo.png ",
+        color: "#007CB6",
+        picture: " Images/wikipediaViewer.png ",
+        title: "Wiki Viewer",
+        shortDesc: "This is a web app that uses the Wikipedia API to search for multiple Wikipedia pages by term or by randomness.",
+        backend: "JavaScript, jQuery, Wikipedia API",
+        frontend: "HTML5, CSS3, React.js, Responsive",
+        productPaper: "I taught myself about using APIs with React and more about state management with this project.",
+        codeLink: "https://github.com/CrumrineCoder/wikipediaviewerreact",
+        websiteLink: "http://dark-yarn.surge.sh/",
+        freeCodeCampLink: "https://www.freecodecamp.org/challenges/build-a-wikipedia-viewer",
+        video: "Videos\\wiki.mp4",
+        class: "Wiki"
+      }, {
+        logo: " Images/calculatorAppLogo.png ",
+        color: "#865DAF",
+        picture: " Images/calculatorApp.png ",
+        title: "Calculator",
+        shortDesc: "This is a web app that resembles a basic calculator.",
+        backend: "JavaScript",
+        frontend: "HTML5, CSS3, Responsive",
+        productPaper: "I practiced JavaScript algorithm scripting with this project.",
+        codeLink: "https://github.com/CrumrineCoder/Calculator",
+        websiteLink: " https://crumrinecoder.github.io/Calculator/",
+        freeCodeCampLink: "https://www.freecodecamp.org/challenges/build-a-javascript-calculator",
+        video: "Videos\\calcEdited.mp4",
+        class: "Calc"
+      }, {
+        logo: " Images/pomodoroAppLogo.png",
+        color: "#E90000",
+        picture: " Images/pomodoroApp.png ",
+        title: "Pomodoro",
+        shortDesc: "This is a web app that acts as a minimalist Pomodoro (time management) clock with options.",
+        backend: "JavaScript, jQuery",
+        frontend: "HTML5, CSS3, Responsive",
+        productPaper: "I practiced Async JavaScript design and minimalistic front end design.",
+        codeLink: "https://github.com/CrumrineCoder/Pomodoro-Version-2",
+        websiteLink: "https://crumrinecoder.github.io/Pomodoro-Version-2/",
+        freeCodeCampLink: "https://www.freecodecamp.org/challenges/build-a-pomodoro-clock",
+        video: "Videos\\pomodoroEdited.mp4",
+        class: "Clock"
       }],
       index: 0,
       mouseIndex: 0
@@ -61,11 +172,11 @@ class App extends Component {
   }
 
   handleCarouselProject = (incr) => {
-    if(this.state.index == (this.state.projects.length-1) && incr == 1){
+    if (this.state.index == (this.state.projects.length - 1) && incr == 1) {
       this.setState({ index: 0 });
-    } else if(this.state.index == 0 && incr == -1){
-      this.setState({ index: (this.state.projects.length-1) });
-    } else{
+    } else if (this.state.index == 0 && incr == -1) {
+      this.setState({ index: (this.state.projects.length - 1) });
+    } else {
       this.setState({ index: (this.state.index + incr) });
     }
   }
@@ -78,7 +189,7 @@ class App extends Component {
     return (
       <div className="App">
 
-        <nav id="nav"  style={{borderColor: this.state.projects[this.state.index].color}}>
+        <nav id="nav" style={{ borderColor: this.state.projects[this.state.index].color }}>
           <ul>
             <li id="nameNavContainer">
               <p id="nic"> Nicolas Crumrine </p>

@@ -67,6 +67,7 @@ class Project extends Component {
                                 </div>
                                 <div id="topLeftContent">
                                     <h1 id="projectTitle"> {this.state.currentProject.title} </h1>
+                                    <button id="toggleButton" style={{background: this.state.currentProject.color}} onClick={this.toggleInfoOverlay} className={this.state.currentProject.class} value="Show More">Toggle Info</button>
                                     <div id="projectAdditionalInformation" style={{ display: this.state.showAdditionalInformation ? 'block' : 'none' }}>
                                         <ul>
                                             <div id="projectFrontEnd">
@@ -84,7 +85,7 @@ class Project extends Component {
                                             </div>
                                         </a>
                                     </div>
-                                    <button id="toggleButton" style={{background: this.state.currentProject.color}} onClick={this.toggleInfoOverlay} className={this.state.currentProject.class} value="Show More">Toggle Info</button>
+                                  
                                 </div>
                                 <ul id="projectLinks">
                                     <a href={this.state.currentProject.codeLink} className="externalLinks" rel="noopener noreferrer" target="_blank">
