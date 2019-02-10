@@ -75,7 +75,7 @@ class App extends Component {
     return (
       <div className="App">
 
-        <nav id="nav">
+        <nav id="nav"  style={{borderColor: this.state.projects[this.state.index].color}}>
           <ul>
             <li id="nameNavContainer">
               <p id="nic"> Nicolas Crumrine </p>

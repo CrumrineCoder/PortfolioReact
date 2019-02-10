@@ -16,6 +16,7 @@ class Project extends Component {
         this.toggleInfoOverlay = this.toggleInfoOverlay.bind(this);
         this.pause = this.pause.bind(this);
         this.play = this.play.bind(this);
+        this.shadeHexColor = this.shadeHexColor.bind(this);
     }
 
     componentWillReceiveProps(nextProps) {
@@ -42,6 +43,11 @@ class Project extends Component {
     play() {
         this.refs.vidRef.play();
         this.setState({ videoIsPlaying: true });
+    }
+
+    shadeHexColor(color, percent) {   
+        var f=parseInt(color.slice(1),16),t=percent<0?0:255,p=percent<0?percent*-1:percent,R=f>>16,G=f>>8&0x00FF,B=f&0x0000FF;
+        return "#"+(0x1000000+(Math.round((t-R)*p)+R)*0x10000+(Math.round((t-G)*p)+G)*0x100+(Math.round((t-B)*p)+B)).toString(16).slice(1);
     }
 
     render() {
@@ -79,21 +85,21 @@ class Project extends Component {
                                             </div>
                                         </a>
                                     </div>
-                                    <button id="toggleButton" onClick={this.toggleInfoOverlay} value="Show More">Toggle Info</button>
+                                    <button id="toggleButton"  style={{background: this.state.currentProject.color}} onClick={this.toggleInfoOverlay} value="Show More">Toggle Info</button>
                                 </div>
                                 <ul id="projectLinks">
                                     <a href={this.state.currentProject.codeLink} className="externalLinks" rel="noopener noreferrer" target="_blank">
-                                        <li id="code-link">
+                                        <li  style={{background: this.state.currentProject.color}} id="code-link">
                                             <i className="fas fa-code fontIcon"></i>See Code
                                          </li>
                                     </a>
                                     <a href={this.state.currentProject.websiteLink} className="externalLinks" rel="noopener noreferrer" target="_blank">
-                                        <li id="website-link">
+                                        <li  style={{background: this.state.currentProject.color}} id="website-link">
                                             <i className="fas fa-external-link-alt fontIcon"></i>Visit Website
                                        </li>
                                     </a>
                                     <a href={this.state.currentProject.caseStudyLink} style={{ display: this.state.currentProject.caseStudyLink != undefined ? 'block' : 'none' }} className="externalLinks" rel="noopener noreferrer" target="_blank">
-                                        <li id="case-link">
+                                        <li style={{background: this.state.currentProject.color}} id="case-link">
                                             <i className="fas fa-book-open fontIcon"></i>Read Case Study
                                        </li>
                                     </a>
@@ -107,11 +113,11 @@ class Project extends Component {
                             <i className="fa fa-chevron-right"></i>
                         </button>
                     </div>
-                    <div id="contactInfo">
+                    <div id="contactInfo" style={{background: this.state.currentProject.color}}>
                         <i className="fa fa-envelope-o fa-2x"> </i>
                         <h1>Let's start</h1>
                         <h3> a new project together</h3>
-                        <a id="emailButton" href="mailto:crumrinecoding@gmail.com">Email Me</a>
+                        <a id="emailButton"  style={{background: this.shadeHexColor(this.state.currentProject.color, -.5)}} href="mailto:crumrinecoding@gmail.com">Email Me</a>
                     </div>
                 </div>
             </>
