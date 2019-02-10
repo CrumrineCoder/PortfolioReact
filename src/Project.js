@@ -7,14 +7,18 @@ class Project extends Component {
     constructor(props) {
         super(props);
         //this.state = this.props;
-        this.state = { currentProject: this.props }
+        this.state = { currentProject: this.props, videoIsPlaying: true }
         this.toggleOverlay = this.toggleOverlay.bind(this);
         this.pause = this.pause.bind(this);
         this.play = this.play.bind(this);
     }
 
     componentWillReceiveProps(nextProps) {
-        this.setState({ currentProject: nextProps });
+        if(this.state.currentProject.title !== nextProps.title) {
+          this.setState({ currentProject: nextProps, videoIsPlaying: true });
+        } else{
+            this.setState({ currentProject: nextProps});
+        }
     }
 
     toggleOverlay() {
@@ -24,11 +28,13 @@ class Project extends Component {
     pause() {
         console.log("test2");
         this.refs.vidRef.pause();
+        this.setState({ videoIsPlaying: false });
     }
 
     play() {
         console.log("test3");
         this.refs.vidRef.play();
+        this.setState({ videoIsPlaying: true });
     }
 
     render() {
@@ -64,8 +70,8 @@ class Project extends Component {
                         <div id="projectInfoText">
                             <div id="content">
                                 <div id="video-controls">
-                                    <i onClick={this.pause} className="fas fa-pause-circle video-control-button" id="video-pause-button"></i>
-                                    <i onClick={this.play} className="fas fa-play-circle video-control-button" id="video-play-button"></i>
+                                    <i style={{display: this.state.videoIsPlaying ? 'block' : 'none' }} onClick={this.pause} className="fas fa-pause-circle video-control-button" id="video-pause-button"></i>
+                                    <i style={{display: this.state.videoIsPlaying ? 'none' : 'block' }} onClick={this.play} className="fas fa-play-circle video-control-button" id="video-play-button"></i>
                                 </div>
                                 <div id="topLeftContent">
                                     <h1 id="projectTitle">  {this.state.currentProject.title} </h1>
