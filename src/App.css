@@ -108,7 +108,7 @@ nav {
   overflow: hidden;
   color: white;
   border-bottom-color: #C9C9C9;
-  border-bottom-style: solid;
+  border-bottom: solid 5px;;
   height: 70px;
   width: 100%;
   top: 0;

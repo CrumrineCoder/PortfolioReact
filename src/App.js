@@ -215,7 +215,7 @@ class App extends Component {
             </li>
           </ul>
         </nav>
-        <Boxes handleProjectChange={this.handleProjectChange} handleProjectPreview={this.handleProjectPreview} projects={this.state.projects} />
+        <Boxes handleProjectChange={this.handleProjectChange} handleProjectPreview={this.handleProjectPreview} projects={this.state.projects} currentProjectIndex={this.state.index}/>
         <Project handleCarouselProject={this.handleCarouselProject} {...this.state.projects[this.state.index]} />
         <ProjectPreview  {...this.state.projects[this.state.mouseIndex]} />
       </div>
