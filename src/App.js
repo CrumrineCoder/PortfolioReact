@@ -192,11 +192,14 @@ class App extends Component {
         <nav id="nav" style={{ borderColor: this.state.projects[this.state.index].color }}>
           <ul>
             <li id="nameNavContainer">
-              <p id="nic"> Nicolas Crumrine </p>
-              <p id="nicJob">Front End Web Developer based in NYC
+              <img id="navProfileImage" src="Images/profile.jpg"></img>
+              <div id="nameNavContainerText">
+                <p id="nic"> Nicolas Crumrine </p>
+                <p id="nicJob">Front End Web Developer based in NYC
                   <a id="aboutMeButton" href="https://nicolascrumrine.herokuapp.com/#/about" rel="noopener noreferrer" target="_blank">About Me
                   </a>
-              </p>
+                </p>
+              </div>
             </li>
             <li>
               <a href="https://github.com/CrumrineCoder" id="github" title="Github" rel="noopener noreferrer" target="_blank">
@@ -215,7 +218,7 @@ class App extends Component {
             </li>
           </ul>
         </nav>
-        <Boxes handleProjectChange={this.handleProjectChange} handleProjectPreview={this.handleProjectPreview} projects={this.state.projects} currentProjectIndex={this.state.index}/>
+        <Boxes handleProjectChange={this.handleProjectChange} handleProjectPreview={this.handleProjectPreview} projects={this.state.projects} currentProjectIndex={this.state.index} />
         <Project handleCarouselProject={this.handleCarouselProject} {...this.state.projects[this.state.index]} />
         <ProjectPreview  {...this.state.projects[this.state.mouseIndex]} />
       </div>
