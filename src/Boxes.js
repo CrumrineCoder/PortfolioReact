@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import ReactGA from 'react-ga';
 import './App.css';
 
 class Boxes extends Component {
@@ -21,10 +21,19 @@ class Boxes extends Component {
     handleClick(idx) {
         this.props.handleProjectChange(idx);
         this.setState({ selectedProjectIndex: idx });
+        ReactGA.event({
+            category: 'Box',
+            action: this.props.projects[idx].title
+        });
     }
 
     changePreview(idx) {
         this.props.handleProjectPreview(idx);
+    }
+
+    initializeReactGA() {
+        ReactGA.initialize('UA-114290573-1');
+        ReactGA.pageview('/homepage');
     }
 
     render() {

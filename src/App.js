@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import ReactGA from 'react-ga';
 import './App.css';
 
 import Boxes from "./Boxes.js";
@@ -16,11 +16,11 @@ class App extends Component {
         color: "#A61C88",
         title: "Polling",
         shortDesc: "This React.js & Redux fullstack website lets users create, view, and vote on polls.",
-        backend: "JavaScript, Node.js, Express.js, MongoDB, Mongoose, jwt, Passport",
+        backend: "JavaScript, Node.js, Express.js, Firebase, MongoDB, Mongoose, jwt, Passport",
         frontend: "React.js, Redux.js, react-router, HTML5, CSS3, Bootstrap 4",
-        productPaper: "This website is an updated version of one I made last year. I taught myself Redux and react-router while developing my React.js fullstack skills. I am still adding new features.",
+        productPaper: "This website is an updated version of one I made last year. I taught myself Redux and react-router while developing my React.js fullstack skills. I refactored the app to learn Firebase. I am still adding new features.",
         codeLink: "https://github.com/CrumrineCoder/Polling",
-        websiteLink: "https://crumrinepolling.herokuapp.com/#/",
+        websiteLink: "https://polling-269dc.firebaseapp.com/#/",
         prevWebsiteLink: "https://joinordie.glitch.me/",
         caseStudyLink: "https://nicolascrumrine.herokuapp.com/#/posts/5c253ffad802b53cdcc17e00",
         video: "Videos/pollingReactEdited.mp4",
@@ -165,6 +165,15 @@ class App extends Component {
       index: 0,
       mouseIndex: 0
     };
+    this.userClicksAboutMe = this.userClicksAboutMe.bind(this);
+    this.userClicksGithub = this.userClicksGithub.bind(this);
+    this.userClicksLinkedIn = this.userClicksLinkedIn.bind(this);
+    this.userClicksEmail = this.userClicksEmail.bind(this);
+  }
+
+  initializeReactGA() {
+    ReactGA.initialize('UA-114290573-1');
+    ReactGA.pageview('/homepage');
   }
 
   handleProjectChange = (idx) => {
@@ -185,6 +194,34 @@ class App extends Component {
     this.setState({ mouseIndex: mouseIdx });
   }
 
+  userClicksAboutMe(){
+    ReactGA.event({
+      category: 'Nav',
+      action: 'About Me'
+    });
+  }
+
+  userClicksGithub(){
+    ReactGA.event({
+      category: 'Nav',
+      action: 'Github'
+    });
+  }
+
+  userClicksLinkedIn(){
+    ReactGA.event({
+      category: 'Nav',
+      action: 'LinkedIn'
+    });
+  }
+
+  userClicksEmail(){
+    ReactGA.event({
+      category: 'Nav',
+      action: 'Email'
+    });
+  }
+
   render() {
     return (
       <div className="App">
@@ -196,23 +233,23 @@ class App extends Component {
               <div id="nameNavContainerText">
                 <p id="nic"> Nicolas Crumrine </p>
                 <p id="nicJob">Front End Web Developer based in NYC
-                  <a id="aboutMeButton" href="https://nicolascrumrine.herokuapp.com/#/about" rel="noopener noreferrer" target="_blank">About Me
+                  <a id="aboutMeButton" href="https://nicolascrumrine.herokuapp.com/#/about" rel="noopener noreferrer" target="_blank" onClick={this.userClicksAboutMe}>About Me
                   </a>
                 </p>
               </div>
             </li>
             <li>
-              <a href="https://github.com/CrumrineCoder" id="github" title="Github" rel="noopener noreferrer" target="_blank">
+              <a href="https://github.com/CrumrineCoder" id="github" title="Github" rel="noopener noreferrer" target="_blank" onClick={this.userClicksGithub}>
                 <i className="fab fa-github navIcon" border="0"></i>
               </a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/nicolas-crumrine-50899b120/" title="link" rel="noopener noreferrer" target="_blank">
+              <a href="https://www.linkedin.com/in/nicolas-crumrine-50899b120/" title="link" rel="noopener noreferrer" target="_blank" onClick={this.userClicksLinkedIn}>
                 <i className="fab fa-linkedin-in navIcon" border="0"></i>
               </a>
             </li>
             <li>
-              <a href="mailto:crumrinecoding@gmail.com" title="Email" rel="noopener noreferrer" target="_blank">
+              <a href="mailto:crumrinecoding@gmail.com" title="Email" rel="noopener noreferrer" target="_blank" onClick={this.userClicksEmail}>
                 <i className="fas fa-envelope navIcon" border="0"></i>
               </a>
             </li>
