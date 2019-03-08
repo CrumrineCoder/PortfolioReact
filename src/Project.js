@@ -140,7 +140,7 @@ class Project extends Component {
                                                 <li className="backend">  {this.state.currentProject.backend} </li>
                                             </div>
                                         </ul>
-                                        <p>  {this.state.currentProject.projectDescription}</p>
+                                        <p>  {this.state.currentProject.shortDesc}</p>
                                         <p> {this.state.currentProject.productPaper} </p>
                                         <a  onClick={this.userClicksPrevious}  href={this.state.currentProject.prevWebsiteLink} style={{ display: this.state.currentProject.prevWebsiteLink != undefined ? 'block' : 'none' }} className="externalLinks" rel="noopener noreferrer" target="_blank">
                                             <div id="prev-code-link">

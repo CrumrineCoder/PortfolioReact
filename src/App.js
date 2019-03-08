@@ -18,7 +18,7 @@ class App extends Component {
         shortDesc: "This React.js & Redux fullstack website lets users create, view, and vote on polls.",
         backend: "JavaScript, Node.js, Express.js, Firebase, MongoDB, Mongoose, jwt, Passport",
         frontend: "React.js, Redux.js, react-router, HTML5, CSS3, Bootstrap 4, Responsive",
-        productPaper: "This website is an updated version of one I made last year. I taught myself Redux and react-router while developing my React.js fullstack skills. I refactored the app to learn Firebase. I am still adding new features.",
+        productPaper: "This website is an updated version of one I made last year. I taught myself Redux and react-router while developing my React.js fullstack skills. I refactored the app to learn Firebase, here is the code for the Node version of this app: https://github.com/CrumrineCoder/PollingReactNodeBase ",
         codeLink: "https://github.com/CrumrineCoder/Polling",
         websiteLink: "https://polling-269dc.firebaseapp.com/#/",
         prevWebsiteLink: "https://joinordie.glitch.me/",
@@ -256,11 +256,11 @@ class App extends Component {
           </ul>
         </nav>
         <Boxes handleProjectChange={this.handleProjectChange} handleProjectPreview={this.handleProjectPreview} projects={this.state.projects} currentProjectIndex={this.state.index} />
-        <Project handleCarouselProject={this.handleCarouselProject} {...this.state.projects[this.state.index]} />
         <ProjectPreview  {...this.state.projects[this.state.mouseIndex]} />
+        <Project handleCarouselProject={this.handleCarouselProject} {...this.state.projects[this.state.index]} />
       </div>
     );
   }
 }
-
+// <ProjectPreview  {...this.state.projects[this.state.mouseIndex]} />
 export default App;

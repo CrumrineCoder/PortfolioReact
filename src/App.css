@@ -72,6 +72,16 @@ button:focus {
   max-width: 30%;
 }
 
+#overlayContainer{
+  position: relative; 
+  color: white; 
+}
+
+.previewUL{
+  margin: 5px;
+
+}
+
 .shownOverlay{
   display: block;
 }
@@ -86,6 +96,7 @@ button:focus {
   background: transparent;
   border: 2px solid white; 
   border-radius: 2px; 
+  top: 3px;
 }
 
 .toggleOverlayButton:hover{
@@ -94,11 +105,6 @@ button:focus {
 
 #toggleOverlayButtonIcon{
   color: white; 
-}
-
-#toggleOverlayButtonClosed{
-  position: fixed;
-  bottom: 10px;
 }
 
 /* !Nav! */
@@ -284,6 +290,10 @@ nav ul li a:hover {
   margin: 10px auto; 
   border-color: white;
 }
+#toggleOverlayButtonClosed{
+  top: 8px;
+  z-index: 30;
+}
 /*#toggleButton:hover{
   color: rgb(180, 180, 180);
   border-color:rgb(180, 180, 180);
@@ -337,7 +347,7 @@ nav ul li a:hover {
   padding: 0px;
 }
 #projectBackEnd, #projectFrontEnd, #overlayFrontEnd, #overlayBackEnd{
-  width: 95%;
+  width: 100%;
 }
 #projectFrontEnd li, #projectBackEnd li, #overlayFrontEnd li, #overlayBackEnd li  {
   border-radius: 5px;
@@ -440,7 +450,7 @@ transform: translate(-50%,-50%);
   white-space: nowrap;
   margin: 0 auto;
   font-size: 0px;
-  margin-top: 67px;
+  margin-top: 67px; 
 }
 .projectSelectImage {
   width: 100%;
@@ -571,7 +581,7 @@ button{
   }
 
   #projectAdditionalInformation{
-      max-width: 50%;
+      max-width: 90%;
   }
  /* SPLASH PAGE */
   #aboutMeText, #credit{
@@ -596,7 +606,13 @@ button{
 }
 @media screen and (max-width: 700px) {
   #projectAdditionalInformation{
-      max-width: 70%;
+      max-width: 96%;
+  }
+  #nextBtn{
+    right: 15px;
+  }
+  #backBtn{
+    left: 5px;
   }
   #splash button{
       height: 250px;
@@ -611,6 +627,7 @@ button{
  }
   #nameNavContainer{
       padding: 5px;
+      justify-content: center;
  }
   #aboutMeText, #credit{
       font-size: 14px;
@@ -659,12 +676,15 @@ button{
       font-size: 13px;
  }
   #projectTitle{
-      padding-top: 40px;
+     margin: 15px;
  }
   #projectLinks li {
       width: 90%;
       font-size: 18px;
       margin: 5px auto;
+ }
+ #projectLinks{
+   width: 75%;
  }
  /* #projectInfoText{
       position: relative;
@@ -685,10 +705,26 @@ button{
      max-width: 100%;
   }
   #projectSelectBoxes{
-      margin-top:  83px;
+    margin-top: 100px;
+  }
+  .previewUL #overlayFrontEnd,  .previewUL #overlayBackEnd{
+    width: 90%;
+  }
+  .previewUL{
+    padding-left: 0px;
   }
 }
 @media screen and (max-width: 500px) {
+  .previewUL{
+    display: none !important;
+  }
+  #projectLinks{
+    width: 100%;
+  }
+  .toggleOverlayButton{
+    display: none !important; 
+  }
+
   #video-controls{
     display: none;
   }
@@ -723,23 +759,20 @@ button{
       font-size: 20px;
  }
   .projectSelectButton{
-      width: 100%;
-      max-width: 100%;
-      height: 50px;
+      width: 50%;
+      max-width: 50%;
+      height: 100%;
       white-space: normal;
+      max-height: 100%;
  }
   .logoText{
-      font-size: 17px;
-      right: 83px;
-      top: 13px;
- }
-  #projectSelectBoxes{
-      overflow-x: visible;
-      white-space: normal;
-      display: none;
+      font-size: 20px;
  }
   .projectSelectImage{
-      width: 50px;
+      width: 100px;
+ }
+ #projectSelectBoxes{
+   height: 125px;
  }
   #projectAdditionalInformation{
       max-width: 100%;
@@ -748,7 +781,6 @@ button{
  }
   #projects{
       height: auto;
-      margin-top: 130px;
  }
   #video-jumbotron{
       display: none;
