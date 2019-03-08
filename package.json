@@ -6,7 +6,8 @@
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-ga": "^2.5.7",
-    "react-scripts": "^2.1.5"
+    "react-scripts": "^2.1.5",
+    "webpack-dev-server": "^3.2.1"
   },
   "scripts": {
     "start": "react-scripts start",

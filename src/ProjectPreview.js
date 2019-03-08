@@ -29,7 +29,8 @@ class Project extends Component {
     render() {
         return (
             <div id="overlayContainer">
-                <ul style={{ display: this.state.hiddenOverlay ? 'block' : 'none' }} className="previewUL">
+                <ul style={{ display: this.state.hiddenOverlay ? 'block' : 'none',  background: this.state.currentProject.color }} className="previewUL">
+               
                     <div id="overlayFrontEnd">
                         <li className="frontend">  {this.state.currentProject.frontend} </li>
                     </div>
@@ -47,7 +48,7 @@ class Project extends Component {
         )
     }
 }
-/*         <div id="overlay" className="hiddenOverlay" style={{ display: this.state.hiddenOverlay ? 'block' : 'none' }}>
+/*         <img src={this.state.currentProject.logo} className="previewLogo"/>    <div id="overlay" className="hiddenOverlay" style={{ display: this.state.hiddenOverlay ? 'block' : 'none' }}>
                      <h4><i>Project Technology Hover Preview</i></h4>
                     <div id="overlayText" className="shownOverlay">
                     

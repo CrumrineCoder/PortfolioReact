@@ -78,8 +78,13 @@ button:focus {
 }
 
 .previewUL{
-  margin: 5px;
+  padding: 5px;
+  margin: 0px;
+}
 
+.previewUL #overlayFrontEnd li,  .previewUL #overlayBackEnd li{
+  border: 1px solid white; 
+  max-width: 90%;
 }
 
 .shownOverlay{
@@ -96,7 +101,7 @@ button:focus {
   background: transparent;
   border: 2px solid white; 
   border-radius: 2px; 
-  top: 3px;
+  top: 5px;
 }
 
 .toggleOverlayButton:hover{
@@ -291,8 +296,12 @@ nav ul li a:hover {
   border-color: white;
 }
 #toggleOverlayButtonClosed{
-  top: 8px;
   z-index: 30;
+}
+.previewLogo{
+  float: left;
+  height: 50px;
+  width: 50px;
 }
 /*#toggleButton:hover{
   color: rgb(180, 180, 180);
