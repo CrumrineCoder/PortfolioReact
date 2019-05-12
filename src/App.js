@@ -12,6 +12,19 @@ class App extends Component {
     super(props);
     this.state = {
       projects: [{
+        logo: "Images/raptureLogo.png ",
+        color: "#218F7D",
+        title: "Rapture Fashion",
+        shortDesc: "React and Shopify Boutique Fashion site",
+        backend: "JavaScript, Shopify Storefront API, Firebase",
+        frontend: "React.js, Redux.js, react-router, HTML5, CSS3, Bootstrap 4, Responsive",
+        productPaper: "This website was a study on UX research, UI design, marketing, and how to integrate Shopify with React all so I can build small business websites.",
+        codeLink: "https://github.com/CrumrineCoder/RaptureFashion/",
+        websiteLink: "https://rapture-fashion.firebaseapp.com/#/",
+        caseStudyLink: "https://nicolascrumrine.com/#/posts/-LecEwsYvjJNcwIJJjao",
+        video: "Videos/raptureFashion.mp4",
+        class: "Rapture"
+      },{
         logo: "Images/votingAppLogo.png ",
         color: "#A61C88",
         title: "Polling",
