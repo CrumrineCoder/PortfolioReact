@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactGA from 'react-ga';
 import './App.css';
 
+import Landing from "./Landing.js";
 import Boxes from "./Boxes.js";
 import Project from "./Project.js";
 import ProjectPreview from "./ProjectPreview.js";
@@ -268,6 +269,7 @@ class App extends Component {
             </li>
           </ul>
         </nav>
+        <Landing></Landing>
         <Boxes handleProjectChange={this.handleProjectChange} handleProjectPreview={this.handleProjectPreview} projects={this.state.projects} currentProjectIndex={this.state.index} />
         <ProjectPreview  {...this.state.projects[this.state.mouseIndex]} />
         <Project handleCarouselProject={this.handleCarouselProject} {...this.state.projects[this.state.index]} />
