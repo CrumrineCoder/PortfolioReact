@@ -17,7 +17,7 @@ class App extends Component {
         title: "Rapture Fashion",
         shortDesc: "React and Shopify Boutique Fashion site",
         backend: "JavaScript, Shopify Storefront API, Firebase",
-        frontend: "React.js, Redux.js, react-router, HTML5, CSS3, Bootstrap 4, Responsive",
+        frontend: "React.js, Redux.js, react-router, HTML5, CSS3, Bootstrap 4",
         productPaper: "This website was a study on UX research, UI design, marketing, and how to integrate Shopify with React all so I can build small business websites.",
         codeLink: "https://github.com/CrumrineCoder/RaptureFashion/",
         websiteLink: "https://rapture-fashion.firebaseapp.com/#/",
