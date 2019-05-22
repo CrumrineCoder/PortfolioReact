@@ -829,6 +829,27 @@ button{
   height: 100%;
 }
 
+.landingVideoContainer, .landingVideo{
+
+}
+
+.landingTopContainer, .landingParallax{
+  height: 100%;
+}
+
+.landingVideoContainer{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.landingVideo{
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .landingTitleBody{
   background: rgba(17, 17, 17, 0.353);
   color: white; 
