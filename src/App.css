@@ -833,12 +833,18 @@ button{
 
 }
 
-.landingTopContainer, .landingParallax{
+.landingContainer, .landingParallax{
   height: 100%;
 }
 
-.landingTopContainer{
+.landingContainer{
   position: relative; 
+}
+
+.landingBottomContainer{
+  position: absolute;
+  left: 0; 
+  bottom: 0;
 }
 
 .landingNav{
@@ -888,4 +894,42 @@ button{
 
 .landingSubTitle{
   font-size: 16px; 
+}
+
+.landingBoxesContainer{
+  width: 100%;
+  overflow-x:scroll;
+  white-space: nowrap;
+  font-size: 0px;
+  margin-top: 67px; 
+}
+
+.landingBox{
+  background: white;
+  max-width: 150px;
+  max-height: 150px;
+  min-width: 100px;
+  min-height: 100px;
+  padding: 0;
+  border: none;
+  position: relative;
+  font-size: 0px;
+  margin: 10px;
+}
+
+.landingBoxImage{
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.landingBoxText{
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  position: absolute;
+  bottom: 0px;
+  color: white;
+  width: 100%;
+  margin: 0px;
 }
