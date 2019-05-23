@@ -242,9 +242,7 @@ class App extends Component {
 
       
         <Landing></Landing>
-        <Boxes handleProjectChange={this.handleProjectChange} handleProjectPreview={this.handleProjectPreview} projects={this.state.projects} currentProjectIndex={this.state.index} />
-        <ProjectPreview  {...this.state.projects[this.state.mouseIndex]} />
-        <Project handleCarouselProject={this.handleCarouselProject} {...this.state.projects[this.state.index]} />
+       
       </div>
     );
   }
@@ -253,6 +251,9 @@ class App extends Component {
 export default App;
 
 /*
+ <Boxes handleProjectChange={this.handleProjectChange} handleProjectPreview={this.handleProjectPreview} projects={this.state.projects} currentProjectIndex={this.state.index} />
+        <ProjectPreview  {...this.state.projects[this.state.mouseIndex]} />
+        <Project handleCarouselProject={this.handleCarouselProject} {...this.state.projects[this.state.index]} />
   <nav id="nav" style={{ borderColor: this.state.projects[this.state.index].color }}>
           <ul>
             <li id="nameNavContainer">

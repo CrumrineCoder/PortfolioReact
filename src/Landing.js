@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Slider from "react-slick";
 
 class Landing extends Component {
 
@@ -175,8 +176,64 @@ class Landing extends Component {
     }
 
     render() {
+        /*
+ 
+        */
+        const settings = {
+            dots: true,
+            infinite: true,
+            speed: 500,
+            arrows: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            beforeChange: (prevIndex, nextIndex) => {
+                this.setState({
+                    selectedFooter: [0, 1, 2].indexOf(nextIndex) !== -1 ? 1 : 2
+                });
+            }
+        };
         return (
             <div className="landingParallax">
+                <div className="landingContainer">
+                    <div className="landingNav">
+                        <div className="landingNavItem">About</div>
+                        <div className="landingNavItem"><i className="fab fa-github"></i></div>
+                        <div className="landingNavItem"><i className="fab fa-linkedin-in"></i></div>
+                        <div className="landingNavItem"><i className="fas fa-envelope"></i></div>
+                    </div>
+                    <div className="landingVideoContainer">
+                        <video ref="vidRef" className="landingVideo" autoPlay muted loop src={this.state.video} type="video/mp4">
+                            Your browser does not support HTML5 video.
+                    </video>
+                    </div>
+                    <div className="landingTitleBody">
+                        <div className="landingTitle">Nicolas Crumrine</div>
+                        <div className="landingSubTitle">Front End Web Developer</div>
+                    </div>
+                </div>
+                <div className="landingBottomContainer">
+                    <div className="landingFiltersContainer">
+                    </div>
+                    <div className="landingBoxesContainer">   {this.state.projects.map((project, idx) => (
+                        <button
+                            key={idx}
+                            type="image"
+                            style={{ background: project.color }}
+                            className="landingBox"
+                        >
+                            <img src={project.logo} className="landingBoxImage" alt="Project Select" />
+                            <p className="landingBoxText">  {project.title} </p>
+                        </button>
+                    ))}     </div>
+                </div>
+            </div>
+        )
+    }
+}
+
+export default Landing;
+/*
+ className="landingParallax">
                 <div className="landingContainer">
                     <div className="landingNav">
                         <div className="landingNavItem">About</div>
@@ -197,23 +254,16 @@ class Landing extends Component {
                 <div className="landingBottomContainer">
                     <div className="landingFiltersContainer">
                     </div>
-                    <div className="landingBoxesContainer">
-                        {this.state.projects.map((project, idx) => (
-                            <button
-                                key={idx}
-                                type="image"
-                                style={{ background: project.color }}
-                                className="landingBox"
-                            >
-                                <img src={project.logo} className="landingBoxImage" alt="Project Select" />
-                                <p className="landingBoxText">  {project.title} </p>
-                            </button>
-                        ))}
-                    </div>
+                    <div className="landingBoxesContainer">   {this.state.projects.map((project, idx) => (
+                        <button
+                            key={idx}
+                            type="image"
+                            style={{ background: project.color }}
+                            className="landingBox"
+                        >
+                            <img src={project.logo} className="landingBoxImage" alt="Project Select" />
+                            <p className="landingBoxText">  {project.title} </p>
+                        </button>
+                    ))}     </div>
                 </div>
-            </div>
-        )
-    }
-}
-
-export default Landing;
+                    */
