@@ -854,6 +854,8 @@ html, body {
     height: auto;
     position: fixed; 
     text-align: right; 
+    background: black;
+    padding: 10px 0px;
   }
   
   .landingNavItem{
