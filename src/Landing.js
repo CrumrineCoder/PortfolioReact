@@ -214,7 +214,7 @@ class Landing extends Component {
                 <div className="landingBottomContainer">
                     <div className="landingFiltersContainer">
                     </div>
-                    <div className="landingBoxesContainer">   {this.state.projects.map((project, idx) => (
+                    <div className="landingBoxesContainer customScrollBar">   {this.state.projects.map((project, idx) => (
                         <button
                             key={idx}
                             type="image"
