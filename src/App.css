@@ -837,6 +837,25 @@ button{
   height: 100%;
 }
 
+.landingTopContainer{
+  position: relative; 
+}
+
+.landingNav{
+  z-index: 3; 
+  width: 100%;
+  height: auto;
+  position: fixed; 
+  text-align: right; 
+}
+
+.landingNavItem{
+  color: white;
+  margin-right: 10px;
+  margin-top: 5px;
+  display: inline-block; 
+}
+
 .landingVideoContainer{
   position: relative;
   width: 100%;
@@ -848,6 +867,7 @@ button{
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
+  /*object-fit: fill;*/
 }
 
 .landingTitleBody{

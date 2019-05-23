@@ -15,6 +15,10 @@ class Landing extends Component {
             <div className="landingParallax">
                 <div className="landingTopContainer">
                     <div className="landingNav">
+                        <div className="landingNavItem">About</div>
+                        <div className="landingNavItem"><i className="fab fa-github"></i></div>
+                        <div className="landingNavItem"><i className="fab fa-linkedin-in"></i></div>
+                        <div className="landingNavItem"><i className="fas fa-envelope"></i></div>
                     </div>
                     <div className="landingVideoContainer">
                         <video ref="vidRef" className="landingVideo" autoPlay muted loop src={this.state.video} type="video/mp4">
