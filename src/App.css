@@ -903,7 +903,7 @@ html, body {
     overflow-x:scroll;
     white-space: nowrap;
     font-size: 0px;
-    margin-top: 67px; 
+    margin-bottom: 10px;
   }
   
   .landingBox{
@@ -936,13 +936,8 @@ html, body {
     margin: 0px;
   }
   
-  .weird{
-    color: white; 
-    background: red; 
-  }
-  
   .App{
-    background: white; 
+    background: black; 
   }
 
   body {

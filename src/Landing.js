@@ -8,6 +8,7 @@ class Landing extends Component {
         //this.state = this.props;
         this.state = {
             video: "Videos\\We are Paid to Work Here.webm",
+            selectedProjectIndex: 0,
             projects: [{
                 logo: "Images/raptureLogo.png ",
                 color: "#218F7D",
@@ -173,7 +174,13 @@ class Landing extends Component {
                 class: "Clock"
             }]
         }
+        this.handleClick = this.handleClick.bind(this);
     }
+
+    handleClick(idx) {
+        this.setState({ selectedProjectIndex: idx });
+    }
+
 
     render() {
         /*
@@ -202,7 +209,7 @@ class Landing extends Component {
                         <div className="landingNavItem"><i className="fas fa-envelope"></i></div>
                     </div>
                     <div className="landingVideoContainer">
-                        <video ref="vidRef" className="landingVideo" autoPlay muted loop src={this.state.video} type="video/mp4">
+                        <video ref="vidRef" className="landingVideo" autoPlay muted loop src={this.state.projects[this.state.selectedProjectIndex].video || this.state.video} type="video/mp4">
                             Your browser does not support HTML5 video.
                     </video>
                     </div>
@@ -218,8 +225,9 @@ class Landing extends Component {
                         <button
                             key={idx}
                             type="image"
-                            style={{ background: project.color }}
+                            style={{ background: project.color, opacity: this.state.selectedProjectIndex == idx ? '.5' : '1' }}
                             className="landingBox"
+                            onClick={() => this.handleClick(idx)}
                         >
                             <img src={project.logo} className="landingBoxImage" alt="Project Select" />
                             <p className="landingBoxText">  {project.title} </p>
