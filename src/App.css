@@ -311,49 +311,97 @@ html, body {
   .Rapture:hover{
     background: #005C4A !important;
   }
+
+  .RaptureBar::-webkit-scrollbar-thumb{
+    background-color: #005C4A!important
+  }
   
   .Poll:hover{
     background: #730055 !important;
+  }
+
+  .PollBar::-webkit-scrollbar-thumb{
+    background-color: #730055!important
   }
   
   .TMBG:hover{
     background: #00050D !important;
   }
+
+  .TMBGBar::-webkit-scrollbar-thumb{
+    background-color: #00050D!important
+  }
   
   .Penny:hover{
     background: #004559 !important;
+  }
+
+  .PennyBar::-webkit-scrollbar-thumb{
+    background-color: #004559!important
   }
   
   .Twitch:hover{
     background: #310E71 !important;
   }
+
+  .TwitchBar::-webkit-scrollbar-thumb{
+    background-color: #310E71!important
+  }
   
   .C4:hover{
     background: #CC4C00 !important;
+  }
+
+  .C4Bar::-webkit-scrollbar-thumb{
+    background-color: #CC4C00!important
   }
   
   .Weather:hover{
     background: #004D00 !important;
   }
+
+  .WeatherBar::-webkit-scrollbar-thumb{
+    background-color: #004D00!important
+  }
   
   .Quote:hover{
     background: #004D4D !important;
+  }
+
+  .QuoteBar::-webkit-scrollbar-thumb{
+    background-color: #004D4D!important
   }
   
   .NPC:hover{
     background: #BC0000 !important;
   }
+
+  .NPCBar::-webkit-scrollbar-thumb{
+    background-color: #BC0000!important
+  }
   
   .Wiki:hover{
     background: #004983 !important;
+  }
+
+  .WikiBar::-webkit-scrollbar-thumb{
+    background-color: #004983!important
   }
   
   .Calc:hover{
     background: #532A7C !important;
   }
+
+  .CalcBar::-webkit-scrollbar-thumb{
+    background-color: #532A7C!important
+  }
   
   .Clock:hover{
     background: #B60000 !important;
+  }
+
+  .ClockBar::-webkit-scrollbar-thumb{
+    background-color: #B60000!important
   }
   
   #projects ul{
@@ -1049,7 +1097,8 @@ html, body {
   {
       border-radius: 10px;
       -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-      background-color: #D62929;
+      background-color: white;
+      border: 1px solid white; 
   }
 
   .landingBoxExternalLink{
