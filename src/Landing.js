@@ -211,10 +211,13 @@ class Landing extends Component {
                     <div className="landingVideoContainer">
                         <video ref="vidRef" className="landingVideo" autoPlay muted loop src={this.state.projects[this.state.selectedProjectIndex].video || this.state.video} type="video/mp4">
                             Your browser does not support HTML5 video.
-                    </video>
+                         </video>
+                    </div>
+                    <div className="overlay">
+                    
                     </div>
                     <div className="landingTitleBody">
-                        <div className="landingTitle">Nicolas Crumrine</div>
+                        <div className="landingTitle">{this.state.selectedProjectIndex == 0 ? (<></> ) : ( "Nicolas Crumrine" )}</div>
                         <div className="landingSubTitle">Front End Web Developer</div>
                     </div>
                 </div>
@@ -225,12 +228,38 @@ class Landing extends Component {
                         <button
                             key={idx}
                             type="image"
-                            style={{ background: project.color, opacity: this.state.selectedProjectIndex == idx ? '.5' : '1' }}
+                            style={{ background: project.color }}
                             className="landingBox"
-                            onClick={() => this.handleClick(idx)}
+                            onMouseOver={() => this.handleClick(idx)}
                         >
-                            <img src={project.logo} className="landingBoxImage" alt="Project Select" />
-                            <p className="landingBoxText">  {project.title} </p>
+                            {this.state.selectedProjectIndex == idx ? (
+                                <div className="landingBoxInner" style={{ backgroundImage: `url(${project.logo})` }}>
+                                    <a href={this.state.projects[this.state.selectedProjectIndex].codeLink} className="landingBoxExternalLink" rel="noopener noreferrer" target="_blank">
+                                        <li className={this.state.projects[this.state.selectedProjectIndex].class} style={{ background: this.state.projects[this.state.selectedProjectIndex].color }} id="code-link">
+                                            <i className="fas fa-code fontIcon"></i>See Code
+                                         </li>
+                                    </a>
+                                    <a href={this.state.projects[this.state.selectedProjectIndex].websiteLink} className="landingBoxExternalLink" rel="noopener noreferrer" target="_blank">
+                                        <li className={this.state.projects[this.state.selectedProjectIndex].class} style={{ background: this.state.projects[this.state.selectedProjectIndex].color }} id="website-link">
+                                            <i className="fas fa-external-link-alt fontIcon"></i>Visit Website
+                                       </li>
+                                    </a>
+                                </div>
+                            ) : (
+                                    <div className="landingBoxInner" style={{ backgroundImage: `url(${project.logo})` }}>
+                                        <div className="landingBoxExternalLink" disabled rel="noopener noreferrer" target="_blank">
+                                            <li className={project.class + " hiddenLink"} style={{ background: project.color }} id="code-link">
+                                                <i className="fas fa-code fontIcon"></i>See Code
+                                     </li>
+                                        </div>
+                                        <div className="landingBoxExternalLink" disabled rel="noopener noreferrer" target="_blank">
+                                            <li className={project.class + " hiddenLink"} style={{ background: project.color }} id="website-link">
+                                                <i className="fas fa-external-link-alt fontIcon"></i>Visit Website
+                                   </li>
+                                        </div>
+                                    </div>
+                                )}
+
                         </button>
                     ))}     </div>
                 </div>
@@ -240,38 +269,3 @@ class Landing extends Component {
 }
 
 export default Landing;
-/*
- className="landingParallax">
-                <div className="landingContainer">
-                    <div className="landingNav">
-                        <div className="landingNavItem">About</div>
-                        <div className="landingNavItem"><i className="fab fa-github"></i></div>
-                        <div className="landingNavItem"><i className="fab fa-linkedin-in"></i></div>
-                        <div className="landingNavItem"><i className="fas fa-envelope"></i></div>
-                    </div>
-                    <div className="landingVideoContainer">
-                        <video ref="vidRef" className="landingVideo" autoPlay muted loop src={this.state.video} type="video/mp4">
-                            Your browser does not support HTML5 video.
-                        </video>
-                    </div>
-                    <div className="landingTitleBody">
-                        <div className="landingTitle">Nicolas Crumrine</div>
-                        <div className="landingSubTitle">Front End Web Developer</div>
-                    </div>
-                </div>
-                <div className="landingBottomContainer">
-                    <div className="landingFiltersContainer">
-                    </div>
-                    <div className="landingBoxesContainer">   {this.state.projects.map((project, idx) => (
-                        <button
-                            key={idx}
-                            type="image"
-                            style={{ background: project.color }}
-                            className="landingBox"
-                        >
-                            <img src={project.logo} className="landingBoxImage" alt="Project Select" />
-                            <p className="landingBoxText">  {project.title} </p>
-                        </button>
-                    ))}     </div>
-                </div>
-                    */

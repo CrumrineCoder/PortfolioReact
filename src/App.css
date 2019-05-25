@@ -920,6 +920,20 @@ html, body {
     font-size: 0px;
     margin: 10px;
   }
+
+  .landingBoxInner{
+    background: white;
+    max-width: 150px;
+    max-height: 150px;
+    min-width: 100px;
+    min-height: 100px;
+    padding: 0;
+    border: none;
+    position: relative;
+    font-size: 0px;
+    width: 100%;
+    background-size: cover;
+  }
   
   .landingBoxImage{
     width: 100%;
@@ -1031,4 +1045,36 @@ html, body {
       border-radius: 10px;
       -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
       background-color: #D62929;
+  }
+
+  .landingBoxExternalLink{
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    color: white; 
+    text-decoration: none;
+    height: 50%;
+    list-style-type: none;
+  }
+
+  .landingBoxExternalLink li{
+    height: 75px; 
+    width: 150px;
+  }
+
+  .landingBoxExternalLink li i{
+    margin-top: 30px;
+  }
+
+  .hiddenLink{
+    opacity: 0;  
+  }
+
+  .overlay{
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    background: #000;
+    background: rgba(0,0,0,.7);
+    width: 100%;
+    height: 100%;
   }
