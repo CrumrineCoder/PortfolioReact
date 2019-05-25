@@ -8,7 +8,7 @@ class Landing extends Component {
         //this.state = this.props;
         this.state = {
             video: "Videos\\We are Paid to Work Here.webm",
-            selectedProjectIndex: 0,
+            selectedProjectIndex: null,
             projects: [{
                 logo: "Images/raptureLogo.png ",
                 color: "#218F7D",
@@ -209,63 +209,92 @@ class Landing extends Component {
                         <div className="landingNavItem"><i className="fas fa-envelope"></i></div>
                     </div>
                     <div className="landingVideoContainer">
-                        <video ref="vidRef" className="landingVideo" autoPlay muted loop src={this.state.projects[this.state.selectedProjectIndex].video || this.state.video} type="video/mp4">
-                            Your browser does not support HTML5 video.
+                        {this.state.selectedProjectIndex !== null ? (
+                            <video ref="vidRef" className="landingVideo" autoPlay muted loop src={this.state.projects[this.state.selectedProjectIndex].video || this.state.video} type="video/mp4">
+                                Your browser does not support HTML5 video.
                          </video>
+                        ) : (
+                                <video ref="vidRef" className="landingVideo" autoPlay muted loop src={this.state.video} type="video/mp4">
+                                    Your browser does not support HTML5 video.
+                         </video>
+                            )}
+
                     </div>
                     <div className="overlay">
-                    
+
                     </div>
                     <div className="landingTitleBody">
-                        <div className="landingTitle">{this.state.selectedProjectIndex == 0 ? (<></> ) : ( "Nicolas Crumrine" )}</div>
-                        <div className="landingSubTitle">Front End Web Developer</div>
-                    </div>
-                </div>
-                <div className="landingBottomContainer">
-                    <div className="landingFiltersContainer">
-                    </div>
-                    <div className="landingBoxesContainer customScrollBar">   {this.state.projects.map((project, idx) => (
-                        <button
-                            key={idx}
-                            type="image"
-                            style={{ background: project.color }}
-                            className="landingBox"
-                            onMouseOver={() => this.handleClick(idx)}
-                        >
-                            {this.state.selectedProjectIndex == idx ? (
-                                <div className="landingBoxInner" style={{ backgroundImage: `url(${project.logo})` }}>
-                                    <a href={this.state.projects[this.state.selectedProjectIndex].codeLink} className="landingBoxExternalLink" rel="noopener noreferrer" target="_blank">
-                                        <li className={this.state.projects[this.state.selectedProjectIndex].class} style={{ background: this.state.projects[this.state.selectedProjectIndex].color }} id="code-link">
-                                            <i className="fas fa-code fontIcon"></i>See Code
-                                         </li>
-                                    </a>
-                                    <a href={this.state.projects[this.state.selectedProjectIndex].websiteLink} className="landingBoxExternalLink" rel="noopener noreferrer" target="_blank">
-                                        <li className={this.state.projects[this.state.selectedProjectIndex].class} style={{ background: this.state.projects[this.state.selectedProjectIndex].color }} id="website-link">
-                                            <i className="fas fa-external-link-alt fontIcon"></i>Visit Website
-                                       </li>
+                        <div className="landingTitle">{this.state.selectedProjectIndex !== null ? (this.state.projects[this.state.selectedProjectIndex].title) : ("Nicolas Crumrine")}</div>
+                        {this.state.selectedProjectIndex !== null ? (
+                            <div>
+                                <div className="landingAdditionalInfo">
+                                    <ul>
+                                        <div id="projectFrontEnd">
+                                            <li className="frontend">  {this.state.projects[this.state.selectedProjectIndex].frontend} </li>
+                                        </div>
+                                        <div id="projectBackEnd">
+                                            <li className="backend">  {this.state.projects[this.state.selectedProjectIndex].backend} </li>
+                                        </div>
+                                    </ul>
+                                    <p>  {this.state.projects[this.state.selectedProjectIndex].shortDesc}</p>
+                                    <p> {this.state.projects[this.state.selectedProjectIndex].productPaper} </p>
+                                    <a onClick={this.userClicksPrevious} href={this.state.projects[this.state.selectedProjectIndex].prevWebsiteLink} style={{ display: this.state.projects[this.state.selectedProjectIndex].prevWebsiteLink != undefined ? 'block' : 'none' }} className="externalLinks" rel="noopener noreferrer" target="_blank">
+                                        <div id="prev-code-link">
+                                            <i className="fas fa-external-link-alt fontIcon" rgb="(0,0,0)"> </i>See Previous Version of Website
+                                            </div>
                                     </a>
                                 </div>
+                            </div>
                             ) : (
+                                < div className="landingSubTitle">Front End Web Developer</div>
+                            )}
+                    </div>
+                    </div>
+                    <div className="landingBottomContainer">
+                        <div className="landingFiltersContainer">
+                        </div>
+                        <div className="landingBoxesContainer customScrollBar">   {this.state.projects.map((project, idx) => (
+                            <button
+                                key={idx}
+                                type="image"
+                                style={{ background: project.color }}
+                                className="landingBox"
+                                onMouseOver={() => this.handleClick(idx)}
+                            >
+                                {this.state.selectedProjectIndex == idx ? (
                                     <div className="landingBoxInner" style={{ backgroundImage: `url(${project.logo})` }}>
-                                        <div className="landingBoxExternalLink" disabled rel="noopener noreferrer" target="_blank">
-                                            <li className={project.class + " hiddenLink"} style={{ background: project.color }} id="code-link">
+                                        <a href={this.state.projects[this.state.selectedProjectIndex].codeLink} className="landingBoxExternalLink" rel="noopener noreferrer" target="_blank">
+                                            <li className={this.state.projects[this.state.selectedProjectIndex].class} style={{ background: this.state.projects[this.state.selectedProjectIndex].color }} id="code-link">
                                                 <i className="fas fa-code fontIcon"></i>See Code
-                                     </li>
-                                        </div>
-                                        <div className="landingBoxExternalLink" disabled rel="noopener noreferrer" target="_blank">
-                                            <li className={project.class + " hiddenLink"} style={{ background: project.color }} id="website-link">
+                                         </li>
+                                        </a>
+                                        <a href={this.state.projects[this.state.selectedProjectIndex].websiteLink} className="landingBoxExternalLink" rel="noopener noreferrer" target="_blank">
+                                            <li className={this.state.projects[this.state.selectedProjectIndex].class} style={{ background: this.state.projects[this.state.selectedProjectIndex].color }} id="website-link">
                                                 <i className="fas fa-external-link-alt fontIcon"></i>Visit Website
-                                   </li>
-                                        </div>
+                                       </li>
+                                        </a>
                                     </div>
-                                )}
+                                ) : (
+                                        <div className="landingBoxInner" style={{ backgroundImage: `url(${project.logo})` }}>
+                                            <div className="landingBoxExternalLink" disabled rel="noopener noreferrer" target="_blank">
+                                                <li className={project.class + " hiddenLink"} style={{ background: project.color }} id="code-link">
+                                                    <i className="fas fa-code fontIcon"></i>See Code
+                                     </li>
+                                            </div>
+                                            <div className="landingBoxExternalLink" disabled rel="noopener noreferrer" target="_blank">
+                                                <li className={project.class + " hiddenLink"} style={{ background: project.color }} id="website-link">
+                                                    <i className="fas fa-external-link-alt fontIcon"></i>Visit Website
+                                   </li>
+                                            </div>
+                                        </div>
+                                    )}
 
-                        </button>
-                    ))}     </div>
-                </div>
-            </div>
-        )
-    }
-}
-
+                            </button>
+                        ))}     </div>
+                    </div>
+                </div >
+                )
+            }
+        }
+        
 export default Landing;
