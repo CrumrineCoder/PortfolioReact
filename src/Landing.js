@@ -7,7 +7,8 @@ class Landing extends Component {
         super(props);
         //this.state = this.props;
         this.state = {
-            video: "Videos\\We are Paid to Work Here.webm",
+           // video: "Videos\\We are Paid to Work Here.webm",
+            video: "Videos\\portfolioMetro.mp4",
             selectedProjectIndex: null,
             projects: [{
                 logo: "Images/raptureLogo.png ",
