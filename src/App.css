@@ -945,12 +945,14 @@ html, body {
   }
   
   .landingTitle{
-    font-size: 32px; 
+    font-size: 60px; 
     font-family: 'Geostar', cursive;
+    font-family: 'Staatliches', cursive;
   }
   
   .landingSubTitle{
     font-size: 16px; 
+    font-family: 'Yantramanav', sans-serif;
   }
   
   .landingBoxesContainer{
@@ -1136,4 +1138,12 @@ html, body {
   .landingAdditionalInfo{
     padding: 5px;
     border-radius: 15px;
+    font-family: 'Yantramanav', sans-serif;
+    font-weight: 400px;
+    font-size: 16px;
+  }
+
+  .landingAdditionalInfoPills{
+    font-size: 14px; 
+    font-family: 'Yantramanav', sans-serif;
   }

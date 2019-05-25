@@ -228,7 +228,7 @@ class Landing extends Component {
                         {this.state.selectedProjectIndex !== null ? (
                             <div>
                                 <div className="landingAdditionalInfo">
-                                    <ul>
+                                    <ul className="landingAdditionalInfoPills">
                                         <div id="projectFrontEnd">
                                             <li className="frontend">  {this.state.projects[this.state.selectedProjectIndex].frontend} </li>
                                         </div>
