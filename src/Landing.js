@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
+import { Spring } from 'react-spring/renderprops';
 
 class Landing extends Component {
   constructor(props) {
@@ -17,7 +18,7 @@ class Landing extends Component {
           title: "Rapture Fashion",
           shortDesc: "React and Shopify Boutique Fashion site",
           frontend:
-          "React.js, Redux.js, react-router, HTML5, CSS3, Bootstrap 4",
+            "React.js, Redux.js, react-router, HTML5, CSS3, Bootstrap 4",
           backend: "JavaScript, Shopify Storefront API, Firebase",
           productPaper:
             "This website was a study on UX research, UI design, marketing, and how to integrate Shopify with React all so I can build small business websites.",
@@ -42,7 +43,7 @@ class Landing extends Component {
             "Taught myself Redux and react-router with a backend. This version uses Firebase, Node version: https://github.com/CrumrineCoder/PollingReactNodeBase",
           codeLink: "https://github.com/CrumrineCoder/Polling",
           websiteLink: "https://polling-269dc.firebaseapp.com/#/",
-         // prevWebsiteLink: "https://joinordie.glitch.me/",
+          // prevWebsiteLink: "https://joinordie.glitch.me/",
           caseStudyLink:
             "https://nicolascrumrine.herokuapp.com/#/posts/5c253ffad802b53cdcc17e00",
           video: "Videos/pollingReactEdited.mp4",
@@ -256,6 +257,7 @@ class Landing extends Component {
         this.state.projects[this.state.selectedProjectIndex].caseStudyLink
       );
     }
+
     return (
       <div className="landingParallax">
         <div className="landingContainer">
@@ -268,8 +270,8 @@ class Landing extends Component {
               {this.state.selectedProjectIndex !== null ? (
                 <h2 className="landingNavProfileName">Nicolas Crumrine</h2>
               ) : (
-                <h2 className="landingNavProfileName" />
-              )}
+                  <h2 className="landingNavProfileName" />
+                )}
             </div>
 
             {this.state.selectedProjectIndex !== null ? (
@@ -323,44 +325,44 @@ class Landing extends Component {
                 </a>
               </div>
             ) : (
-              <div className="landingNavRightHandContainer">
-                <a
-                  href="https://nicolascrumrine.com/#/about"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  className="landingNavItem"
-                >
-                  About
+                <div className="landingNavRightHandContainer">
+                  <a
+                    href="https://nicolascrumrine.com/#/about"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    className="landingNavItem"
+                  >
+                    About
                 </a>
-                <a
-                  href="https://github.com/CrumrineCoder"
-                  id="github"
-                  title="Github"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  className="landingNavItem"
-                >
-                  <i className="fab fa-github" />
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/nicolas-crumrine-50899b120/"
-                  title="link"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  className="landingNavItem"
-                >
-                  <i className="fab fa-linkedin-in" />
-                </a>
-                <a
-                  href="mailto:crumrinecoding@gmail.com"
-                  title="Email"
-                  rel="noopener noreferrer"
-                  className="landingNavItem"
-                >
-                  <i className="fas fa-envelope" />
-                </a>
-              </div>
-            )}
+                  <a
+                    href="https://github.com/CrumrineCoder"
+                    id="github"
+                    title="Github"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    className="landingNavItem"
+                  >
+                    <i className="fab fa-github" />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/nicolas-crumrine-50899b120/"
+                    title="link"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    className="landingNavItem"
+                  >
+                    <i className="fab fa-linkedin-in" />
+                  </a>
+                  <a
+                    href="mailto:crumrinecoding@gmail.com"
+                    title="Email"
+                    rel="noopener noreferrer"
+                    className="landingNavItem"
+                  >
+                    <i className="fas fa-envelope" />
+                  </a>
+                </div>
+              )}
           </div>
           <div className="landingVideoContainer">
             {this.state.selectedProjectIndex !== null ? (
@@ -379,91 +381,96 @@ class Landing extends Component {
                 Your browser does not support HTML5 video.
               </video>
             ) : (
-              <video
-                ref="vidRef"
-                className="landingVideo"
-                autoPlay
-                muted
-                loop
-                src={this.state.video}
-                type="video/mp4"
-              >
-                Your browser does not support HTML5 video.
+                <video
+                  ref="vidRef"
+                  className="landingVideo"
+                  autoPlay
+                  muted
+                  loop
+                  src={this.state.video}
+                  type="video/mp4"
+                >
+                  Your browser does not support HTML5 video.
               </video>
-            )}
+              )}
           </div>
           <div className="overlay" />
-          <div className="landingTitleBody">
-            <div className="landingTitle">
-              {this.state.selectedProjectIndex !== null
-                ? this.state.projects[this.state.selectedProjectIndex].title
-                : "Nicolas Crumrine"}
-            </div>
-            {this.state.selectedProjectIndex !== null ? (
-              <div>
-                <div className="landingAdditionalInfo">
-                  <ul className="landingAdditionalInfoPills">
-                    <div id="projectFrontEnd">
-                      <li className="frontend">
-                        {
-                          this.state.projects[this.state.selectedProjectIndex]
-                            .frontend
-                        }
-                      </li>
-                    </div>
-                    <div id="projectBackEnd">
-                      <li className="backend">
-                        {
-                          this.state.projects[this.state.selectedProjectIndex]
-                            .backend
-                        }
-                      </li>
-                    </div>
-                  </ul>
-                  <p>
-                    {
-                      this.state.projects[this.state.selectedProjectIndex]
-                        .shortDesc
-                    }
-                  </p>
-                  <p>
-                    {
-                      this.state.projects[this.state.selectedProjectIndex]
-                        .productPaper
-                    }
-                  </p>
-                  <a
-                    onClick={this.userClicksPrevious}
-                    href={
-                      this.state.projects[this.state.selectedProjectIndex]
-                        .prevWebsiteLink
-                    }
-                    style={{
-                      display:
-                        this.state.projects[this.state.selectedProjectIndex]
-                          .prevWebsiteLink != undefined
-                          ? "block"
-                          : "none"
-                    }}
-                    className="externalLinks"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    <div id="prev-code-link">
-                      <i
-                        className="fas fa-external-link-alt fontIcon"
-                        rgb="(0,0,0)"
-                      >
-                      </i>
-                      See Previous Version of Website
-                    </div>
-                  </a>
+          <Spring from={{ opacity: 0, marginTop: -1000 }} to={{ opacity: 1, marginTop: 0 }}>
+            {props => (
+              <div style={props} className="landingTitleBody">
+                <div className="landingTitle">
+                  {this.state.selectedProjectIndex !== null
+                    ? this.state.projects[this.state.selectedProjectIndex].title
+                    : "Nicolas Crumrine"}
                 </div>
+                {this.state.selectedProjectIndex !== null ? (
+                  <div>
+                    <div className="landingAdditionalInfo">
+                      <ul className="landingAdditionalInfoPills">
+                        <div id="projectFrontEnd">
+                          <li className="frontend">
+                            {
+                              this.state.projects[this.state.selectedProjectIndex]
+                                .frontend
+                            }
+                          </li>
+                        </div>
+                        <div id="projectBackEnd">
+                          <li className="backend">
+                            {
+                              this.state.projects[this.state.selectedProjectIndex]
+                                .backend
+                            }
+                          </li>
+                        </div>
+                      </ul>
+                      <p>
+                        {
+                          this.state.projects[this.state.selectedProjectIndex]
+                            .shortDesc
+                        }
+                      </p>
+                      <p>
+                        {
+                          this.state.projects[this.state.selectedProjectIndex]
+                            .productPaper
+                        }
+                      </p>
+                      <a
+                        onClick={this.userClicksPrevious}
+                        href={
+                          this.state.projects[this.state.selectedProjectIndex]
+                            .prevWebsiteLink
+                        }
+                        style={{
+                          display:
+                            this.state.projects[this.state.selectedProjectIndex]
+                              .prevWebsiteLink != undefined
+                              ? "block"
+                              : "none"
+                        }}
+                        className="externalLinks"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        <div id="prev-code-link">
+                          <i
+                            className="fas fa-external-link-alt fontIcon"
+                            rgb="(0,0,0)"
+                          >
+                          </i>
+                          See Previous Version of Website
+                    </div>
+                      </a>
+                    </div>
+                  </div>
+                ) : (
+                    <div className="landingSubTitle">Front End Web Developer</div>
+                  )}
               </div>
-            ) : (
-              <div className="landingSubTitle">Front End Web Developer</div>
-            )}
-          </div>
+            )
+            }
+          </Spring>
         </div>
         <div className="landingBottomContainer">
           <div className="landingFiltersContainer" />
@@ -471,7 +478,7 @@ class Landing extends Component {
             className={
               this.state.selectedProjectIndex !== null
                 ? this.state.projects[this.state.selectedProjectIndex].class +
-                  "Bar landingBoxesContainer customScrollBar"
+                "Bar landingBoxesContainer customScrollBar"
                 : "landingBoxesContainer customScrollBar"
             }
           >
@@ -553,45 +560,45 @@ class Landing extends Component {
                     )}
                   </div>
                 ) : (
-                  <div
-                    className="landingBoxInner"
-                    style={{ backgroundImage: `url(${project.logo})` }}
-                  >
                     <div
-                      className="landingBoxExternalLink"
-                      disabled
-                      rel="noopener noreferrer"
-                      target="_blank"
+                      className="landingBoxInner"
+                      style={{ backgroundImage: `url(${project.logo})` }}
                     >
-                      <li
-                        className={project.class + " hiddenLink"}
-                        style={{ background: project.color }}
-                        id="code-link"
+                      <div
+                        className="landingBoxExternalLink"
+                        disabled
+                        rel="noopener noreferrer"
+                        target="_blank"
                       >
-                        <div>
-                          <i className="fas fa-code fontIcon" />See Code
+                        <li
+                          className={project.class + " hiddenLink"}
+                          style={{ background: project.color }}
+                          id="code-link"
+                        >
+                          <div>
+                            <i className="fas fa-code fontIcon" />See Code
                         </div>
-                      </li>
-                    </div>
-                    <div
-                      className="landingBoxExternalLink"
-                      disabled
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      <li
-                        className={project.class + " hiddenLink"}
-                        style={{ background: project.color }}
-                        id="website-link"
+                        </li>
+                      </div>
+                      <div
+                        className="landingBoxExternalLink"
+                        disabled
+                        rel="noopener noreferrer"
+                        target="_blank"
                       >
-                        <div>
-                          <i className="fas fa-external-link-alt fontIcon" />
-                          Visit Website
+                        <li
+                          className={project.class + " hiddenLink"}
+                          style={{ background: project.color }}
+                          id="website-link"
+                        >
+                          <div>
+                            <i className="fas fa-external-link-alt fontIcon" />
+                            Visit Website
                         </div>
-                      </li>
+                        </li>
+                      </div>
                     </div>
-                  </div>
-                )}
+                  )}
               </button>
             ))}
           </div>

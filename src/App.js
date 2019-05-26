@@ -6,6 +6,8 @@ import Landing from "./Landing.js";
 import Boxes from "./Boxes.js";
 import Project from "./Project.js";
 import ProjectPreview from "./ProjectPreview.js";
+//import Blotter from "blotter";
+//import Blotter from "./scripts/blotter.min.js"
 
 class App extends Component {
 
@@ -25,7 +27,7 @@ class App extends Component {
         caseStudyLink: "https://nicolascrumrine.com/#/posts/-LecEwsYvjJNcwIJJjao",
         video: "Videos/raptureFashion.mp4",
         class: "Rapture"
-      },{
+      }, {
         logo: "Images/votingAppLogo.png ",
         color: "#A61C88",
         title: "Polling",
@@ -91,7 +93,7 @@ class App extends Component {
         websiteLink: "https://tmbg.herokuapp.com/",
         video: "Videos/tmbgEdited.mp4",
         class: "TMBG"
-      },{
+      }, {
         logo: " Images/connectFourAppLogo.png ",
         color: "#FF7F11",
         picture: " Images/connectFourApp.png ",
@@ -185,6 +187,17 @@ class App extends Component {
     this.userClicksEmail = this.userClicksEmail.bind(this);
   }
 
+  componentDidMount() {
+    const links = ["https://cdn.rawgit.com/bradley/Blotter/3007fe6e/build/blotter.min.js", "https://cdn.rawgit.com/bradley/Blotter/3007fe6e/build/materials/channelSplitMaterial.js", "https://cdn.rawgit.com/bradley/Blotter/3007fe6e/build/materials/fliesMaterial.js"]
+
+    for (var i=0; i<links.length; i++){
+      const script = document.createElement("script");
+      script.src = links[i];
+      script.async = true;
+      document.body.appendChild(script);
+    }
+  }
+
   initializeReactGA() {
     ReactGA.initialize('UA-114290573-1');
     ReactGA.pageview('/homepage');
@@ -208,41 +221,44 @@ class App extends Component {
     this.setState({ mouseIndex: mouseIdx });
   }
 
-  userClicksAboutMe(){
+  userClicksAboutMe() {
     ReactGA.event({
       category: 'Nav',
       action: 'About Me'
     });
   }
 
-  userClicksGithub(){
+  userClicksGithub() {
     ReactGA.event({
       category: 'Nav',
       action: 'Github'
     });
   }
 
-  userClicksLinkedIn(){
+  userClicksLinkedIn() {
     ReactGA.event({
       category: 'Nav',
       action: 'LinkedIn'
     });
   }
 
-  userClicksEmail(){
+  userClicksEmail() {
     ReactGA.event({
       category: 'Nav',
       action: 'Email'
     });
   }
 
+
   render() {
+    // Define text style
+
+    
     return (
       <div className="App">
-
+     <Landing></Landing>
       
-        <Landing></Landing>
-       
+
       </div>
     );
   }
