@@ -1055,6 +1055,7 @@ html, body {
     font-size: 0px;
     margin: 10px;
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.285), 0px 10px 10px rgba(0, 0, 0, 0.394);
+    border-radius: 15px;
   }
 
   .landingBoxInner{
@@ -1069,6 +1070,7 @@ html, body {
     font-size: 0px;
     width: 100%;
     background-size: cover;
+    border-radius: 15px;
   }
   
   .landingBoxImage{
@@ -1204,6 +1206,18 @@ html, body {
   .landingBoxExternalLink li{
     width: 150px;
     position: relative;
+  }
+
+ .landingBoxExternalLink:nth-child(1) li{
+    border-radius: 15px 15px 0px 0px;
+  }
+
+  .landingBoxExternalLink2:nth-child(2) li{
+    border-radius: 0px 0px 15px 15px;
+  }
+
+  .landingBoxExternalLink3:nth-child(3) li{
+    border-radius: 0px 0px 15px 15px;
   }
 
   .landingBoxExternalLink li div{
