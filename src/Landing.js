@@ -7,8 +7,9 @@ class Landing extends Component {
         super(props);
         //this.state = this.props;
         this.state = {
-           // video: "Videos\\We are Paid to Work Here.webm",
+            // video: "Videos\\We are Paid to Work Here.webm",
             video: "Videos\\portfolioMetro.mp4",
+            profile: "Images\\profileNicMay2019.jpg",
             selectedProjectIndex: null,
             projects: [{
                 logo: "Images/raptureLogo.png ",
@@ -200,14 +201,39 @@ class Landing extends Component {
                 });
             }
         };
+        if (this.state.selectedProjectIndex) {
+            console.log(this.state.projects[this.state.selectedProjectIndex].caseStudyLink);
+        }
         return (
             <div className="landingParallax">
                 <div className="landingContainer">
                     <div className="landingNav">
-                        <div className="landingNavItem">About</div>
-                        <div className="landingNavItem"><i className="fab fa-github"></i></div>
-                        <div className="landingNavItem"><i className="fab fa-linkedin-in"></i></div>
-                        <div className="landingNavItem"><i className="fas fa-envelope"></i></div>
+
+                        <div className="landingNavLeftHandContainer">
+                            <img className="landingNavProfileImage" src={this.state.profile} />
+                            {this.state.selectedProjectIndex !== null ? (
+                                <h2 className="landingNavProfileName">Nicolas Crumrine</h2>
+                            ) : (
+                                    <h2 className="landingNavProfileName"></h2>
+                                )}
+                        </div>
+
+
+                        {this.state.selectedProjectIndex !== null ? (
+                            <div className="landingNavRightHandContainer">
+                                <a href="https://nicolascrumrine.com/#/about" rel="noopener noreferrer" target="_blank" className={this.state.projects[this.state.selectedProjectIndex].class + " landingNavItem"}>About</a>
+                                <a href="https://github.com/CrumrineCoder" id="github" title="Github" rel="noopener noreferrer" target="_blank" className={this.state.projects[this.state.selectedProjectIndex].class + " landingNavItem"}><i className="fab fa-github"></i></a>
+                                <a href="https://www.linkedin.com/in/nicolas-crumrine-50899b120/" title="link" rel="noopener noreferrer" target="_blank" className={this.state.projects[this.state.selectedProjectIndex].class + " landingNavItem"}><i className="fab fa-linkedin-in"></i></a>
+                                <a href="mailto:crumrinecoding@gmail.com" title="Email" rel="noopener noreferrer" className={this.state.projects[this.state.selectedProjectIndex].class + " landingNavItem"}><i className="fas fa-envelope"></i></a>
+                            </div>
+                        ) : (
+                                <div className="landingNavRightHandContainer">
+                                    <a href="https://nicolascrumrine.com/#/about" rel="noopener noreferrer" target="_blank" className="landingNavItem">About</a>
+                                    <a href="https://github.com/CrumrineCoder" id="github" title="Github" rel="noopener noreferrer" target="_blank" className="landingNavItem"><i className="fab fa-github"></i></a>
+                                    <a href="https://www.linkedin.com/in/nicolas-crumrine-50899b120/" title="link" rel="noopener noreferrer" target="_blank" className="landingNavItem"><i className="fab fa-linkedin-in"></i></a>
+                                    <a href="mailto:crumrinecoding@gmail.com" title="Email" rel="noopener noreferrer" className="landingNavItem"><i className="fas fa-envelope"></i></a>
+                                </div>
+                            )}
                     </div>
                     <div className="landingVideoContainer">
                         {this.state.selectedProjectIndex !== null ? (
@@ -246,62 +272,80 @@ class Landing extends Component {
                                     </a>
                                 </div>
                             </div>
-                            ) : (
+                        ) : (
                                 < div className="landingSubTitle">Front End Web Developer</div>
                             )}
                     </div>
-                    </div>
-                    <div className="landingBottomContainer">
-                        <div className="landingFiltersContainer">
-                        </div>
-                        <div className={
-                             this.state.selectedProjectIndex !== null ? (
-                                 this.state.projects[this.state.selectedProjectIndex].class + "Bar landingBoxesContainer customScrollBar"
-                                 ) : (
-                                     "landingBoxesContainer customScrollBar"
-                                )
-                            }>   {this.state.projects.map((project, idx) => (
-                            <button
-                                key={idx}
-                                type="image"
-                                style={{ background: project.color }}
-                                className="landingBox"
-                                onMouseOver={() => this.handleClick(idx)}
-                            >
-                                {this.state.selectedProjectIndex == idx ? (
-                                    <div className="landingBoxInner" style={{ backgroundImage: `url(${project.logo})` }}>
-                                        <a href={this.state.projects[this.state.selectedProjectIndex].codeLink} className="landingBoxExternalLink" rel="noopener noreferrer" target="_blank">
-                                            <li className={this.state.projects[this.state.selectedProjectIndex].class} style={{ background: this.state.projects[this.state.selectedProjectIndex].color }} id="code-link">
-                                                <i className="fas fa-code fontIcon"></i>See Code
-                                         </li>
-                                        </a>
-                                        <a href={this.state.projects[this.state.selectedProjectIndex].websiteLink} className="landingBoxExternalLink" rel="noopener noreferrer" target="_blank">
-                                            <li className={this.state.projects[this.state.selectedProjectIndex].class} style={{ background: this.state.projects[this.state.selectedProjectIndex].color }} id="website-link">
-                                                <i className="fas fa-external-link-alt fontIcon"></i>Visit Website
-                                       </li>
-                                        </a>
-                                    </div>
-                                ) : (
-                                        <div className="landingBoxInner" style={{ backgroundImage: `url(${project.logo})` }}>
-                                            <div className="landingBoxExternalLink" disabled rel="noopener noreferrer" target="_blank">
-                                                <li className={project.class + " hiddenLink"} style={{ background: project.color }} id="code-link">
-                                                    <i className="fas fa-code fontIcon"></i>See Code
-                                     </li>
-                                            </div>
-                                            <div className="landingBoxExternalLink" disabled rel="noopener noreferrer" target="_blank">
-                                                <li className={project.class + " hiddenLink"} style={{ background: project.color }} id="website-link">
-                                                    <i className="fas fa-external-link-alt fontIcon"></i>Visit Website
-                                   </li>
-                                            </div>
-                                        </div>
-                                    )}
-
-                            </button>
-                        ))}     </div>
-                    </div>
                 </div >
-                )
-            }
-        }
-        
+                <div className="landingBottomContainer">
+                    <div className="landingFiltersContainer">
+                    </div>
+                    <div className={
+                        this.state.selectedProjectIndex !== null ? (
+                            this.state.projects[this.state.selectedProjectIndex].class + "Bar landingBoxesContainer customScrollBar"
+                        ) : (
+                                "landingBoxesContainer customScrollBar"
+                            )
+                    }>   {this.state.projects.map((project, idx) => (
+                        <button
+                            key={idx}
+                            type="image"
+                            style={{ background: project.color }}
+                            className="landingBox"
+                            onMouseOver={() => this.handleClick(idx)}
+                        >
+                            {this.state.selectedProjectIndex == idx ? (
+                                <div className="landingBoxInner" style={{ backgroundImage: `url(${project.logo})` }}>
+
+                                    <a href={project.codeLink} className={project.caseStudyLink === undefined ? ("landingBoxExternalLink landingBoxExternalLink2") : ("landingBoxExternalLink landingBoxExternalLink3")} rel="noopener noreferrer" target="_blank">
+                                        <li className={project.class} style={{ background: project.color }} id="code-link">
+                                            <div>
+                                                <i className="fas fa-code fontIcon"></i>See Code
+                                            </div>
+                                        </li>
+                                    </a>
+                                    <a href={project.websiteLink} className={project.caseStudyLink === undefined ? ("landingBoxExternalLink landingBoxExternalLink2") : ("landingBoxExternalLink landingBoxExternalLink3")} rel="noopener noreferrer" target="_blank">
+                                        <li className={project.class} style={{ background: project.color }} id="website-link">
+                                            <div>
+                                                <i className="fas fa-external-link-alt fontIcon"></i>Visit Website
+                                            </div>
+                                        </li>
+                                    </a>
+                                    {project.caseStudyLink !== undefined &&
+                                        <a href={project.caseStudyLink} className={project.caseStudyLink === undefined ? ("landingBoxExternalLink landingBoxExternalLink2") : ("landingBoxExternalLink landingBoxExternalLink3")} rel="noopener noreferrer" target="_blank">
+                                            <li className={project.class} style={{ background: project.color }} id="case-link">
+                                                <div>
+                                                    <i className="fas fa-book-open fontIcon"></i>Read Case Study
+                                                </div>
+                                            </li>
+                                        </a>
+                                    }
+                                </div>
+                            ) : (
+                                    <div className="landingBoxInner" style={{ backgroundImage: `url(${project.logo})` }}>
+                                        <div className="landingBoxExternalLink" disabled rel="noopener noreferrer" target="_blank">
+                                            <li className={project.class + " hiddenLink"} style={{ background: project.color }} id="code-link">
+                                                <div>
+                                                    <i className="fas fa-code fontIcon"></i>See Code
+                                                </div>
+                                            </li>
+                                        </div>
+                                        <div className="landingBoxExternalLink" disabled rel="noopener noreferrer" target="_blank">
+                                            <li className={project.class + " hiddenLink"} style={{ background: project.color }} id="website-link">
+                                                <div>
+                                                    <i className="fas fa-external-link-alt fontIcon"></i>Visit Website
+                                                </div>
+                                            </li>
+                                        </div>
+                                    </div>
+                                )}
+
+                        </button>
+                    ))}     </div>
+                </div>
+            </div >
+        )
+    }
+}
+
 export default Landing;
