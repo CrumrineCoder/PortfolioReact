@@ -546,8 +546,7 @@ class Landing extends Component {
                           id="case-link"
                         >
                           <div>
-                            <i className="fas fa-book-open fontIcon" />Read Case
-                            Study
+                            <i className="fas fa-book-open fontIcon" />Case Study
                           </div>
                         </li>
                       </a>
