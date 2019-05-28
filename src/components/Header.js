@@ -9,6 +9,14 @@ class Header extends Component {
         }
     }
 
+    componentWillMount(){
+        this.setState({
+            profile: this.props.profile,
+            selectedProjectIndex: this.props.selectedProjectIndex,
+            projects: this.props.projects
+        })
+    }
+
     render() {
         return (
             <div className="landingNav">

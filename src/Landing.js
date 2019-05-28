@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import Slider from "react-slick";
 import { Spring } from 'react-spring/renderprops';
+
+import Header from "./components/Header.js";
 
 class Landing extends Component {
   constructor(props) {
@@ -239,7 +240,11 @@ class Landing extends Component {
     return (
       <div className="landingParallax">
         <div className="landingContainer">
-       
+          <Header
+            profile={this.state.profile}
+            selectedProjectIndex={this.state.selectedProjectIndex}
+            projects={this.state.projects}
+          ></Header>
           <div className="landingVideoContainer">
             {this.state.selectedProjectIndex !== null ? (
               <video
