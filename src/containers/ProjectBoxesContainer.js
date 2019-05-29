@@ -17,7 +17,7 @@ class ProjectBoxesContainer extends Component {
                         : "landingBoxesContainer customScrollBar"
                 }
             >
-                {this.state.projects.map((project, idx) => (
+                {this.props.projects.map((project, idx) => (
                     <ProjectBox
                     selectedProjectIndex={this.props.selectedProjectIndex}
                     project={project}
