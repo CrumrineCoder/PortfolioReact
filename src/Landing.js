@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import { Spring } from 'react-spring/renderprops';
 
 import Header from "./components/Header.js";
+import Video from "./components/Video.js";
+import ProjectInfo from "./components/ProjectInfo.js";
 
 class Landing extends Component {
   constructor(props) {
@@ -9,8 +10,7 @@ class Landing extends Component {
     //this.state = this.props;
     this.state = {
       // video: "Videos\\We are Paid to Work Here.webm",
-      video: "Videos\\portfolioMetro.mp4",
-      profile: "Images\\profileNicMay2019.jpg",
+      noProjectSelected: true,
       selectedProjectIndex: null,
       projects: [
         {
@@ -233,7 +233,7 @@ class Landing extends Component {
   }
 
   handleClick(idx) {
-    this.setState({ selectedProjectIndex: idx });
+    this.setState({ selectedProjectIndex: idx, noProjectSelected: false });
   }
 
   render() {
@@ -241,123 +241,23 @@ class Landing extends Component {
       <div className="landingParallax">
         <div className="landingContainer">
           <Header
-            profile={this.state.profile}
             selectedProjectIndex={this.state.selectedProjectIndex}
-            projects={this.state.projects}
-          ></Header>
-          <div className="landingVideoContainer">
-            {this.state.selectedProjectIndex !== null ? (
-              <video
-                ref="vidRef"
-                className="landingVideo"
-                autoPlay
-                muted
-                loop
-                src={
-                  this.state.projects[this.state.selectedProjectIndex].video ||
-                  this.state.video
-                }
-                type="video/mp4"
-              >
-                Your browser does not support HTML5 video.
-              </video>
-            ) : (
-                <video
-                  ref="vidRef"
-                  className="landingVideo"
-                  autoPlay
-                  muted
-                  loop
-                  src={this.state.video}
-                  type="video/mp4"
-                >
-                  Your browser does not support HTML5 video.
-              </video>
-              )}
-          </div>
-          <div className="overlay" />
-          <Spring from={{ opacity: 0, marginTop: -1000 }} to={{ opacity: 1, marginTop: 0 }}>
-            {props => (
-              <div style={props} className="landingTitleBody">
-                <div className="landingTitle">
-                  {this.state.selectedProjectIndex !== null
-                    ? this.state.projects[this.state.selectedProjectIndex].title
-                    : "Nicolas Crumrine"}
-                </div>
-                {this.state.selectedProjectIndex !== null ? (
-                  <div>
-                    <div className="landingAdditionalInfo">
-                      <ul className="landingAdditionalInfoPills">
-                        <div id="projectFrontEnd">
-                          <li className="frontend">
-                            {
-                              this.state.projects[this.state.selectedProjectIndex]
-                                .frontend
-                            }
-                          </li>
-                        </div>
-                        <div id="projectBackEnd">
-                          <li className="backend">
-                            {
-                              this.state.projects[this.state.selectedProjectIndex]
-                                .backend
-                            }
-                          </li>
-                        </div>
-                      </ul>
-                      <p>
-                        {
-                          this.state.projects[this.state.selectedProjectIndex]
-                            .shortDesc
-                        }
-                      </p>
-                      <p>
-                        {
-                          this.state.projects[this.state.selectedProjectIndex]
-                            .productPaper
-                        }
-                      </p>
-                      <a
-                        onClick={this.userClicksPrevious}
-                        href={
-                          this.state.projects[this.state.selectedProjectIndex]
-                            .prevWebsiteLink
-                        }
-                        style={{
-                          display:
-                            this.state.projects[this.state.selectedProjectIndex]
-                              .prevWebsiteLink != undefined
-                              ? "block"
-                              : "none"
-                        }}
-                        className="externalLinks"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                      >
-                        <div id="prev-code-link">
-                          <i
-                            className="fas fa-external-link-alt fontIcon"
-                            rgb="(0,0,0)"
-                          >
-                          </i>
-                          See Previous Version of Website
-                    </div>
-                      </a>
-                    </div>
-                  </div>
-                ) : (
-                    <div className="landingSubTitle">Front End Web Developer</div>
-                  )}
-              </div>
-            )
-            }
-          </Spring>
+            projects={this.state.projects}>
+          </Header>
+          <Video
+            selectedProjectIndex={this.state.selectedProjectIndex}
+            projects={this.state.projects}>
+          </Video>
+          <ProjectInfo
+            selectedProjectIndex={this.state.selectedProjectIndex}
+            projects={this.state.projects}>
+          </ProjectInfo>
+
         </div>
         <div className="landingBottomContainer">
-          <div className="landingFiltersContainer" />
           <div
             className={
-              this.state.selectedProjectIndex !== null
+              !this.state.noProjectSelected
                 ? this.state.projects[this.state.selectedProjectIndex].class +
                 "Bar landingBoxesContainer customScrollBar"
                 : "landingBoxesContainer customScrollBar"
@@ -371,13 +271,56 @@ class Landing extends Component {
                 className="landingBox"
                 onMouseOver={() => this.handleClick(idx)}
               >
-                {this.state.selectedProjectIndex == idx ? (
-                  <div
-                    className="landingBoxInner"
-                    style={{ backgroundImage: `url(${project.logo})` }}
+                <div
+                  className="landingBoxInner"
+                  style={{ backgroundImage: `url(${project.logo})` }}
+                >
+                  <a
+                    href={project.codeLink}
+                    className={
+                      project.caseStudyLink === undefined
+                        ? "landingBoxExternalLink landingBoxExternalLink2"
+                        : "landingBoxExternalLink landingBoxExternalLink3"
+                    }
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    disabled={this.state.noProjectSelected}
                   >
+                    <li
+                      className={this.state.noProjectSelected ? (project.class + " hiddenLink") : (this.state.selectedProjectIndex == idx ? (project.class) : (project.class + " hiddenLink"))}
+                      style={{ background: project.color }}
+                      id="code-link"
+                    >
+                      <div>
+                        <i className="fas fa-code fontIcon" />See Code
+                      </div>
+                    </li>
+                  </a>
+                  <a
+                    href={project.websiteLink}
+                    className={
+                      project.caseStudyLink === undefined
+                        ? "landingBoxExternalLink landingBoxExternalLink2"
+                        : "landingBoxExternalLink landingBoxExternalLink3"
+                    }
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    disabled={this.state.noProjectSelected}
+                  >
+                    <li
+                      className={this.state.noProjectSelected ? (project.class + " hiddenLink") : (this.state.selectedProjectIndex == idx ? (project.class) : (project.class + " hiddenLink"))}
+                      style={{ background: project.color }}
+                      id="website-link"
+                    >
+                      <div>
+                        <i className="fas fa-external-link-alt fontIcon" />
+                        Visit Website
+                      </div>
+                    </li>
+                  </a>
+                  {project.caseStudyLink !== undefined && (
                     <a
-                      href={project.codeLink}
+                      href={project.caseStudyLink}
                       className={
                         project.caseStudyLink === undefined
                           ? "landingBoxExternalLink landingBoxExternalLink2"
@@ -385,101 +328,20 @@ class Landing extends Component {
                       }
                       rel="noopener noreferrer"
                       target="_blank"
+                      disabled={this.state.noProjectSelected}
                     >
                       <li
-                        className={project.class}
+                        className={this.state.noProjectSelected ? (project.class + " hiddenLink") : (this.state.selectedProjectIndex == idx ? (project.class) : (project.class + " hiddenLink"))}
                         style={{ background: project.color }}
-                        id="code-link"
+                        id="case-link"
                       >
                         <div>
-                          <i className="fas fa-code fontIcon" />See Code
+                          <i className="fas fa-book-open fontIcon" />Case Study
                         </div>
                       </li>
                     </a>
-                    <a
-                      href={project.websiteLink}
-                      className={
-                        project.caseStudyLink === undefined
-                          ? "landingBoxExternalLink landingBoxExternalLink2"
-                          : "landingBoxExternalLink landingBoxExternalLink3"
-                      }
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      <li
-                        className={project.class}
-                        style={{ background: project.color }}
-                        id="website-link"
-                      >
-                        <div>
-                          <i className="fas fa-external-link-alt fontIcon" />
-                          Visit Website
-                        </div>
-                      </li>
-                    </a>
-                    {project.caseStudyLink !== undefined && (
-                      <a
-                        href={project.caseStudyLink}
-                        className={
-                          project.caseStudyLink === undefined
-                            ? "landingBoxExternalLink landingBoxExternalLink2"
-                            : "landingBoxExternalLink landingBoxExternalLink3"
-                        }
-                        rel="noopener noreferrer"
-                        target="_blank"
-                      >
-                        <li
-                          className={project.class}
-                          style={{ background: project.color }}
-                          id="case-link"
-                        >
-                          <div>
-                            <i className="fas fa-book-open fontIcon" />Case Study
-                          </div>
-                        </li>
-                      </a>
-                    )}
-                  </div>
-                ) : (
-                    <div
-                      className="landingBoxInner"
-                      style={{ backgroundImage: `url(${project.logo})` }}
-                    >
-                      <div
-                        className="landingBoxExternalLink"
-                        disabled
-                        rel="noopener noreferrer"
-                        target="_blank"
-                      >
-                        <li
-                          className={project.class + " hiddenLink"}
-                          style={{ background: project.color }}
-                          id="code-link"
-                        >
-                          <div>
-                            <i className="fas fa-code fontIcon" />See Code
-                        </div>
-                        </li>
-                      </div>
-                      <div
-                        className="landingBoxExternalLink"
-                        disabled
-                        rel="noopener noreferrer"
-                        target="_blank"
-                      >
-                        <li
-                          className={project.class + " hiddenLink"}
-                          style={{ background: project.color }}
-                          id="website-link"
-                        >
-                          <div>
-                            <i className="fas fa-external-link-alt fontIcon" />
-                            Visit Website
-                        </div>
-                        </li>
-                      </div>
-                    </div>
                   )}
+                </div>
               </button>
             ))}
           </div>

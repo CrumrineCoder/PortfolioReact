@@ -4,17 +4,10 @@ import React, { Component } from "react";
 class Header extends Component {
     constructor(props) {
         super(props);
-        //this.state = this.props;
         this.state = {
+            profile: "Images\\profileNicMay2019.jpg",
         }
-    }
-
-    componentWillMount(){
-        this.setState({
-            profile: this.props.profile,
-            selectedProjectIndex: this.props.selectedProjectIndex,
-            projects: this.props.projects
-        })
+        //this.state = this.props;
     }
 
     render() {
@@ -25,21 +18,22 @@ class Header extends Component {
                         className="landingNavProfileImage"
                         src={this.state.profile}
                     />
-                    {this.state.selectedProjectIndex !== null ? (
+                    {this.props.selectedProjectIndex}
+                    {this.props.selectedProjectIndex !== null ? (
                         <h2 className="landingNavProfileName">Nicolas Crumrine</h2>
                     ) : (
                             <h2 className="landingNavProfileName" />
                         )}
                 </div>
 
-                {this.state.selectedProjectIndex !== null ? (
+                {this.props.selectedProjectIndex !== null ? (
                     <div className="landingNavRightHandContainer">
                         <a
                             href="https://nicolascrumrine.com/#/about"
                             rel="noopener noreferrer"
                             target="_blank"
                             className={
-                                this.state.projects[this.state.selectedProjectIndex].class +
+                                this.props.projects[this.props.selectedProjectIndex].class +
                                 " landingNavItem"
                             }
                         >
@@ -52,7 +46,7 @@ class Header extends Component {
                             rel="noopener noreferrer"
                             target="_blank"
                             className={
-                                this.state.projects[this.state.selectedProjectIndex].class +
+                                this.props.projects[this.props.selectedProjectIndex].class +
                                 " landingNavItem"
                             }
                         >
@@ -64,7 +58,7 @@ class Header extends Component {
                             rel="noopener noreferrer"
                             target="_blank"
                             className={
-                                this.state.projects[this.state.selectedProjectIndex].class +
+                                this.props.projects[this.props.selectedProjectIndex].class +
                                 " landingNavItem"
                             }
                         >
@@ -75,7 +69,7 @@ class Header extends Component {
                             title="Email"
                             rel="noopener noreferrer"
                             className={
-                                this.state.projects[this.state.selectedProjectIndex].class +
+                                this.props.projects[this.props.selectedProjectIndex].class +
                                 " landingNavItem"
                             }
                         >
