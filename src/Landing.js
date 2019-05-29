@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import Header from "./components/Header.js";
 import Video from "./components/Video.js";
 import ProjectInfo from "./components/ProjectInfo.js";
+import ProjectBoxesContainer from "./containers/ProjectBoxesContainer.js";
 
 class Landing extends Component {
   constructor(props) {
@@ -252,99 +253,14 @@ class Landing extends Component {
             selectedProjectIndex={this.state.selectedProjectIndex}
             projects={this.state.projects}>
           </ProjectInfo>
-
         </div>
         <div className="landingBottomContainer">
-          <div
-            className={
-              !this.state.noProjectSelected
-                ? this.state.projects[this.state.selectedProjectIndex].class +
-                "Bar landingBoxesContainer customScrollBar"
-                : "landingBoxesContainer customScrollBar"
-            }
-          >
-            {this.state.projects.map((project, idx) => (
-              <button
-                key={idx}
-                type="image"
-                style={{ background: project.color }}
-                className="landingBox"
-                onMouseOver={() => this.handleClick(idx)}
-              >
-                <div
-                  className="landingBoxInner"
-                  style={{ backgroundImage: `url(${project.logo})` }}
-                >
-                  <a
-                    href={project.codeLink}
-                    className={
-                      project.caseStudyLink === undefined
-                        ? "landingBoxExternalLink landingBoxExternalLink2"
-                        : "landingBoxExternalLink landingBoxExternalLink3"
-                    }
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    disabled={this.state.noProjectSelected}
-                  >
-                    <li
-                      className={this.state.noProjectSelected ? (project.class + " hiddenLink") : (this.state.selectedProjectIndex == idx ? (project.class) : (project.class + " hiddenLink"))}
-                      style={{ background: project.color }}
-                      id="code-link"
-                    >
-                      <div>
-                        <i className="fas fa-code fontIcon" />See Code
-                      </div>
-                    </li>
-                  </a>
-                  <a
-                    href={project.websiteLink}
-                    className={
-                      project.caseStudyLink === undefined
-                        ? "landingBoxExternalLink landingBoxExternalLink2"
-                        : "landingBoxExternalLink landingBoxExternalLink3"
-                    }
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    disabled={this.state.noProjectSelected}
-                  >
-                    <li
-                      className={this.state.noProjectSelected ? (project.class + " hiddenLink") : (this.state.selectedProjectIndex == idx ? (project.class) : (project.class + " hiddenLink"))}
-                      style={{ background: project.color }}
-                      id="website-link"
-                    >
-                      <div>
-                        <i className="fas fa-external-link-alt fontIcon" />
-                        Visit Website
-                      </div>
-                    </li>
-                  </a>
-                  {project.caseStudyLink !== undefined && (
-                    <a
-                      href={project.caseStudyLink}
-                      className={
-                        project.caseStudyLink === undefined
-                          ? "landingBoxExternalLink landingBoxExternalLink2"
-                          : "landingBoxExternalLink landingBoxExternalLink3"
-                      }
-                      rel="noopener noreferrer"
-                      target="_blank"
-                      disabled={this.state.noProjectSelected}
-                    >
-                      <li
-                        className={this.state.noProjectSelected ? (project.class + " hiddenLink") : (this.state.selectedProjectIndex == idx ? (project.class) : (project.class + " hiddenLink"))}
-                        style={{ background: project.color }}
-                        id="case-link"
-                      >
-                        <div>
-                          <i className="fas fa-book-open fontIcon" />Case Study
-                        </div>
-                      </li>
-                    </a>
-                  )}
-                </div>
-              </button>
-            ))}
-          </div>
+          <ProjectBoxesContainer
+            selectedProjectIndex={this.state.selectedProjectIndex}
+            projects={this.state.projects}
+            noProjectSelected={this.state.noProjectSelected}
+            handleClick={this.handleClick}>
+          </ProjectBoxesContainer>
         </div>
       </div>
     );
