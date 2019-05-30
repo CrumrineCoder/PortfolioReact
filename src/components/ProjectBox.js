@@ -34,8 +34,8 @@ class ProjectBox extends Component {
                         disabled={this.props.noProjectSelected}
                     >
                         <li
-                                  className={this.props.noProjectSelected ? (this.props.project.class + " hiddenLink") : (this.props.selectedProjectIndex == this.props.idx ? (this.props.project.class) : (this.props.project.class + " hiddenLink"))}
-                                  style={{ background: this.props.project.color }}
+                            className={this.props.noProjectSelected ? (this.props.project.class + " hiddenLink") : (this.props.selectedProjectIndex == this.props.idx ? (this.props.project.class) : (this.props.project.class + " hiddenLink"))}
+                            style={{ background: this.props.project.color }}
                             id="code-link"
                         >
                             <div>
@@ -55,8 +55,8 @@ class ProjectBox extends Component {
                         disabled={this.props.noProjectSelected}
                     >
                         <li
-                                   className={this.props.noProjectSelected ? (this.props.project.class + " hiddenLink") : (this.props.selectedProjectIndex == this.props.idx ? (this.props.project.class) : (this.props.project.class + " hiddenLink"))}
-                                   style={{ background: this.props.project.color }}
+                            className={this.props.noProjectSelected ? (this.props.project.class + " hiddenLink") : (this.props.selectedProjectIndex == this.props.idx ? (this.props.project.class) : (this.props.project.class + " hiddenLink"))}
+                            style={{ background: this.props.project.color }}
                             id="website-link"
                         >
                             <div>

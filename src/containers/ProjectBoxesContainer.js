@@ -19,11 +19,11 @@ class ProjectBoxesContainer extends Component {
             >
                 {this.props.projects.map((project, idx) => (
                     <ProjectBox
-                    selectedProjectIndex={this.props.selectedProjectIndex}
-                    project={project}
-                    noProjectSelected={this.props.noProjectSelected}
-                    idx={idx}
-                    handleClick={this.props.handleClick}>
+                        selectedProjectIndex={this.props.selectedProjectIndex}
+                        project={project}
+                        noProjectSelected={this.props.noProjectSelected}
+                        idx={idx}
+                        handleClick={this.props.handleClick}>
                     </ProjectBox>
                 ))}
             </div>
