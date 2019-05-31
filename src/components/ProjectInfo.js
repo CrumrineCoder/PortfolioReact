@@ -14,12 +14,86 @@ class ProjectInfo extends Component {
 
     render() {
         console.log(this.props);
-        return (
+        let child = (
+            <div key={this.props.selectedProjectIndex} className="landingTitleBody">
+                <div className="landingTitle">
+                    {this.props.selectedProjectIndex !== null
+                        ? this.props.projects[this.props.selectedProjectIndex].title
+                        : "Nicolas Crumrine"}
+                </div>
+                {this.props.selectedProjectIndex !== null ? (
+                    <div>
+                        <div className="landingAdditionalInfo">
+                            <ul className="landingAdditionalInfoPills">
+                                <div id="projectFrontEnd">
+                                    <li className="frontend">
+                                        {
+                                            this.props.projects[this.props.selectedProjectIndex]
+                                                .frontend
+                                        }
+                                    </li>
+                                </div>
+                                <div id="projectBackEnd">
+                                    <li className="backend">
+                                        {
+                                            this.props.projects[this.props.selectedProjectIndex]
+                                                .backend
+                                        }
+                                    </li>
+                                </div>
+                            </ul>
+                            <p>
+                                {
+                                    this.props.projects[this.props.selectedProjectIndex]
+                                        .shortDesc
+                                }
+                            </p>
+                            <p>
+                                {
+                                    this.props.projects[this.props.selectedProjectIndex]
+                                        .productPaper
+                                }
+                            </p>
+                            <a
+                                onClick={this.userClicksPrevious}
+                                href={
+                                    this.props.projects[this.props.selectedProjectIndex]
+                                        .prevWebsiteLink
+                                }
+                                style={{
+                                    display:
+                                        this.props.projects[this.props.selectedProjectIndex]
+                                            .prevWebsiteLink != undefined
+                                            ? "block"
+                                            : "none"
+                                }}
+                                className="externalLinks"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                <div id="prev-code-link">
+                                    <i
+                                        className="fas fa-external-link-alt fontIcon"
+                                        rgb="(0,0,0)"
+                                    >
+                                    </i>
+                                    See Previous Version of Website
+                           </div>
+                            </a>
+                        </div>
+                    </div>
+                ) : (
+                        <div className="landingSubTitle">Front End Web Developer</div>
+                    )}
+            </div>
+        )
+    return(
             <ReactCSSTransitionGroup
-                transitionName="example"
-                transitionEnterTimeout={3000}
-                transitionLeaveTimeout={3000}>
-                <div key={this.props.selectedProjectIndex} className="landingTitleBody">Test</div>
+                transitionName = "example"
+                transitionEnterTimeout={300}
+                transitionLeaveTimeout={300}
+            >
+              {child}
             </ReactCSSTransitionGroup>
         );
     }
