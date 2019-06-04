@@ -34,8 +34,7 @@ class ProjectBox extends Component {
                         disabled={this.props.noProjectSelected}
                     >
                         <li
-                            className={this.props.noProjectSelected ? (this.props.project.class + " hiddenLink") : (this.props.selectedProjectIndex == this.props.idx ? (this.props.project.class) : (this.props.project.class + " hiddenLink"))}
-                            style={{ background: this.props.project.color }}
+                           className={this.props.noProjectSelected ? (this.props.project.class + "Pill hiddenLink") : (this.props.selectedProjectIndex == this.props.idx ? (this.props.project.class+"Pill") : (this.props.project.class + "Pill hiddenLink"))}
                             id="code-link"
                         >
                             <div>
@@ -55,8 +54,7 @@ class ProjectBox extends Component {
                         disabled={this.props.noProjectSelected}
                     >
                         <li
-                            className={this.props.noProjectSelected ? (this.props.project.class + " hiddenLink") : (this.props.selectedProjectIndex == this.props.idx ? (this.props.project.class) : (this.props.project.class + " hiddenLink"))}
-                            style={{ background: this.props.project.color }}
+                            className={this.props.noProjectSelected ? (this.props.project.class + "Pill hiddenLink") : (this.props.selectedProjectIndex == this.props.idx ? (this.props.project.class+"Pill") : (this.props.project.class + "Pill hiddenLink"))}
                             id="website-link"
                         >
                             <div>
@@ -78,8 +76,8 @@ class ProjectBox extends Component {
                             disabled={this.props.noProjectSelected}
                         >
                             <li
-                                className={this.props.noProjectSelected ? (this.props.project.class + " hiddenLink") : (this.props.selectedProjectIndex == this.props.idx ? (this.props.project.class) : (this.props.project.class + " hiddenLink"))}
-                                style={{ background: this.props.project.color }}
+                                className={this.props.noProjectSelected ? (this.props.project.class + "Pill hiddenLink") : (this.props.selectedProjectIndex == this.props.idx ? (this.props.project.class+"Pill") : (this.props.project.class + "Pill hiddenLink"))}
+                                
                                 id="case-link"
                             >
                                 <div>
@@ -92,6 +90,6 @@ class ProjectBox extends Component {
             </button>
         );
     }
-}
+}//style={{ background: this.props.project.color }}
 
 export default ProjectBox;

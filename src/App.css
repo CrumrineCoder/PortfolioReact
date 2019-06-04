@@ -308,8 +308,13 @@ html, body {
     border-color:rgb(180, 180, 180);
   } */
 /* darken by 20% the base color https://www.cssfontstack.com/oldsites/hexcolortool/ */
+
   .Rapture:hover{
     background: #005C4A !important;
+  }
+
+  .RapturePill{
+    background: linear-gradient(to right, #005C4A 50%, #218F7D 50%);
   }
 
   .RaptureBar::-webkit-scrollbar-thumb{
@@ -319,10 +324,14 @@ html, body {
   .RaptureNavItem:hover{
     color: #005C4A !important;
   }
-  
+
   .Poll:hover{
     background: #730055 !important;
   }
+
+.PollPill{
+  background: linear-gradient(to right, #730055 50%, #A61C88 50%);
+}
 
   .PollBar::-webkit-scrollbar-thumb{
     background-color: #730055!important
@@ -334,6 +343,10 @@ html, body {
   
   .TMBG:hover{
     background: #00050D !important;
+  }
+
+  .TMBGPill{
+    background: linear-gradient(to right, #00050D 50%, #171E26 50%);
   }
 
   .TMBGBar::-webkit-scrollbar-thumb{
@@ -348,6 +361,10 @@ html, body {
     background: #004559 !important;
   }
 
+  .PennyPill{
+    background: linear-gradient(to right, #004559 50%, #18788C 50%);
+  }
+
   .PennyBar::-webkit-scrollbar-thumb{
     background-color: #004559!important
   }
@@ -358,6 +375,10 @@ html, body {
   
   .Twitch:hover{
     background: #310E71 !important;
+  }
+
+  .TwitchPill{
+    background: linear-gradient(to right, #310E71 50%, #6441A4 50%);
   }
 
   .TwitchBar::-webkit-scrollbar-thumb{
@@ -372,6 +393,10 @@ html, body {
     background: #CC4C00 !important;
   }
 
+  .C4Pill{
+    background: linear-gradient(to right, #CC4C00 50%, #FF7F11 50%);
+  }
+
   .C4Bar::-webkit-scrollbar-thumb{
     background-color: #CC4C00!important
   }
@@ -382,6 +407,10 @@ html, body {
   
   .Weather:hover{
     background: #004D00 !important;
+  }
+
+  .WeatherPill{
+    background: linear-gradient(to right, #004D00 50%, #048027 50%);
   }
 
   .WeatherBar::-webkit-scrollbar-thumb{
@@ -396,6 +425,10 @@ html, body {
     background: #004D4D !important;
   }
 
+  .QuotePill{
+    background: linear-gradient(to right, #004D4D 50%, #008080 50%);
+  }
+
   .QuoteBar::-webkit-scrollbar-thumb{
     background-color: #004D4D!important
   }
@@ -406,6 +439,10 @@ html, body {
   
   .NPC:hover{
     background: #BC0000 !important;
+  }
+
+  .NPCPill{
+    background: linear-gradient(to right, #BC0000 50%, #EF281A 50%);
   }
 
   .NPCBar::-webkit-scrollbar-thumb{
@@ -420,6 +457,10 @@ html, body {
     background: #004983 !important;
   }
 
+  .WikiPill{
+    background: linear-gradient(to right, #004983 50%, #007CB6 50%);
+  }
+
   .WikiBar::-webkit-scrollbar-thumb{
     background-color: #004983!important
   }
@@ -432,6 +473,10 @@ html, body {
     background: #532A7C !important;
   }
 
+  .CalcPill{
+    background: linear-gradient(to right, #532A7C 50%, #865DAF 50%);
+  }
+
   .CalcBar::-webkit-scrollbar-thumb{
     background-color: #532A7C!important
   }
@@ -442,6 +487,10 @@ html, body {
   
   .Clock:hover{
     background: #B60000 !important;
+  }
+
+  .ClockPill{
+    background: linear-gradient(to right, #B60000 50%, #E90000 50%);
   }
 
   .ClockBar::-webkit-scrollbar-thumb{
@@ -1195,6 +1244,8 @@ html, body {
     text-decoration: none;
     list-style-type: none;
     height: 75px; 
+
+
   }
 
   .landingBoxExternalLink3 li{
@@ -1208,6 +1259,14 @@ html, body {
   .landingBoxExternalLink li{
     width: 150px;
     position: relative;
+
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .25s ease-out;
+  }
+
+  .landingBoxExternalLink li:hover{
+    background-position: left bottom;
   }
 
  .landingBoxExternalLink:nth-child(1) li{
