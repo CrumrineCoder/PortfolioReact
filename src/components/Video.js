@@ -10,7 +10,7 @@ class Video extends Component {
       video: "Videos\\portfolioMetro.mp4"
     }
     //this.state = this.props;
-  }
+  }// key={this.props.selectedProjectIndex}
 
   render() {
     let video = (<div key={this.props.selectedProjectIndex} className="landingVideoContainer">
@@ -47,8 +47,8 @@ class Video extends Component {
       <>
         <ReactCSSTransitionGroup
           transitionName="video"
-          transitionEnterTimeout={400}
-          transitionLeaveTimeout={400}
+          transitionEnterTimeout={100}
+          transitionLeaveTimeout={100}
         >
           {video}
         </ReactCSSTransitionGroup>
