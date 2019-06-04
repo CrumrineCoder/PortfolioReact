@@ -47,8 +47,8 @@ class Video extends Component {
       <>
         <ReactCSSTransitionGroup
           transitionName="video"
-          transitionEnterTimeout={100}
-          transitionLeaveTimeout={100}
+          transitionEnterTimeout={400}
+          transitionLeaveTimeout={400}
         >
           {video}
         </ReactCSSTransitionGroup>
