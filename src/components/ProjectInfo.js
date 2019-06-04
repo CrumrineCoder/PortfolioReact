@@ -90,8 +90,8 @@ class ProjectInfo extends Component {
     return(
             <ReactCSSTransitionGroup
                 transitionName = "example"
-                transitionEnterTimeout={300}
-                transitionLeaveTimeout={300}
+                transitionEnterTimeout={100}
+                transitionLeaveTimeout={100}
             >
               {child}
             </ReactCSSTransitionGroup>
