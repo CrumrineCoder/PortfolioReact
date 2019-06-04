@@ -1,7 +1,7 @@
 
 import React, { Component } from "react";
 import { Spring } from 'react-spring/renderprops';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import ReactCSSTransitionGroup  from 'react-addons-css-transition-group';
 
 class ProjectInfo extends Component {
     constructor(props) {

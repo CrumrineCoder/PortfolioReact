@@ -1247,16 +1247,16 @@ html, body {
 }
 .projectInfo-enter.projectInfo-enter-active {
   opacity: 1;
-  transform: translate(-50%, 0%);
+  transform: translate(-50%, 50%);
   transition-property: transform, opacity;
-  transition-duration: 100ms;
-  transition-timing-function: cubic-bezier(0.175, 0.665, 0.320, 1), linear;
+  transition-duration: 400ms;
+  transition-timing-function: ease-in-out;
 }
 .projectInfo-leave {
   opacity: 1;
   transition-property: transform, opacity;
   transition-duration: 100ms;
-  transition-timing-function: cubic-bezier(0.175, 0.665, 0.320, 1), linear;
+  transition-timing-function: ease-in-out;
 }
 .projectInfo-leave.projectInfo-leave-active {
   opacity: 0.01;
@@ -1287,7 +1287,24 @@ html, body {
 
 }
 */
-
+.video-enter {
+  opacity: 0.01;
+}
+.video-enter.video-enter-active {
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: 400ms;
+  transition-timing-function: ease-in-out;
+}
+.video-leave {
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: 400ms;
+  transition-timing-function: ease-in-out;
+}
+.video-leave.video-leave-active {
+  opacity: 0.01;
+} 
 
   .overlay{
     position: absolute;

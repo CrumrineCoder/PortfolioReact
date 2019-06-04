@@ -1,6 +1,7 @@
 
 
 import React, { Component } from "react";
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 class Video extends Component {
   constructor(props) {
@@ -12,38 +13,45 @@ class Video extends Component {
   }
 
   render() {
+    let video = (<div key={this.props.selectedProjectIndex} className="landingVideoContainer">
+      {this.props.selectedProjectIndex !== null ? (
+        <video
+          ref="vidRef"
+          className="landingVideo"
+          autoPlay
+          muted
+          loop
+          src={
+            this.props.projects[this.props.selectedProjectIndex].video ||
+            this.state.video
+          }
+          type="video/mp4"
+        >
+          Your browser does not support HTML5 video.
+      </video>
+      ) : (
+          <video
+            ref="vidRef"
+            className="landingVideo"
+            autoPlay
+            muted
+            loop
+            src={this.state.video}
+            type="video/mp4"
+          >
+            Your browser does not support HTML5 video.
+      </video>
+        )}
+    </div>)
     return (
       <>
-        <div className="landingVideoContainer">
-          {this.props.selectedProjectIndex !== null ? (
-            <video
-              ref="vidRef"
-              className="landingVideo"
-              autoPlay
-              muted
-              loop
-              src={
-                this.props.projects[this.props.selectedProjectIndex].video ||
-                this.state.video
-              }
-              type="video/mp4"
-            >
-              Your browser does not support HTML5 video.
-            </video>
-          ) : (
-              <video
-                ref="vidRef"
-                className="landingVideo"
-                autoPlay
-                muted
-                loop
-                src={this.state.video}
-                type="video/mp4"
-              >
-                Your browser does not support HTML5 video.
-            </video>
-            )}
-        </div>
+        <ReactCSSTransitionGroup
+          transitionName="video"
+          transitionEnterTimeout={400}
+          transitionLeaveTimeout={400}
+        >
+          {video}
+        </ReactCSSTransitionGroup>
         <div className="overlay" />
       </>
     );
