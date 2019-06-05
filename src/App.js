@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import ReactGA from 'react-ga';
 import './App.css';
 
-import Landing from "./Landing.js";
-import Boxes from "./Boxes.js";
-import Project from "./Project.js";
-import ProjectPreview from "./ProjectPreview.js";
+import Landing from "./containers/Landing.js";
+//import Boxes from "./old/Boxes.js";
+//import Project from "./old/Project.js";
+//import ProjectPreview from "./old/ProjectPreview.js";
 //import Blotter from "blotter";
 //import Blotter from "./scripts/blotter.min.js"
 
@@ -208,9 +208,9 @@ class App extends Component {
   }
 
   handleCarouselProject = (incr) => {
-    if (this.state.index == (this.state.projects.length - 1) && incr == 1) {
+    if (this.state.index === (this.state.projects.length - 1) && incr === 1) {
       this.setState({ index: 0 });
-    } else if (this.state.index == 0 && incr == -1) {
+    } else if (this.state.index === 0 && incr === -1) {
       this.setState({ index: (this.state.projects.length - 1) });
     } else {
       this.setState({ index: (this.state.index + incr) });

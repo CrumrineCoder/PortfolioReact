@@ -3,10 +3,7 @@ import React, { Component } from "react";
 import ProjectBox from "../components/ProjectBox.js";
 
 class ProjectBoxesContainer extends Component {
-    constructor(props) {
-        super(props);
-    }
-
+    
     render() {
         return (
             <div
@@ -23,7 +20,9 @@ class ProjectBoxesContainer extends Component {
                         project={project}
                         noProjectSelected={this.props.noProjectSelected}
                         idx={idx}
-                        handleClick={this.props.handleClick}>
+                        handleClick={this.props.handleClick}
+                        key={idx}
+                        >
                     </ProjectBox>
                 ))}
             </div>

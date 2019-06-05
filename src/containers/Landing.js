@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 
-import Header from "./components/Header.js";
-import Video from "./components/Video.js";
-import ProjectInfo from "./components/ProjectInfo.js";
-import ProjectBoxesContainer from "./containers/ProjectBoxesContainer.js";
+import Header from "../components/Header.js";
+import Video from "../components/Video.js";
+import ProjectInfo from "../components/ProjectInfo.js";
+import ProjectBoxesContainer from "./ProjectBoxesContainer.js";
 
 class Landing extends Component {
   constructor(props) {

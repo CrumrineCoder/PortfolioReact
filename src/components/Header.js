@@ -17,6 +17,7 @@ class Header extends Component {
                     <img
                         className="landingNavProfileImage"
                         src={this.state.profile}
+                        alt="ProfilePicture"
                     />
                     {this.props.selectedProjectIndex}
                     {this.props.selectedProjectIndex !== null ? (

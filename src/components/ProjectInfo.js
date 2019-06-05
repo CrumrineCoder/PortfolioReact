@@ -1,6 +1,6 @@
 
 import React, { Component } from "react";
-import { Spring } from 'react-spring/renderprops';
+//import { Spring } from 'react-spring/renderprops';
 import ReactCSSTransitionGroup  from 'react-addons-css-transition-group';
 
 class ProjectInfo extends Component {
@@ -13,7 +13,6 @@ class ProjectInfo extends Component {
     }
 
     render() {
-        console.log(this.props);
         let child = (
             <div key={this.props.selectedProjectIndex} className="landingTitleBody">
                 <div className="landingTitle">
@@ -63,7 +62,7 @@ class ProjectInfo extends Component {
                                 style={{
                                     display:
                                         this.props.projects[this.props.selectedProjectIndex]
-                                            .prevWebsiteLink != undefined
+                                            .prevWebsiteLink !== undefined
                                             ? "block"
                                             : "none"
                                 }}

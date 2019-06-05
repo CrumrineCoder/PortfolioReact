@@ -34,7 +34,7 @@ class ProjectBox extends Component {
                         disabled={this.props.noProjectSelected}
                     >
                         <li
-                           className={this.props.noProjectSelected ? (this.props.project.class + "Pill hiddenLink") : (this.props.selectedProjectIndex == this.props.idx ? (this.props.project.class+"Pill") : (this.props.project.class + "Pill hiddenLink"))}
+                           className={this.props.noProjectSelected ? (this.props.project.class + "Pill hiddenLink") : (this.props.selectedProjectIndex === this.props.idx ? (this.props.project.class+"Pill") : (this.props.project.class + "Pill hiddenLink"))}
                             id="code-link"
                         >
                             <div>
@@ -54,7 +54,7 @@ class ProjectBox extends Component {
                         disabled={this.props.noProjectSelected}
                     >
                         <li
-                            className={this.props.noProjectSelected ? (this.props.project.class + "Pill hiddenLink") : (this.props.selectedProjectIndex == this.props.idx ? (this.props.project.class+"Pill") : (this.props.project.class + "Pill hiddenLink"))}
+                            className={this.props.noProjectSelected ? (this.props.project.class + "Pill hiddenLink") : (this.props.selectedProjectIndex === this.props.idx ? (this.props.project.class+"Pill") : (this.props.project.class + "Pill hiddenLink"))}
                             id="website-link"
                         >
                             <div>
@@ -76,7 +76,7 @@ class ProjectBox extends Component {
                             disabled={this.props.noProjectSelected}
                         >
                             <li
-                                className={this.props.noProjectSelected ? (this.props.project.class + "Pill hiddenLink") : (this.props.selectedProjectIndex == this.props.idx ? (this.props.project.class+"Pill") : (this.props.project.class + "Pill hiddenLink"))}
+                                className={this.props.noProjectSelected ? (this.props.project.class + "Pill hiddenLink") : (this.props.selectedProjectIndex === this.props.idx ? (this.props.project.class+"Pill") : (this.props.project.class + "Pill hiddenLink"))}
                                 
                                 id="case-link"
                             >
