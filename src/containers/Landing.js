@@ -28,7 +28,7 @@ class Landing extends Component {
           websiteLink: "https://rapture-fashion.firebaseapp.com/#/",
           caseStudyLink:
             "https://nicolascrumrine.com/#/posts/-LecEwsYvjJNcwIJJjao",
-          video: "Videos/raptureFashion.mp4",
+          video: "Videos/rapturefashion2.mp4",
           class: "Rapture"
         },
         {
