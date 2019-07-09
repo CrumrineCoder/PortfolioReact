@@ -28,7 +28,7 @@ class Landing extends Component {
           websiteLink: "https://rapture-fashion.firebaseapp.com/#/",
           caseStudyLink:
             "https://nicolascrumrine.com/#/posts/-LecEwsYvjJNcwIJJjao",
-          video: "Videos/rapturefashion2.mp4",
+          video: "Videos/RaptureFashion.mp4",
           class: "Rapture"
         },
         {
@@ -48,7 +48,7 @@ class Landing extends Component {
           // prevWebsiteLink: "https://joinordie.glitch.me/",
           caseStudyLink:
             "https://nicolascrumrine.herokuapp.com/#/posts/5c253ffad802b53cdcc17e00",
-          video: "Videos/pollingReactEdited.mp4",
+          video: "Videos/Polling.mp4",
           class: "Poll"
         },
         {
@@ -65,7 +65,7 @@ class Landing extends Component {
             "Worked with another designer. Developed marketing strategy, wrote a competitive analysis, scheduled and wrote user stories with client.",
           codeLink: "https://github.com/CrumrineCoder/PJRevised",
           websiteLink: "http://pennyjanescookies.com/",
-          video: "Videos\\pjcEdited.mp4",
+          video: "Videos\\PJC.mp4",
           class: "Penny"
         },
         {
@@ -82,7 +82,7 @@ class Landing extends Component {
             "I refined and expanded on Node.JS and Express.js and experimented with AngularJS alongside a database.",
           codeLink: "https://github.com/CrumrineCoder/NPC-LOOK-UP",
           websiteLink: "https://npclookup.glitch.me/",
-          video: "Videos\\npcEdited.mp4",
+          video: "Videos\\NPC.mp4",
           class: "NPC"
         },
         {
@@ -100,7 +100,7 @@ class Landing extends Component {
           websiteLink: "https://crumrinecoder.github.io/Twitch-Viewer-Redone/",
           freeCodeCampLink:
             "https://www.freecodecamp.org/challenges/show-the-local-weather",
-          video: "Videos\\twitchEdited.mp4",
+          video: "Videos\\Twitch.mp4",
           class: "Twitch"
         },
         {
@@ -116,7 +116,7 @@ class Landing extends Component {
             "The website allows users to anonymously comment on the newest album and to find the nearest tour. Also a practice in business marketing and design. Links and most buttons are placeholders.",
           codeLink: "https://github.com/CrumrineCoder/TheyMightBeGiantsv3",
           websiteLink: "https://tmbg.herokuapp.com/",
-          video: "Videos/tmbgEdited.mp4",
+          video: "Videos/TMBG.mp4",
           class: "TMBG"
         },
         {
@@ -134,7 +134,7 @@ class Landing extends Component {
           websiteLink: "https://crumrinecoder.github.io/connect4-version2/",
           freeCodeCampLink:
             "https://www.freecodecamp.org/challenges/build-a-tic-tac-toe-game",
-          video: "Videos\\c4Edited.mp4",
+          video: "Videos\\C4.mp4",
           class: "C4"
         },
         {
@@ -152,7 +152,7 @@ class Landing extends Component {
           websiteLink: "https://crumrinecoder.github.io/Weather-App/",
           freeCodeCampLink:
             "https://www.freecodecamp.org/challenges/show-the-local-weather",
-          video: "Videos\\weatherEdited.mp4",
+          video: "Videos\\Weather.mp4",
           class: "Weather"
         },
         {
@@ -172,7 +172,7 @@ class Landing extends Component {
             "https://crumrinecoder.github.io/Quote-Generator-Version-2/",
           freeCodeCampLink:
             "https://www.freecodecamp.org/challenges/build-a-random-quote-machine",
-          video: "Videos\\quoteEdited.mp4",
+          video: "Videos\\Quote.mp4",
           class: "Quote"
         },
         {
@@ -190,7 +190,7 @@ class Landing extends Component {
           websiteLink: "http://dark-yarn.surge.sh/",
           freeCodeCampLink:
             "https://www.freecodecamp.org/challenges/build-a-wikipedia-viewer",
-          video: "Videos\\wiki.mp4",
+          video: "Videos\\Wiki.mp4",
           class: "Wiki"
         },
         {
@@ -207,7 +207,7 @@ class Landing extends Component {
           websiteLink: " https://crumrinecoder.github.io/Calculator/",
           freeCodeCampLink:
             "https://www.freecodecamp.org/challenges/build-a-javascript-calculator",
-          video: "Videos\\calcEdited.mp4",
+          video: "Videos\\Calc.mp4",
           class: "Calc"
         },
         {
@@ -225,7 +225,7 @@ class Landing extends Component {
           websiteLink: "https://crumrinecoder.github.io/Pomodoro-Version-2/",
           freeCodeCampLink:
             "https://www.freecodecamp.org/challenges/build-a-pomodoro-clock",
-          video: "Videos\\pomodoroEdited.mp4",
+          video: "Videos\\Pomodoro.mp4",
           class: "Clock"
         }
       ]
