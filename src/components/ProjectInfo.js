@@ -17,7 +17,7 @@ class ProjectInfo extends Component {
             <div key={this.props.selectedProjectIndex} className="landingTitleBody">
                 <div className="landingTitle">
                     {this.props.selectedProjectIndex !== null
-                        ? this.props.projects[this.props.selectedProjectIndex].title
+                        ? this.props.projects[this.props.selectedProjectIndex].projectName
                         : "Nicolas Crumrine"}
                 </div>
                 {this.props.selectedProjectIndex !== null ? (

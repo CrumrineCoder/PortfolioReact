@@ -17,7 +17,7 @@ class Landing extends Component {
         {
           logo: "Images/raptureLogo.png ",
           color: "#218F7D",
-          title: "Rapture Fashion",
+          projectName: "Rapture Fashion",
           shortDesc: "React and Shopify Boutique Fashion site",
           frontend:
             "React.js, Redux.js, react-router, HTML5, CSS3, Bootstrap 4",
@@ -34,7 +34,7 @@ class Landing extends Component {
         {
           logo: "Images/votingAppLogo.png ",
           color: "#A61C88",
-          title: "Polling",
+          projectName: "Polling",
           shortDesc:
             "React.js & Redux fullstack website where users create, view, and vote on polls.",
           backend:
@@ -55,7 +55,7 @@ class Landing extends Component {
           logo: "Images/cookiesWebsiteLogo.png ",
           color: "#18788C",
           picture: " Images/cookiesWebsite.png ",
-          title: "Penny's Cookies",
+          projectName: "Penny's Cookies",
           shortDesc:
             "Portfolio website for a local NYC cookie bakery and decorating business that I built for a client.",
           backend: "JavaScript, PHP, jQuery",
@@ -72,7 +72,7 @@ class Landing extends Component {
           logo: " Images/npcLookUpLogo.png ",
           color: "#EF281A",
           picture: " Images/npcLookUpv2.png ",
-          title: "NPC Lookup",
+          projectName: "NPC Lookup",
           shortDesc:
             "This fullstack website lets users add Non Playable Characters (NPCs) to a database and view them with Angular.",
           backend:
@@ -89,7 +89,7 @@ class Landing extends Component {
           logo: " Images/twitchViewerLogo.png ",
           color: "#6441A4",
           picture: " Images/twitchViewer.png ",
-          title: "Twitch Viewer",
+          projectName: "Twitch Viewer",
           shortDesc:
             "This is a website that uses the Twitch.tv API and Angular to display Twitch Streams.",
           backend: "JavaScript, jQuery, Twitch.tv API",
@@ -106,7 +106,7 @@ class Landing extends Component {
         {
           logo: "Images/tmbgLogo.png ",
           color: "#171E26",
-          title: "TMBG",
+          projectName: "TMBG",
           shortDesc:
             "This is a landing page redesign for the They Might Be Giants website.",
           backend:
@@ -123,7 +123,7 @@ class Landing extends Component {
           logo: " Images/connectFourAppLogo.png ",
           color: "#FF7F11",
           picture: " Images/connectFourApp.png ",
-          title: "Connect Four",
+          projectName: "Connect Four",
           shortDesc:
             "This is a web app that uses plain JavaScript to play Connect Four either against an AI that uses alpha-beta minimaxing or locally with another player.",
           backend: "JavaScript, minimax Algorithms",
@@ -141,7 +141,7 @@ class Landing extends Component {
           logo: " Images/weatherApp%20logo.png ",
           color: "#048027",
           picture: " Images/weatherApp.png ",
-          title: "Weather",
+          projectName: "Weather",
           shortDesc:
             "This is a web app that shows the weather based on location.",
           backend: "JavaScript, jQuery, OpenStreetMap API, Forecast.io API,",
@@ -159,7 +159,7 @@ class Landing extends Component {
           logo: " Images/quotesAppLogo.png ",
           color: "#008080",
           picture: " Images/quotesApp.png ",
-          title: "Quotes",
+          projectName: "Quotes",
           shortDesc:
             "This is a website that uses Angular to display quotes from various sources.",
           backend: "JavaScript, jQuery",
@@ -179,13 +179,13 @@ class Landing extends Component {
           logo: " Images/wikipediaViewerLogo.png ",
           color: "#007CB6",
           picture: " Images/wikipediaViewer.png ",
-          title: "Wiki Viewer",
+          projectName: "Wiki Viewer",
           shortDesc:
             "This is a web app that uses the Wikipedia API to search for multiple Wikipedia pages by term or by randomness.",
           backend: "JavaScript, jQuery, Wikipedia API",
           frontend: "HTML5, CSS3, React.js, Responsive",
           productPaper:
-            "I taught myself about using APIs with React and more about state management with this project.",
+            "Recently redone with React Hooks. Also taught myself about using APIs with React and more about state management with this project.",
           codeLink: "https://github.com/CrumrineCoder/wikipediaviewerreact",
           websiteLink: "http://dark-yarn.surge.sh/",
           freeCodeCampLink:
@@ -197,7 +197,7 @@ class Landing extends Component {
           logo: " Images/calculatorAppLogo.png ",
           color: "#865DAF",
           picture: " Images/calculatorApp.png ",
-          title: "Calculator",
+          projectName: "Calculator",
           shortDesc: "This is a web app that resembles a basic calculator.",
           backend: "JavaScript",
           frontend: "HTML5, CSS3, Responsive",
@@ -214,7 +214,7 @@ class Landing extends Component {
           logo: " Images/pomodoroAppLogo.png",
           color: "#E90000",
           picture: " Images/pomodoroApp.png ",
-          title: "Pomodoro",
+          projectName: "Pomodoro",
           shortDesc:
             "This is a web app that acts as a minimalist Pomodoro (time management) clock with options.",
           backend: "JavaScript, jQuery",
