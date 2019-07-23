@@ -2,9 +2,12 @@ import React, { Component } from 'react';
 import ReactGA from 'react-ga';
 import './App.css';
 
-import Boxes from "./Boxes.js";
-import Project from "./Project.js";
-import ProjectPreview from "./ProjectPreview.js";
+import Landing from "./containers/Landing.js";
+//import Boxes from "./old/Boxes.js";
+//import Project from "./old/Project.js";
+//import ProjectPreview from "./old/ProjectPreview.js";
+//import Blotter from "blotter";
+//import Blotter from "./scripts/blotter.min.js"
 
 class App extends Component {
 
@@ -24,7 +27,7 @@ class App extends Component {
         caseStudyLink: "https://nicolascrumrine.com/#/posts/-LecEwsYvjJNcwIJJjao",
         video: "Videos/raptureFashion.mp4",
         class: "Rapture"
-      },{
+      }, {
         logo: "Images/votingAppLogo.png ",
         color: "#A61C88",
         title: "Polling",
@@ -90,7 +93,7 @@ class App extends Component {
         websiteLink: "https://tmbg.herokuapp.com/",
         video: "Videos/tmbgEdited.mp4",
         class: "TMBG"
-      },{
+      }, {
         logo: " Images/connectFourAppLogo.png ",
         color: "#FF7F11",
         picture: " Images/connectFourApp.png ",
@@ -184,6 +187,17 @@ class App extends Component {
     this.userClicksEmail = this.userClicksEmail.bind(this);
   }
 
+  componentDidMount() {
+    const links = ["https://cdn.rawgit.com/bradley/Blotter/3007fe6e/build/blotter.min.js", "https://cdn.rawgit.com/bradley/Blotter/3007fe6e/build/materials/channelSplitMaterial.js", "https://cdn.rawgit.com/bradley/Blotter/3007fe6e/build/materials/fliesMaterial.js"]
+
+    for (var i=0; i<links.length; i++){
+      const script = document.createElement("script");
+      script.src = links[i];
+      script.async = true;
+      document.body.appendChild(script);
+    }
+  }
+
   initializeReactGA() {
     ReactGA.initialize('UA-114290573-1');
     ReactGA.pageview('/homepage');
@@ -194,9 +208,9 @@ class App extends Component {
   }
 
   handleCarouselProject = (incr) => {
-    if (this.state.index == (this.state.projects.length - 1) && incr == 1) {
+    if (this.state.index === (this.state.projects.length - 1) && incr === 1) {
       this.setState({ index: 0 });
-    } else if (this.state.index == 0 && incr == -1) {
+    } else if (this.state.index === 0 && incr === -1) {
       this.setState({ index: (this.state.projects.length - 1) });
     } else {
       this.setState({ index: (this.state.index + incr) });
@@ -207,39 +221,56 @@ class App extends Component {
     this.setState({ mouseIndex: mouseIdx });
   }
 
-  userClicksAboutMe(){
+  userClicksAboutMe() {
     ReactGA.event({
       category: 'Nav',
       action: 'About Me'
     });
   }
 
-  userClicksGithub(){
+  userClicksGithub() {
     ReactGA.event({
       category: 'Nav',
       action: 'Github'
     });
   }
 
-  userClicksLinkedIn(){
+  userClicksLinkedIn() {
     ReactGA.event({
       category: 'Nav',
       action: 'LinkedIn'
     });
   }
 
-  userClicksEmail(){
+  userClicksEmail() {
     ReactGA.event({
       category: 'Nav',
       action: 'Email'
     });
   }
 
+
   render() {
+    // Define text style
+
+    
     return (
       <div className="App">
+     <Landing></Landing>
+      
 
-        <nav id="nav" style={{ borderColor: this.state.projects[this.state.index].color }}>
+      </div>
+    );
+  }
+}
+// <ProjectPreview  {...this.state.projects[this.state.mouseIndex]} />
+export default App;
+
+/*
+ <Boxes handleProjectChange={this.handleProjectChange} handleProjectPreview={this.handleProjectPreview} projects={this.state.projects} currentProjectIndex={this.state.index} />
+        <ProjectPreview  {...this.state.projects[this.state.mouseIndex]} />
+        <Project handleCarouselProject={this.handleCarouselProject} {...this.state.projects[this.state.index]} />
+  <nav id="nav" style={{ borderColor: this.state.projects[this.state.index].color }}>
           <ul>
             <li id="nameNavContainer">
               <img id="navProfileImage" src="Images/profile.jpg"></img>
@@ -268,12 +299,4 @@ class App extends Component {
             </li>
           </ul>
         </nav>
-        <Boxes handleProjectChange={this.handleProjectChange} handleProjectPreview={this.handleProjectPreview} projects={this.state.projects} currentProjectIndex={this.state.index} />
-        <ProjectPreview  {...this.state.projects[this.state.mouseIndex]} />
-        <Project handleCarouselProject={this.handleCarouselProject} {...this.state.projects[this.state.index]} />
-      </div>
-    );
-  }
-}
-// <ProjectPreview  {...this.state.projects[this.state.mouseIndex]} />
-export default App;
+        */

@@ -1,0 +1,1014 @@
+/* Entire Document */
+html, body {
+    height: 100%;
+    /*scroll-behavior: smooth;*/
+  }
+  
+  [ng\:cloak], [ng-cloak], .ng-cloak {
+    display: none !important;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    z-index: 0;
+    background: black;
+  }
+  button:focus {
+    outline: 0;
+  }
+  #backBtn{
+    left: 35px;
+  }
+  #nextBtn{
+    right: 45px;
+  }
+  #backBtn i{
+    padding-right: 3px;
+  }
+  #nextBtn i{
+    padding-left: 3px;
+  }
+  .sliderBtn i{
+    color: rgb(188, 188, 188);
+    width: 52px;
+    height: 52px;
+    font-size: 30px;
+  }
+  .sliderBtn i:hover{
+    color: rgb(255, 255, 255);
+  }
+  .sliderBtn{
+    position: absolute;
+    bottom: 0px;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+   /* border: 3px solid black;
+    */
+    border: none;
+    background: rgba(207, 208, 209, 0);
+  }
+  /* .sliderBtn:hover{
+    background: rgb(113, 113, 113);
+  }
+  */
+  /* !Overlay! */
+  
+  #overlay{
+    position: fixed; 
+    z-index: 3; 
+    bottom: 10px;
+    right: 10px;
+    width: auto;
+    height: auto; 
+    background: rgba(0, 0, 0, 0.8); 
+    color: white; 
+    border-radius: 15px; 
+    text-align: center; 
+    padding: 5px; 
+    max-width: 30%;
+  }
+  
+  #overlayContainer{
+    position: relative; 
+    color: white; 
+  }
+  
+  .previewUL{
+    padding: 5px;
+    margin: 0px;
+  }
+  
+  .previewUL #overlayFrontEnd li,  .previewUL #overlayBackEnd li{
+    border: 1px solid white; 
+    max-width: 90%;
+  }
+  
+  .shownOverlay{
+    display: block;
+  }
+  
+  .hiddenOverlay{
+   /* display: none;  */
+  }
+  
+  .toggleOverlayButton{
+    position: absolute;
+    right: 10px; 
+    background: transparent;
+    border: 2px solid white; 
+    border-radius: 2px; 
+    top: 5px;
+  }
+  
+  .toggleOverlayButton:hover{
+    cursor: pointer;
+  }
+  
+  #toggleOverlayButtonIcon{
+    color: white; 
+  }
+  
+  /* !Nav! */
+  nav {
+    background-color: #3B3738;
+    margin: 0;
+    overflow: hidden;
+    color: white;
+    border-bottom-color: #C9C9C9;
+    border-bottom: solid 5px;;
+    height: 80px;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+    position: fixed;
+  /*  display: none; */
+    display: block;  
+  }
+  /* Leftside of Nav */
+  #nic {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  #navProfileImage {
+    margin-right:10px;
+    width: 66px;
+    height: 66px;
+    border-radius: 50px;
+  }
+  
+  #nameNavContainer{
+    display: flex;
+    flex-direction: row;
+    height: 70px;
+    padding: 8px 0;
+  }
+  
+  #nameNavContainerText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  #nicJob {
+    font-style: italic;
+    margin-top: -15px;
+  }
+  /* Nav Positioning */
+  nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  nav ul li {
+    display: inline-block;
+    list-style-type: none;
+  }
+  nav ul li a {
+    color: white;
+    background-color: #521A19;
+    display: block;
+    height: 100%;
+    padding: 20px 20px;
+    text-decoration: none;
+  }
+  nav ul li:first-child {
+    margin-right: auto;
+  }
+  #nameNavContainer {
+    padding-left: 15px;
+  }
+  /* Right links */
+  nav ul li a:hover {
+    background-color: #B20D0C;
+  }
+  
+  
+  
+  .navIcon{
+    font-size: 36px; 
+  }
+  /* About me Section */
+  #overlayExit{
+    display: inline; 
+    float: right; 
+    font-size: 30px; 
+  }
+  
+  #aboutMeButton, #logoCredits{
+    color: #CDCCFF;
+    cursor:pointer;
+    background:none!important;
+    border:none;
+    padding:0!important;
+    font-size: 14px;
+    margin-left: 10px;
+    display: inline; 
+    font-style: normal; 
+    font-weight: bold; 
+  }
+  #aboutMeButton:hover, #logoCredits:hover{
+    text-decoration:underline;
+  }
+  #logoCredits{
+    position: absolute;
+    left: 0xp;
+  }
+  #aboutMeText, #credit{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 20px;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    width: 90%;
+  }
+  /* !Projects! */
+  #projects{
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    height: 90%;
+  }
+  #projectInfoText{
+    position: absolute;
+    bottom: 0px;
+    color: white;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+  }
+  #content{
+    position: relative;
+   /* max-width: 700px;
+    */
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+  }
+  
+  #video-controls{
+    z-index: 3;
+    position: absolute; 
+    top: 20px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%)
+  }
+  .video-control-button{
+    font-size: 34px;
+  }
+  .video-control-button:hover{
+    cursor: pointer;
+    color: rgb(180, 180, 180);
+  }
+  
+  
+  #projectTitle{
+   /* padding-top: 4%;
+    */
+  }
+  #topLeftContent{
+    position: absolute;
+    left: 10px;
+  }
+  #projectAdditionalInformation{
+   /*display: none;*/
+    max-width: 40%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 5px;
+    border-radius: 15px;
+  }
+  #toggleButton{
+    background: rgb(42, 42, 42);
+    border: 3px solid black;
+    color: rgb(255, 255, 255);
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 10px;
+    margin: 10px auto; 
+    border-color: white;
+  }
+  #toggleOverlayButtonClosed{
+    z-index: 30;
+  }
+  .previewLogo{
+    float: left;
+    height: 50px;
+    width: 50px;
+  }
+  /*#toggleButton:hover{
+    color: rgb(180, 180, 180);
+    border-color:rgb(180, 180, 180);
+  } */
+  
+  .Poll:hover{
+    background: #730055 !important;
+  }
+  
+  .TMBG:hover{
+    background: #00050D !important;
+  }
+  
+  .Penny:hover{
+    background: #004559 !important;
+  }
+  
+  .Twitch:hover{
+    background: #310E71 !important;
+  }
+  
+  .C4:hover{
+    background: #CC4C00 !important;
+  }
+  
+  .Weather:hover{
+    background: #004D00 !important;
+  }
+  
+  .Quote:hover{
+    background: #004D4D !important;
+  }
+  
+  .NPC:hover{
+    background: #BC0000 !important;
+  }
+  
+  .Wiki:hover{
+    background: #004983 !important;
+  }
+  
+  .Calc:hover{
+    background: #532A7C !important;
+  }
+  
+  .Clock:hover{
+    background: #B60000 !important;
+  }
+  
+  #projects ul{
+    padding: 0px;
+  }
+  #projectBackEnd, #projectFrontEnd, #overlayFrontEnd, #overlayBackEnd{
+    width: 100%;
+  }
+  #projectFrontEnd li, #projectBackEnd li, #overlayFrontEnd li, #overlayBackEnd li  {
+    border-radius: 5px;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    padding: 3px 5px 3px 5px;
+    margin: 0px 3px 4px 3px;
+  }
+  #projectFrontEnd li, #overlayFrontEnd li {
+    background: #C54E30;
+  }
+  #projectBackEnd li, #overlayBackEnd li {
+    background: #9952B7;
+  }
+  #projectLinks {
+    padding: 0px;
+    position: absolute;
+   /* left: calc(50% - 418px);
+    */
+    bottom: 0px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    text-align: center;
+  }
+  #projectLinks li {
+    text-align: center;
+    display: inline-block;
+    list-style-type: none;
+    margin: 5px 10px 0px 0px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+   /* background: #2D304C; */
+   background: rgb(35, 35, 35); 
+    padding: 4px 10px;
+    border: 3px solid transparent;
+    border-radius: 10px;
+    border-color: white; 
+  }
+  
+  .fontIcon{
+    padding: 3px 5px 3px 5px;
+    color: white;
+    -webkit-transition: color .5s;
+    -moz-transition: color .5s;
+    -ms-transition: color .5s;
+    -o-transition: color .5s;
+    transition: color .5s;
+  }
+  
+  .externalLinks{
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    color: white; 
+    text-decoration: none;
+  }
+  /*
+  #projectLinks li:hover {
+   color: rgb(180, 180, 180);
+   border-color:rgb(180, 180, 180);
+  } */
+  
+  #video-jumbotron{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: hidden;
+  }
+  #projectPicture {
+  /* Make video to at least 100% wide and tall */
+  min-width: 100%; 
+  min-height: 100%; 
+  
+  /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+  width: auto;
+  height: auto;
+  
+  /* Center the video */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  }
+  #projectVideo{
+    display: block;
+   /*position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    */
+  }
+  /* Project Buttons */
+  #projectSelectBoxes {
+    width: 100%;
+    overflow-x:scroll;
+    white-space: nowrap;
+    margin: 0 auto;
+    font-size: 0px;
+    margin-top: 67px; 
+  }
+  .projectSelectImage {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  button{
+    cursor: pointer;
+  }
+  .logoText{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    bottom: 0px;
+    color: white;
+    width: 100%;
+    margin: 0px;
+  }
+  .projectSelectButton {
+    background: white;
+    max-width: 150px;
+    max-height: 150px;
+    min-width: 100px;
+    min-height: 100px;
+    padding: 0;
+    border: none;
+    position: relative;
+    font-size: 0px;
+  }
+  /* !!CONTACT!! */
+  #contactInfo{
+    text-align: center;
+    clear: both;
+    padding: 100px 0px;
+    background-color: #3B3738;
+    color: white;
+  }
+  
+  #nameContainer{
+    float: left;
+  }
+  #addressContainer{
+    float: right;
+  }
+  #Message{
+    clear: both;
+  }
+  .antispam {
+    display:none;
+  }
+  #credit{
+    font-size: 10px;
+  }
+  
+  #contactInfo h1{
+    margin-top: 30px;
+    font-size: 36px; 
+    margin-bottom: 10px; 
+  }
+  #contactInfo h3{
+    margin-top: 10px;
+    margin-bottom: 70px;
+    font-size: 20px;
+  }
+  
+  #emailButton{
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 25px;
+    margin: 10px auto;
+    text-transform: uppercase; 
+    text-decoration: none; 
+  
+  }
+  
+  #emailButton:hover{
+    opacity: .8;
+  }
+  
+  /* Splash page */
+  #splash button{
+    width: 20%;
+    height: 100%;
+    margin: 0px;
+    border: none;
+    padding: 0px;
+  }
+  #removeMargin{
+    font-size: 0px;
+  }
+  #splash button img{
+    width: 100%;
+  }
+  .splashText{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 27px;
+    position: absolute;
+    top: 60%;
+    color: white;
+    width: 100%;
+  }
+  #splash{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  #index{
+  /*  display: none; */
+    display: block; 
+    height: 100%;
+  }
+  .projectSelectButton img, .projectSelectImage {
+    opacity: 1;
+  }
+  .projectSelectButton:hover img, .projectSelectImage:hover {
+    opacity: .5;
+  }
+  @media screen and (max-width: 950px) {
+  
+    #projects ul{
+        margin-bottom: 10px;
+    }
+  
+    #projectAdditionalInformation{
+        max-width: 90%;
+    }
+   /* SPLASH PAGE */
+    #aboutMeText, #credit{
+        font-size: 18px;
+   }
+   /* Projects */
+    #projectTitle{
+        padding-top: 1.5%;
+   }
+    #projectLinks{
+        margin: 0px;
+   }
+    #projectFrontEnd li, #projectBackEnd li {
+        font-size: 12px;
+   }
+  
+    #projectLinks li {
+        width: 50%;
+        font-size: 18px;
+   }
+  
+  }
+  @media screen and (max-width: 700px) {
+    #projectAdditionalInformation{
+        max-width: 96%;
+    }
+    #nextBtn{
+      right: 15px;
+    }
+    #backBtn{
+      left: 5px;
+    }
+    #splash button{
+        height: 250px;
+        width: 100%;
+   }
+    #splash{
+        margin-top: 70px;
+        width: 100%;
+   }
+    #splash button img{
+        width: 150px;
+   }
+    #nameNavContainer{
+        padding: 5px;
+        justify-content: center;
+   }
+    #aboutMeText, #credit{
+        font-size: 14px;
+   }
+    #splash{
+        margin-top: 100px;
+   }
+   /* NAV */
+    nav{
+        height: 107px;
+   }
+    nav ul{
+        display: block;
+        text-align: center;
+        font-size: 0px;
+   }
+    #nicJob{
+        font-size: 14px;
+   }
+    nav ul li {
+        width: 33.3%;
+        text-align: center;
+   }
+    nav ul li:first-child {
+        width: 100%;
+        text-align: center;
+        display: block;
+   }
+    nav ul li a {
+        display: block;
+        font-size: 8px;
+        padding: 0px;
+        padding-top: 4px;
+   }
+   .navIcon{
+        height: 25px;
+        width: 25px;
+   }
+    .projectSelectButton {
+        max-width: 100px;
+        max-height: 100px;
+        min-width: 50px;
+        min-height: 50px;
+   }
+    .logoText{
+        font-size: 13px;
+   }
+    #projectTitle{
+       margin: 15px;
+   }
+    #projectLinks li {
+        width: 90%;
+        font-size: 18px;
+        margin: 5px auto;
+   }
+   #projectLinks{
+     width: 75%;
+   }
+   /* #projectInfoText{
+        position: relative;
+   }
+    #projectPicture{
+        display: none;
+   }
+    #content{
+        margin: 10px;
+        padding-bottom: 60px;
+   }
+    */
+   
+    .navIcon{
+        font-size: 25px;
+       }
+    #overlay{
+       max-width: 100%;
+    }
+    #projectSelectBoxes{
+      margin-top: 100px;
+    }
+    .previewUL #overlayFrontEnd,  .previewUL #overlayBackEnd{
+      width: 90%;
+    }
+    .previewUL{
+      padding-left: 0px;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .previewUL{
+      display: none !important;
+    }
+    #projectLinks{
+      width: 100%;
+    }
+    .toggleOverlayButton{
+      display: none !important; 
+    }
+  
+    #video-controls{
+      display: none;
+    }
+  
+    #toggleOverlayButtonIcon{
+      display: none;
+    }
+  
+    #overlay{
+        display: none !important;
+    }
+  
+    #aboutMeText, #credit{
+        font-size: 12px;
+        padding-top: 30px;
+   }
+  
+    #nic{
+        margin: 3px 0px;
+        font-size: 14px 
+   }
+    #nicJob {
+        margin: 5px 0px 10px 5px;
+        font-size: 12px;
+   }
+    #aboutMeButton, #logoCredits{
+        display: block;
+        font-size: 15px;
+        margin: 0 auto;
+   }
+    #contactInfo{
+        font-size: 20px;
+   }
+    .projectSelectButton{
+        width: 50%;
+        max-width: 50%;
+        height: 100%;
+        white-space: normal;
+        max-height: 100%;
+   }
+    .logoText{
+        font-size: 20px;
+   }
+    .projectSelectImage{
+        width: 100px;
+   }
+   #projectSelectBoxes{
+     height: 125px;
+   }
+    #projectAdditionalInformation{
+        max-width: 100%;
+        padding: 0px;
+        background: none;
+   }
+    #projects{
+        height: auto;
+   }
+    #video-jumbotron{
+        display: none;
+   }
+    #content{
+        width: 90%;
+   }
+    #projectInfoText{
+        position: relative;
+   }
+    #toggleButton{
+        margin: 0 auto;
+        display: block;
+        margin-bottom: 15px;
+   }
+    #topLeftContent{
+        position: relative;
+   }
+    #projectLinks{
+        position: relative;
+        transform: none;
+        -webkit-transform: none;
+        bottom: 0;
+        left: 0;
+   }
+    .sliderBtn{
+        top: 0;
+   }
+   h1{
+       text-align: center; 
+   }
+  
+  
+  }
+  .App, #root{
+    width: 100%;
+    height: 100%;
+  }
+  
+  .landingVideoContainer, .landingVideo{
+  
+  }
+  
+  .landingContainer, .landingParallax{
+    height: 100%;
+  }
+  
+  .landingContainer{
+    position: relative; 
+  }
+  
+  .landingBottomContainer{
+    position: absolute;
+    left: 0; 
+    bottom: 0;
+  }
+  
+  .landingNav{
+    z-index: 3; 
+    width: 100%;
+    height: auto;
+    position: fixed; 
+    text-align: right; 
+  }
+  
+  .landingNavItem{
+    color: white;
+    margin-right: 10px;
+    margin-top: 5px;
+    display: inline-block; 
+  }
+  
+  .landingVideoContainer{
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .landingVideo{
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /*object-fit: fill;*/
+  }
+  
+  .landingTitleBody{
+    background: rgba(17, 17, 17, 0.353);
+    color: white; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 20px; 
+    border-radius: 20px; 
+  }
+  
+  .landingTitle{
+    font-size: 32px; 
+  }
+  
+  .landingSubTitle{
+    font-size: 16px; 
+  }
+  
+  .landingBoxesContainer{
+    width: 100%;
+    overflow-x:scroll;
+    white-space: nowrap;
+    font-size: 0px;
+    margin-top: 67px; 
+  }
+  
+  .landingBox{
+    background: white;
+    max-width: 150px;
+    max-height: 150px;
+    min-width: 100px;
+    min-height: 100px;
+    padding: 0;
+    border: none;
+    position: relative;
+    font-size: 0px;
+    margin: 10px;
+  }
+  
+  .landingBoxImage{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .landingBoxText{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    bottom: 0px;
+    color: white;
+    width: 100%;
+    margin: 0px;
+  }
+  
+  .weird{
+    color: white; 
+    background: red; 
+  }
+  
+  .App{
+    background: white; 
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background: #E55039;
+  }
+  
+  .box {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+  }
+  
+  .box .b {
+    border-radius: 50%;
+    border-left: 4px solid;
+    border-right: 4px solid;
+    border-top: 4px solid transparent !important;
+    border-bottom: 4px solid transparent !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ro 2s infinite;
+  }
+  
+  .box .b1 {
+    border-color: #4A69BD;
+    width: 120px;
+    height: 120px;
+  }
+  
+  .box .b2 {
+    border-color: #F6B93B;
+    width: 100px;
+    height: 100px;
+    animation-delay: 0.2s;
+  }
+  
+  .box .b3 {
+    border-color: #2ECC71;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0.4s;
+  }
+  
+  .box .b4 {
+    border-color: #34495E;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0.6s;
+  }
+  
+  @keyframes ro {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    
+    50% {
+      transform: translate(-50%, -50%) rotate(-180deg);
+    }
+    
+    100% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+  }

@@ -4,6 +4,8 @@ html, body {
   /*scroll-behavior: smooth;*/
 }
 
+body    {overflow-y:scroll;}
+
 [ng\:cloak], [ng-cloak], .ng-cloak {
   display: none !important;
 }
@@ -307,49 +309,198 @@ nav ul li a:hover {
   color: rgb(180, 180, 180);
   border-color:rgb(180, 180, 180);
 } */
+/* darken by 20% the base color https://www.cssfontstack.com/oldsites/hexcolortool/ */
+
+.Rapture:hover{
+  background: #005C4A !important;
+}
+
+.RapturePill{
+  background: linear-gradient(to right, #005C4A 50%, #218F7D 50%);
+}
+
+.RaptureBar::-webkit-scrollbar-thumb{
+  background-color: #005C4A!important
+}
+
+.RaptureNavItem:hover{
+  color: #005C4A !important;
+}
 
 .Poll:hover{
   background: #730055 !important;
+}
+
+.PollPill{
+background: linear-gradient(to right, #730055 50%, #A61C88 50%);
+}
+
+.PollBar::-webkit-scrollbar-thumb{
+  background-color: #730055!important
+}
+
+.PollNavItem:hover{
+  color: #730055 !important;
 }
 
 .TMBG:hover{
   background: #00050D !important;
 }
 
+.TMBGPill{
+  background: linear-gradient(to right, #00050D 50%, #171E26 50%);
+}
+
+.TMBGBar::-webkit-scrollbar-thumb{
+  background-color: #00050D!important
+}
+
+.TMBGNavItem:hover{
+  color: #00050D !important;
+}
+
 .Penny:hover{
   background: #004559 !important;
+}
+
+.PennyPill{
+  background: linear-gradient(to right, #004559 50%, #18788C 50%);
+}
+
+.PennyBar::-webkit-scrollbar-thumb{
+  background-color: #004559!important
+}
+
+.PennyNavItem:hover{
+  color: #004559 !important;
 }
 
 .Twitch:hover{
   background: #310E71 !important;
 }
 
+.TwitchPill{
+  background: linear-gradient(to right, #310E71 50%, #6441A4 50%);
+}
+
+.TwitchBar::-webkit-scrollbar-thumb{
+  background-color: #310E71!important
+}
+
+.TwitchNavItem:hover{
+  color: #310E71 !important;
+}
+
 .C4:hover{
   background: #CC4C00 !important;
+}
+
+.C4Pill{
+  background: linear-gradient(to right, #CC4C00 50%, #FF7F11 50%);
+}
+
+.C4Bar::-webkit-scrollbar-thumb{
+  background-color: #CC4C00!important
+}
+
+.C4NavItem:hover{
+  color: #CC4C00 !important;
 }
 
 .Weather:hover{
   background: #004D00 !important;
 }
 
+.WeatherPill{
+  background: linear-gradient(to right, #004D00 50%, #048027 50%);
+}
+
+.WeatherBar::-webkit-scrollbar-thumb{
+  background-color: #004D00!important
+}
+
+.WeatherNavItem:hover{
+  color: #004D00 !important;
+}
+
 .Quote:hover{
   background: #004D4D !important;
+}
+
+.QuotePill{
+  background: linear-gradient(to right, #004D4D 50%, #008080 50%);
+}
+
+.QuoteBar::-webkit-scrollbar-thumb{
+  background-color: #004D4D!important
+}
+
+.QuoteNavItem:hover{
+  color: #004D4D !important;
 }
 
 .NPC:hover{
   background: #BC0000 !important;
 }
 
+.NPCPill{
+  background: linear-gradient(to right, #BC0000 50%, #EF281A 50%);
+}
+
+.NPCBar::-webkit-scrollbar-thumb{
+  background-color: #BC0000!important
+}
+
+.NPCNavItem:hover{
+  color: #BC0000 !important;
+}
+
 .Wiki:hover{
   background: #004983 !important;
+}
+
+.WikiPill{
+  background: linear-gradient(to right, #004983 50%, #007CB6 50%);
+}
+
+.WikiBar::-webkit-scrollbar-thumb{
+  background-color: #004983!important
+}
+
+.WikiNavItem:hover{
+  color: #004983 !important;
 }
 
 .Calc:hover{
   background: #532A7C !important;
 }
 
+.CalcPill{
+  background: linear-gradient(to right, #532A7C 50%, #865DAF 50%);
+}
+
+.CalcBar::-webkit-scrollbar-thumb{
+  background-color: #532A7C!important
+}
+
+.CalcNavItem:hover{
+  color: #532A7C !important;
+}
+
 .Clock:hover{
   background: #B60000 !important;
+}
+
+.ClockPill{
+  background: linear-gradient(to right, #B60000 50%, #E90000 50%);
+}
+
+.ClockBar::-webkit-scrollbar-thumb{
+  background-color: #B60000!important
+}
+
+.ClockNavItem:hover{
+  color: #B60000 !important;
 }
 
 #projects ul{
@@ -827,4 +978,463 @@ button{
 .App, #root{
   width: 100%;
   height: 100%;
+  overflow: hidden;
+}
+
+.landingVideoContainer, .landingVideo{
+
+}
+
+.landingContainer, .landingParallax{
+  height: 100%;
+}
+
+.landingContainer{
+  position: relative; 
+}
+
+.landingBottomContainer{
+  position: absolute;
+  left: 0; 
+  bottom: 0;
+  width: 100%;
+}
+
+.landingNav{
+  z-index: 3; 
+  width: 100%;
+  height: auto;
+  position: fixed; 
+  padding: 10px 0px;
+}
+
+.landingNavProfileImage{
+  height: 50px;
+  border-radius: 25px;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+.landingNavProfileName{
+  display: inline-block;
+  color: white; 
+  margin-left: 10px;
+  position: absolute;
+  top: 5px;
+  font-family: 'Yantramanav', sans-serif;
+  font-weight: 500;
+}
+
+.landingNavLeftHandContainer{
+  float: left; 
+}
+
+.landingNavRightHandContainer{
+  text-align: right; 
+}
+
+.landingNavItem{
+  color: white;
+  margin-right: 10px;
+  margin-top: 5px;
+  display: inline-block; 
+  cursor: pointer; 
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: none; 
+}
+
+.landingNavItem:hover{
+  background: black;
+}
+
+
+.landingVideoContainer{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.landingVideo{
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  /*object-fit: fill;*/
+  width: 100%;
+}
+
+.landingTitleBody{
+  background: rgba(17, 17, 17, 0.9);
+  color: white; 
+  position: absolute;
+  top: 230px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 20px; 
+  border-radius: 20px; 
+  -webkit-transition: -webkit-transform 2s linear; 
+  transition: transform 2s linear;
+}
+
+.landingTitle{
+  font-size: 60px; 
+  font-family: 'Geostar', cursive;
+  font-family: 'Staatliches', cursive;
+}
+
+.landingSubTitle{
+  font-size: 16px; 
+  font-family: 'Yantramanav', sans-serif;
+}
+
+.landingBoxesContainer{
+  width: 100%;
+  overflow-x:scroll;
+  white-space: nowrap;
+  font-size: 0px;
+  margin-bottom: 10px;
+}
+
+.landingBox{
+  background: white;
+  max-width: 150px;
+  max-height: 150px;
+  min-width: 100px;
+  min-height: 100px;
+  padding: 0;
+  border: none;
+  position: relative;
+  font-size: 0px;
+  margin: 10px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.285), 0px 10px 10px rgba(0, 0, 0, 0.394);
+  border-radius: 15px;
+}
+
+.landingBoxInner{
+  background: white;
+  max-width: 150px;
+  max-height: 150px;
+  min-width: 100px;
+  min-height: 100px;
+  padding: 0;
+  border: none;
+  position: relative;
+  font-size: 0px;
+  width: 100%;
+  background-size: cover;
+  border-radius: 15px;
+}
+
+.landingBoxImage{
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.landingBoxText{
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  position: absolute;
+  bottom: 0px;
+  color: white;
+  width: 100%;
+  margin: 0px;
+}
+
+.App{
+  background: black; 
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #E55039;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+.box .b {
+  border-radius: 50%;
+  border-left: 4px solid;
+  border-right: 4px solid;
+  border-top: 4px solid transparent !important;
+  border-bottom: 4px solid transparent !important;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ro 2s infinite;
+}
+
+.box .b1 {
+  border-color: #4A69BD;
+  width: 120px;
+  height: 120px;
+}
+
+.box .b2 {
+  border-color: #F6B93B;
+  width: 100px;
+  height: 100px;
+  animation-delay: 0.2s;
+}
+
+.box .b3 {
+  border-color: #2ECC71;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0.4s;
+}
+
+.box .b4 {
+  border-color: #34495E;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0.6s;
+}
+
+@keyframes ro {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  
+  50% {
+    transform: translate(-50%, -50%) rotate(-180deg);
+  }
+  
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+
+.customScrollBar::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: rgba(245, 245, 245, 0);
+    margin: 10px;
+}
+
+.customScrollBar::-webkit-scrollbar
+{
+    width: 12px;
+    background-color: rgba(245, 245, 245, 0);
+}
+
+.customScrollBar::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: white;
+    border: 1px solid white; 
+}
+
+.landingBoxExternalLink{
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  color: white; 
+  text-decoration: none;
+  list-style-type: none;
+  height: 75px; 
+
+
+}
+
+.landingBoxExternalLink3 li{
+  height: 50px;
+}
+
+.landingBoxExternalLink2 li{
+  height: 75px; 
+}
+
+.landingBoxExternalLink li{
+  width: 150px;
+  position: relative;
+
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all .25s ease-out;
+}
+
+.landingBoxExternalLink li:hover{
+  background-position: left bottom;
+}
+
+.landingBoxExternalLink:nth-child(1) li{
+  border-radius: 15px 15px 0px 0px;
+}
+
+.landingBoxExternalLink2:nth-child(2) li{
+  border-radius: 0px 0px 15px 15px;
+}
+
+.landingBoxExternalLink3:nth-child(3) li{
+  border-radius: 0px 0px 15px 15px;
+}
+
+.landingBoxExternalLink li div{
+  position: absolute; 
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 30px;
+  bottom: 0;
+}
+
+.landingBoxExternalLink3 li div{
+  top: 15px;
+}
+
+.hiddenLink{
+  opacity: 0;  
+}
+
+
+.projectInfo-enter {
+opacity: 0.01;
+transition: opacity 100ms ease-in;
+}
+.projectInfo-enter.projectInfo-enter-active {
+opacity: 1;
+transform: translate(-50%, 50%);
+transition-property: transform, opacity;
+transition-duration: 400ms;
+transition-timing-function: ease-in-out;
+}
+.projectInfo-leave {
+opacity: 1;
+transition-property: transform, opacity;
+transition-duration: 100ms;
+transition-timing-function: ease-in-out;
+}
+.projectInfo-leave.projectInfo-leave-active {
+opacity: 0.01;
+transition: opacity 100ms ease-in;
+} 
+/*
+.example-enter {
+opacity: 0;
+}
+.example-enter.example-enter-active {
+opacity: 1;
+transition: opacity 1s ease;
+transform: translate(0, -50%);
+-webkit-transition: -webkit-transform 2s linear; 
+transition: transform 2s linear;
+}
+.example-leave {
+opacity: 1;
+transform:   translate(0,0,0);
+transition-property: transform, opacity;
+transition-duration: 300ms;
+transition-timing-function: cubic-bezier(0.175, 0.665, 0.320, 1), linear;
+}
+.example-leave.example-leave-active {
+opacity: 0;
+}
+*/
+.video-enter {
+opacity: 0.01;
+}
+.video-enter.video-enter-active {
+opacity: 1;
+transition-property: opacity;
+transition-duration: 400ms;
+transition-timing-function: ease-in-out;
+}
+.video-leave {
+opacity: 1;
+transition-property: opacity;
+transition-duration: 400ms;
+transition-timing-function: ease-in-out;
+}
+.video-leave.video-leave-active {
+opacity: 0.01;
+} 
+
+.overlay{
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  background: #000;
+  background: rgba(0,0,0,.7);
+  width: 100%;
+  height: 100%;
+}
+
+.landingAdditionalInfo{
+  padding: 5px;
+  border-radius: 15px;
+  font-family: 'Yantramanav', sans-serif;
+  font-weight: 400px;
+  font-size: 16px;
+}
+
+.landingAdditionalInfoPills{
+  font-size: 14px; 
+  font-family: 'Yantramanav', sans-serif;
+}
+
+@media only screen and (max-width: 800px) {
+  .landingTitleBody{
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .landingTitleBody{
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .landingTitleBody{
+    width: 100%;
+    background: rgba(17, 17, 17, 0.9);
+    color: white;
+    /* position: absolute; */
+    /* top: 280px; */
+    /* left: 50%; */
+    /* -webkit-transform: translate(-50%, -50%); */
+    /* transform: translate(-50%, -50%); */
+    /* text-align: center; */
+    /* padding: 20px; */
+    border-radius: 20px;
+    -webkit-transition: -webkit-transform 2s linear;
+    transition: -webkit-transform 2s linear;
+    transition: transform 2s linear;
+    transition: transform 2s linear, -webkit-transform 2s linear;
+    width: 100%;
+    /* padding: 5px; */
+    text-align: center;
+    margin-top: 50px;
+    padding: 5px; 
+    word-wrap: break-word;
+  }
+  .landingNavRightHandContainer{
+    float: left; 
+    padding-top: 30px; 
+  }
+  .landingAdditionalInfoPills{
+    padding-left: 0px; 
+  }
+  .landingVideoContainer{
+    display: none; 
+  }
+  .landingTitle{
+    font-size: 50px; 
+  }
 }
