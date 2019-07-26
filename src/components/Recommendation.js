@@ -16,8 +16,8 @@ class Recommendation extends Component {
             color = this.props.projects[this.props.selectedProjectIndex].color
         }
         return (
-            <div className="recommendationContainer">
-                <div style={{background: color}} dangerouslySetInnerHTML={{ __html: this.props.text }} ></div>
+            <div style={{background: color}} className="recommendationContainer">
+                <div  className="recommendationText" dangerouslySetInnerHTML={{ __html: this.props.text }} ></div>
             </div>
         );
     }

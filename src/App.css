@@ -1391,10 +1391,19 @@ opacity: 0.01;
 
 .recommendationSectionContainer{
   background: black; 
+
 }
 
 .recommendationContainer{
-  background: white; 
+  margin: 30px; 
+  padding: 20px;
+  border: 2px solid white; 
+}
+
+.recommendationText{
+  font-size: 16px;
+  color: white; 
+  font-family: 'Yantramanav', sans-serif
 }
 
 @media only screen and (max-width: 800px) {
