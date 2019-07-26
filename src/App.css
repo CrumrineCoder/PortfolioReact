@@ -5,7 +5,6 @@ html, body {
 }
 
 
-
 [ng\:cloak], [ng-cloak], .ng-cloak {
   display: none !important;
 }
@@ -17,6 +16,7 @@ body {
   font-family: 'Roboto', sans-serif;
   z-index: 0;
   background: black;
+  overflow-y: scroll;
 }
 button:focus {
   outline: 0;

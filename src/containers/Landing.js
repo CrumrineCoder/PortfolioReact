@@ -4,6 +4,7 @@ import Header from "../components/Header.js";
 import Video from "../components/Video.js";
 import ProjectInfo from "../components/ProjectInfo.js";
 import ProjectBoxesContainer from "./ProjectBoxesContainer.js";
+import Recommendation from "../components/Recommendation.js";
 
 class Landing extends Component {
   constructor(props) {
@@ -13,6 +14,12 @@ class Landing extends Component {
       // video: "Videos\\We are Paid to Work Here.webm",
       noProjectSelected: true,
       selectedProjectIndex: null,
+      recommendations: [
+        {
+          name: "Sean D. Mack",
+          recommendation: "<p>Nicolas was an amazing addition to the intern program here at xOps.</p> <p>Nic developed front end interface based on mock-ups provided for our open source monitoring tools. He met with our worldwide team for daily standups and biweekly sprints to continue designing mockups after he finished building from the ones provided.</p> <p> During our chats, he was always thoughtful of the business, user, and the development team’s pain points, but was never paralyzed in his decision making. He has an eye for UI design along with an inclination to research and understand the user. He is able to discover pain points and begin developing solutions for them, and is always more than happy to communicate when he needs help. </p> <p> Nic is a talented designer and front-end programmer and I am happy to recommend him for any position he might apply. </p>"
+        }
+      ],
       projects: [
         {
           logo: "Images/raptureLogo.png ",
@@ -231,10 +238,17 @@ class Landing extends Component {
       ]
     };
     this.handleClick = this.handleClick.bind(this);
+    this.getRecommendation = this.getRecommendation.bind(this);
   }
 
   handleClick(idx) {
     this.setState({ selectedProjectIndex: idx, noProjectSelected: false });
+  }
+
+  getRecommendation(name){
+    return this.state.recommendations.filter(obj => {
+      return obj.name === name
+    })
   }
 
   render() {
@@ -265,7 +279,7 @@ class Landing extends Component {
         </div>
       </div>
       <div>
-        Recommendations
+        <Recommendation name="Sean D. Mack" role="CEO/CTO and Principal Consultant" company="xOps" text={this.getRecommendation("Sean D. Mack")[0].recommendation}></Recommendation>
       </div>
       </>
     );
