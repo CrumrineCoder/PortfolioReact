@@ -27,6 +27,7 @@ class Recommendation extends Component {
                     "Dark recommendationContainer"
                     : "recommendationContainer"
             }>
+                <i class="fas fa-quote-left recommendationQuoteIcon"></i>
                 <div  className="recommendationText" dangerouslySetInnerHTML={{ __html: this.props.text }} ></div>
                 <div className="recommendationFooter">
                     <img className="recommendationFooterImage" src={this.props.image} />

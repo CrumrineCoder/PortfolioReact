@@ -1406,6 +1406,12 @@ opacity: 0.01;
   font-style: italic; 
 }
 
+.recommendationQuoteIcon{
+  font-size: 30px;
+  display: block;
+  text-align: center; 
+}
+
 .recommendationText{
   
 }
