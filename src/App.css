@@ -1410,22 +1410,31 @@ opacity: 0.01;
   
 }
 
+.recommendationFooter{
+  display: flex; 
+}
+
 .recommendationFooterImage{
-  width: 52px;
-  border-radius: 25px; 
-  float: left; 
+  width: 80px;
+  border-radius: 50px; 
+  object-fit: contain;
+  align-self: flex-start;
   margin-right: 20px;
+  border: 2px solid white; 
+}
+
+.recommendationFooterText{
+  flex: 1 1 auto;
 }
 
 .recommendatonFooterName{
   font-weight: bold; 
   font-style: normal; 
   text-transform: uppercase; 
-  margin: 0px; 
 }
 
 .recommendationFooterCompany{
-  margin-top: 10px; 
+ 
 }
 
 @media only screen and (max-width: 800px) {

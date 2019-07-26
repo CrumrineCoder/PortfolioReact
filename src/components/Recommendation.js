@@ -21,8 +21,10 @@ class Recommendation extends Component {
                 <div  className="recommendationText" dangerouslySetInnerHTML={{ __html: this.props.text }} ></div>
                 <div className="recommendationFooter">
                     <img className="recommendationFooterImage" src={this.props.image} />
-                    <p className="recommendatonFooterName">{this.props.name}</p>
-                    <p className="recommendationFooterCompany">{this.props.role} at {this.props.company}</p>
+                    <div className="recommendationFooterText">
+                       <p className="recommendatonFooterName">{this.props.name}</p>
+                       <p className="recommendationFooterCompany">{this.props.role} at {this.props.company}</p>
+                    </div>      
                 </div>
             </div>
         );
