@@ -320,7 +320,7 @@ nav ul li a:hover {
   background: linear-gradient(to right, #005C4A 50%, #218F7D 50%);
 }
 
-.RaptureBar::-webkit-scrollbar-thumb{
+.RaptureDark, .RaptureBar::-webkit-scrollbar-thumb{
   background-color: #005C4A!important
 }
 
@@ -336,7 +336,7 @@ nav ul li a:hover {
 background: linear-gradient(to right, #730055 50%, #A61C88 50%);
 }
 
-.PollBar::-webkit-scrollbar-thumb{
+.PollDark, .PollBar::-webkit-scrollbar-thumb{
   background-color: #730055!important
 }
 
@@ -352,7 +352,7 @@ background: linear-gradient(to right, #730055 50%, #A61C88 50%);
   background: linear-gradient(to right, #00050D 50%, #171E26 50%);
 }
 
-.TMBGBar::-webkit-scrollbar-thumb{
+.TMBGDark, .TMBGBar::-webkit-scrollbar-thumb{
   background-color: #00050D!important
 }
 
@@ -368,7 +368,7 @@ background: linear-gradient(to right, #730055 50%, #A61C88 50%);
   background: linear-gradient(to right, #004559 50%, #18788C 50%);
 }
 
-.PennyBar::-webkit-scrollbar-thumb{
+.PennyDark, .PennyBar::-webkit-scrollbar-thumb{
   background-color: #004559!important
 }
 
@@ -384,7 +384,7 @@ background: linear-gradient(to right, #730055 50%, #A61C88 50%);
   background: linear-gradient(to right, #310E71 50%, #6441A4 50%);
 }
 
-.TwitchBar::-webkit-scrollbar-thumb{
+.TwitchDark, .TwitchBar::-webkit-scrollbar-thumb{
   background-color: #310E71!important
 }
 
@@ -400,7 +400,7 @@ background: linear-gradient(to right, #730055 50%, #A61C88 50%);
   background: linear-gradient(to right, #CC4C00 50%, #FF7F11 50%);
 }
 
-.C4Bar::-webkit-scrollbar-thumb{
+.C4Dark, .C4Bar::-webkit-scrollbar-thumb{
   background-color: #CC4C00!important
 }
 
@@ -416,7 +416,7 @@ background: linear-gradient(to right, #730055 50%, #A61C88 50%);
   background: linear-gradient(to right, #004D00 50%, #048027 50%);
 }
 
-.WeatherBar::-webkit-scrollbar-thumb{
+.WeatherDark, .WeatherBar::-webkit-scrollbar-thumb{
   background-color: #004D00!important
 }
 
@@ -432,7 +432,7 @@ background: linear-gradient(to right, #730055 50%, #A61C88 50%);
   background: linear-gradient(to right, #004D4D 50%, #008080 50%);
 }
 
-.QuoteBar::-webkit-scrollbar-thumb{
+.QuoteDark, .QuoteBar::-webkit-scrollbar-thumb{
   background-color: #004D4D!important
 }
 
@@ -448,7 +448,7 @@ background: linear-gradient(to right, #730055 50%, #A61C88 50%);
   background: linear-gradient(to right, #BC0000 50%, #EF281A 50%);
 }
 
-.NPCBar::-webkit-scrollbar-thumb{
+.NPCDark, .NPCBar::-webkit-scrollbar-thumb{
   background-color: #BC0000!important
 }
 
@@ -464,7 +464,7 @@ background: linear-gradient(to right, #730055 50%, #A61C88 50%);
   background: linear-gradient(to right, #004983 50%, #007CB6 50%);
 }
 
-.WikiBar::-webkit-scrollbar-thumb{
+.WikiDark, .WikiBar::-webkit-scrollbar-thumb{
   background-color: #004983!important
 }
 
@@ -480,7 +480,7 @@ background: linear-gradient(to right, #730055 50%, #A61C88 50%);
   background: linear-gradient(to right, #532A7C 50%, #865DAF 50%);
 }
 
-.CalcBar::-webkit-scrollbar-thumb{
+.CalcDark, .CalcBar::-webkit-scrollbar-thumb{
   background-color: #532A7C!important
 }
 
@@ -496,7 +496,7 @@ background: linear-gradient(to right, #730055 50%, #A61C88 50%);
   background: linear-gradient(to right, #B60000 50%, #E90000 50%);
 }
 
-.ClockBar::-webkit-scrollbar-thumb{
+.ClockDark, .ClockBar::-webkit-scrollbar-thumb{
   background-color: #B60000!important
 }
 

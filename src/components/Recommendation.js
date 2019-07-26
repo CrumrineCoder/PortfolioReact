@@ -16,8 +16,17 @@ class Recommendation extends Component {
         if(this.props.selectedProjectIndex != null){
             color = this.props.projects[this.props.selectedProjectIndex].color
         }
-        return (
+        /*
+        </div>
             <div style={{background: color}} className="recommendationContainer">
+            */
+        return (
+            <div className={
+                !this.props.noProjectSelected
+                    ? this.props.projects[this.props.selectedProjectIndex].class +
+                    "Dark recommendationContainer"
+                    : "recommendationContainer"
+            }>
                 <div  className="recommendationText" dangerouslySetInnerHTML={{ __html: this.props.text }} ></div>
                 <div className="recommendationFooter">
                     <img className="recommendationFooterImage" src={this.props.image} />
