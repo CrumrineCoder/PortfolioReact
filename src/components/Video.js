@@ -43,15 +43,18 @@ class Video extends Component {
       </video>
         )}
     </div>)
-    return (
-      <>
-        <ReactCSSTransitionGroup
+    /*
+      <ReactCSSTransitionGroup
           transitionName="video"
           transitionEnterTimeout={400}
           transitionLeaveTimeout={400}
         >
           {video}
         </ReactCSSTransitionGroup>
+        */
+    return (
+      <>
+        {video}
         <div className="overlay" />
       </>
     );

@@ -239,6 +239,7 @@ class Landing extends Component {
 
   render() {
     return (
+      <>
       <div className="landingParallax">
         <div className="landingContainer">
           <Header
@@ -263,6 +264,10 @@ class Landing extends Component {
           </ProjectBoxesContainer>
         </div>
       </div>
+      <div>
+        Recommendations
+      </div>
+      </>
     );
   }
 }
