@@ -278,8 +278,8 @@ class Landing extends Component {
           </ProjectBoxesContainer>
         </div>
       </div>
-      <div>
-        <Recommendation name="Sean D. Mack" role="CEO/CTO and Principal Consultant" company="xOps" text={this.getRecommendation("Sean D. Mack")[0].recommendation}></Recommendation>
+      <div class="recommendationSectionContainer">
+        <Recommendation name="Sean D. Mack" role="CEO/CTO and Principal Consultant" company="xOps" text={this.getRecommendation("Sean D. Mack")[0].recommendation} selectedProjectIndex={this.state.selectedProjectIndex} projects={this.state.projects}></Recommendation>
       </div>
       </>
     );

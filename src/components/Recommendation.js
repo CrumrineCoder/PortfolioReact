@@ -11,11 +11,13 @@ class Recommendation extends Component {
 
     render() {
         console.log(this.props);
-
+        var color = ""; 
+        if(this.props.selectedProjectIndex != null){
+            color = this.props.projects[this.props.selectedProjectIndex].color
+        }
         return (
-            <div>
-                <div dangerouslySetInnerHTML={{ __html: this.props.text }} ></div>
-
+            <div className="recommendationContainer">
+                <div style={{background: color}} dangerouslySetInnerHTML={{ __html: this.props.text }} ></div>
             </div>
         );
     }

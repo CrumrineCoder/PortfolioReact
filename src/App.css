@@ -1,6 +1,7 @@
 /* Entire Document */
 html, body {
   height: 100%;
+  background: black; 
   /*scroll-behavior: smooth;*/
 }
 
@@ -1386,6 +1387,14 @@ opacity: 0.01;
 .landingAdditionalInfoPills{
   font-size: 14px; 
   font-family: 'Yantramanav', sans-serif;
+}
+
+.recommendationSectionContainer{
+  background: black; 
+}
+
+.recommendationContainer{
+  background: white; 
 }
 
 @media only screen and (max-width: 800px) {
