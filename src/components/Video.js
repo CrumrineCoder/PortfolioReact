@@ -1,7 +1,7 @@
 
 
 import React, { Component } from "react";
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+//import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 class Video extends Component {
   constructor(props) {
@@ -43,15 +43,18 @@ class Video extends Component {
       </video>
         )}
     </div>)
-    return (
-      <>
-        <ReactCSSTransitionGroup
+    /*
+      <ReactCSSTransitionGroup
           transitionName="video"
           transitionEnterTimeout={400}
           transitionLeaveTimeout={400}
         >
           {video}
         </ReactCSSTransitionGroup>
+        */
+    return (
+      <>
+        {video}
         <div className="overlay" />
       </>
     );
