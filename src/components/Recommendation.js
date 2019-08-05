@@ -11,7 +11,6 @@ class Recommendation extends Component {
     }
 
     render() {
-        console.log(this.props);
         var color = ""; 
         if(this.props.selectedProjectIndex != null){
             color = this.props.projects[this.props.selectedProjectIndex].color
