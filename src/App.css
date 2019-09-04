@@ -312,6 +312,22 @@ nav ul li a:hover {
 } */
 /* darken by 20% the base color https://www.cssfontstack.com/oldsites/hexcolortool/ */
 
+.Bard:hover{
+  background: #B69137 !important;
+}
+
+.BardPill{
+  background: linear-gradient(to right, #9D781E 50%, #D0AB51 50%);
+}
+
+.BardDark, .BardBar::-webkit-scrollbar-thumb{
+  background-color: rgb(51, 41, 11)!important
+}
+
+.BardNavItem:hover{
+  color: #B69137 !important;
+}
+
 .Rapture:hover{
   background: #005C4A !important;
 }
@@ -1248,7 +1264,7 @@ body {
   color: white; 
   text-decoration: none;
   list-style-type: none;
-  height: 75px; 
+  height: 76px; 
 
 
 }
@@ -1258,7 +1274,7 @@ body {
 }
 
 .landingBoxExternalLink2 li{
-  height: 75px; 
+  height: 76px; 
 }
 
 .landingBoxExternalLink li{
