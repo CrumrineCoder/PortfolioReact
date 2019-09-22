@@ -321,7 +321,7 @@ nav ul li a:hover {
 }
 
 .BardDark, .BardBar::-webkit-scrollbar-thumb{
-  background-color: rgb(51, 41, 11)!important
+  background-color: #B69137!important
 }
 
 .BardNavItem:hover{
