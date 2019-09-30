@@ -39,7 +39,7 @@ class Landing extends Component {
           websiteLink: "https://confectionswithcharacter.com/",
           caseStudyLink:
             "https://nicolascrumrine.com/#/posts/-Lntx2aWkC23w704-4z-",
-          video: "Videos/BardicInspiration.mp4",
+          video: "Videos/Bardic.mp4",
           class: "Bard"
         },
         {
