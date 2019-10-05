@@ -1435,7 +1435,7 @@ opacity: 0.01;
 
 @media only screen and (max-width: 380px) {
   .landingNav{
-    position: sticky;
+    position: fixed;
   }
   .landingBottomContainer{
     position: relative; 
@@ -1446,13 +1446,15 @@ opacity: 0.01;
   }
   .landingTitleBody{
     width: 95%;
-    margin: 0 auto;
+    margin: 70px auto;
     background: black; 
     padding: 5px; 
     position: relative; 
     transform: none;
     top: 0px; 
     left: 0px; 
+    -webkit-transition: -webkit-transform 0s linear; 
+  transition: transform 0s linear;
   }
   .landingNavRightHandContainer{
     float: left; 
