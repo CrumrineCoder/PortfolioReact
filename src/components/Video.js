@@ -19,7 +19,7 @@ class Video extends Component {
           ref="vidRef"
           className="landingVideo"
           autoPlay
-          muted
+          muted={true}
           loop
           src={
             this.props.projects[this.props.selectedProjectIndex].video ||
@@ -34,7 +34,7 @@ class Video extends Component {
             ref="vidRef"
             className="landingVideo"
             autoPlay
-            muted
+            muted={true}
             loop
             src={this.state.video}
             type="video/mp4"

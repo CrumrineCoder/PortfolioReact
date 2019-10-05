@@ -19,7 +19,6 @@ class Header extends Component {
                         src={this.state.profile}
                         alt="ProfilePicture"
                     />
-                    {this.props.selectedProjectIndex}
                     {this.props.selectedProjectIndex !== null ? (
                         <h2 className="landingNavProfileName">Nicolas Crumrine</h2>
                     ) : (
