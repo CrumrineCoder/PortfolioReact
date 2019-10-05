@@ -266,7 +266,7 @@ class Landing extends Component {
     this.setState({ selectedProjectIndex: idx, noProjectSelected: false });
   }
 
-  getRecommendation(name){
+  getRecommendation(name) {
     return this.state.recommendations.filter(obj => {
       return obj.name === name
     })
@@ -275,34 +275,35 @@ class Landing extends Component {
   render() {
     return (
       <>
-      <div className="landingParallax">
-        <div className="landingContainer">
-          <Header
-            selectedProjectIndex={this.state.selectedProjectIndex}
-            projects={this.state.projects}>
-          </Header>
-          <Video
-            selectedProjectIndex={this.state.selectedProjectIndex}
-            projects={this.state.projects}>
-          </Video>
-          <ProjectInfo
-            selectedProjectIndex={this.state.selectedProjectIndex}
-            projects={this.state.projects}>
-          </ProjectInfo>
+        <Header
+          selectedProjectIndex={this.state.selectedProjectIndex}
+          projects={this.state.projects}>
+        </Header>
+        <div className="landingParallax">
+          <div className="landingContainer">
+
+            <Video
+              selectedProjectIndex={this.state.selectedProjectIndex}
+              projects={this.state.projects}>
+            </Video>
+            <ProjectInfo
+              selectedProjectIndex={this.state.selectedProjectIndex}
+              projects={this.state.projects}>
+            </ProjectInfo>
+          </div>
+          <div className="landingBottomContainer">
+            <ProjectBoxesContainer
+              selectedProjectIndex={this.state.selectedProjectIndex}
+              projects={this.state.projects}
+              noProjectSelected={this.state.noProjectSelected}
+              handleClick={this.handleClick}>
+            </ProjectBoxesContainer>
+          </div>
         </div>
-        <div className="landingBottomContainer">
-          <ProjectBoxesContainer
-            selectedProjectIndex={this.state.selectedProjectIndex}
-            projects={this.state.projects}
-            noProjectSelected={this.state.noProjectSelected}
-            handleClick={this.handleClick}>
-          </ProjectBoxesContainer>
+        <div class="recommendationSectionContainer">
+          <Recommendation name="Sean D. Mack" role="CEO/CTO and Principal Consultant" company="xOps" image="Images/Sean.jpg" text={this.getRecommendation("Sean D. Mack")[0].recommendation} selectedProjectIndex={this.state.selectedProjectIndex} noProjectSelected={this.state.noProjectSelected} projects={this.state.projects}></Recommendation>
+          <Recommendation name="Robert Tolmach" role="Co-Founder" company="Changing the Present" image="Images/Robert.jpg" text={this.getRecommendation("Robert Tolmach")[0].recommendation} selectedProjectIndex={this.state.selectedProjectIndex} noProjectSelected={this.state.noProjectSelected} projects={this.state.projects}></Recommendation>
         </div>
-      </div>
-      <div class="recommendationSectionContainer">
-        <Recommendation name="Sean D. Mack" role="CEO/CTO and Principal Consultant" company="xOps" image="Images/Sean.jpg" text={this.getRecommendation("Sean D. Mack")[0].recommendation} selectedProjectIndex={this.state.selectedProjectIndex} noProjectSelected={this.state.noProjectSelected} projects={this.state.projects}></Recommendation>
-        <Recommendation name="Robert Tolmach" role="Co-Founder" company="Changing the Present" image="Images/Robert.jpg" text={this.getRecommendation("Robert Tolmach")[0].recommendation} selectedProjectIndex={this.state.selectedProjectIndex} noProjectSelected={this.state.noProjectSelected} projects={this.state.projects}></Recommendation>
-      </div>
       </>
     );
   }
