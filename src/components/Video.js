@@ -7,7 +7,7 @@ class Video extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      video: "Videos\\Portfoliometro.mp4"
+      video: "Videos\\portfolioMetro.mp4"
     }
     //this.state = this.props;
   }// key={this.props.selectedProjectIndex}
