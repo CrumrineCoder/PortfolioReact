@@ -86,14 +86,14 @@ class Landing extends Component {
           projectName: "Penny's Cookies",
           shortDesc:
             "Portfolio website for a local NYC cookie bakery and decorating business that I built for a client.",
-          backend: "JavaScript, PHP, jQuery",
+          backend: "JavaScript",
           frontend:
-            "HTML5, CSS3, Responsive",
+            "React.js, HTML5, CSS3, Responsive",
           productPaper:
             "Worked with another designer. Developed marketing strategy, wrote a competitive analysis, scheduled and wrote user stories with client.",
           codeLink: "https://github.com/CrumrineCoder/PJRevised",
           websiteLink: "http://pennyjanescookies.com/",
-          video: "Videos\\PJC.mp4",
+          video: "Videos\\PennyJanesCookies.mp4",
           class: "Penny"
         },
         {
