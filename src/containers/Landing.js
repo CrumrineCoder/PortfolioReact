@@ -218,7 +218,7 @@ class Landing extends Component {
           websiteLink: "http://dark-yarn.surge.sh/",
           freeCodeCampLink:
             "https://www.freecodecamp.org/challenges/build-a-wikipedia-viewer",
-          video: "Videos\\Wiki.mp4",
+          video: "Videos\\wiki.mp4",
           class: "Wiki"
         },
         {

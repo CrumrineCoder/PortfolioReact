@@ -32,7 +32,7 @@ button:focus {
 }
 
 .BardDarkOpacity{
-  background-color: rgba(182, 146, 55, 0.9)!important
+  background-color: rgba(182, 146, 55, 0.95)!important
 }
 
 .BardNavItem:hover{
@@ -52,7 +52,7 @@ button:focus {
 }
 
 .RaptureDarkOpacity{
-  background-color: rgba(0, 92, 74, 0.9) !important
+  background-color: rgba(0, 92, 74, 0.95) !important
 }
 
 .RaptureNavItem:hover{
@@ -72,7 +72,7 @@ background: linear-gradient(to right, #730055 50%, #A61C88 50%);
 }
 
 .PollDarkOpacity{
-  background-color: rgb(115,0,85, .9) !important
+  background-color: rgb(115,0,85, .95) !important
 }
 
 .PollNavItem:hover{
@@ -92,7 +92,7 @@ background: linear-gradient(to right, #730055 50%, #A61C88 50%);
 }
 
 .TMBGDarkOpacity{
-  background-color: rgb(0,5,13, .9) !important
+  background-color: rgb(0,5,13, .95) !important
 }
 
 .TMBGNavItem:hover{
@@ -112,7 +112,7 @@ background: linear-gradient(to right, #730055 50%, #A61C88 50%);
 }
 
 .PennyDarkOpacity{
-  background-color: rgb(0,69,89, .9) !important
+  background-color: rgb(0,69,89, .95) !important
 }
 
 .PennyNavItem:hover{
@@ -132,7 +132,7 @@ background: linear-gradient(to right, #730055 50%, #A61C88 50%);
 }
 
 .TwitchDarkOpacity{
-  background-color: rgb(49,14,113, .9) !important
+  background-color: rgb(49,14,113, .95) !important
 }
 
 .TwitchNavItem:hover{
@@ -152,7 +152,7 @@ background: linear-gradient(to right, #730055 50%, #A61C88 50%);
 }
 
 .C4DarkOpacity{
-  background-color: rgb(204,76,0, .9) !important
+  background-color: rgb(204,76,0, .95) !important
 }
 
 .C4NavItem:hover{
@@ -172,7 +172,7 @@ background: linear-gradient(to right, #730055 50%, #A61C88 50%);
 }
 
 .WeatherDarkOpacity{
-  background-color: rgb(0,77,0, .9) !important
+  background-color: rgb(0,77,0, .95) !important
 }
 
 .WeatherNavItem:hover{
@@ -192,7 +192,7 @@ background: linear-gradient(to right, #730055 50%, #A61C88 50%);
 }
 
 .QuoteDarkOpacity{
-  background-color: rgb(0,77,77, .9) !important
+  background-color: rgb(0,77,77, .95) !important
 }
 
 .QuoteNavItem:hover{
@@ -212,7 +212,7 @@ background: linear-gradient(to right, #730055 50%, #A61C88 50%);
 }
 
 .NPCDarkOpacity{
-  background-color: rgb(188,0,0, .9) !important
+  background-color: rgb(188,0,0, .95) !important
 }
 
 .NPCNavItem:hover{
@@ -232,7 +232,7 @@ background: linear-gradient(to right, #730055 50%, #A61C88 50%);
 }
 
 .WikiDarkOpacity{
-  background-color: rgb(0,73,131, .9) !important
+  background-color: rgb(0,73,131, .95) !important
 }
 
 .WikiNavItem:hover{
@@ -252,7 +252,7 @@ background: linear-gradient(to right, #730055 50%, #A61C88 50%);
 }
 
 .CalcDarkOpacity{
-  background-color: rgb(83,42,124, .9) !important
+  background-color: rgb(83,42,124, .95) !important
 }
 
 .CalcNavItem:hover{
@@ -272,7 +272,7 @@ background: linear-gradient(to right, #730055 50%, #A61C88 50%);
 }
 
 .ClockDarkOpacity{
-  background-color: rgb(182,0,0, .9) !important
+  background-color: rgb(182,0,0, .95) !important
 }
 
 .ClockNavItem:hover{
@@ -814,16 +814,19 @@ opacity: 0.01;
 
 .recommendationFooterText{
   flex: 1 1 auto;
+  margin-top: 20px; 
 }
 
 .recommendatonFooterName{
   font-weight: bold; 
   font-style: normal; 
   text-transform: uppercase; 
+  margin: 0px; 
 }
 
 .recommendationFooterCompany{
  font-style: italic; 
+ margin: 0px;
 }
 
 @media only screen and (max-width: 800px) {
