@@ -31,6 +31,10 @@ button:focus {
   background-color: #B69137!important
 }
 
+.BardDarkOpacity{
+  background-color: rgba(182, 146, 55, 0.9)!important
+}
+
 .BardNavItem:hover{
   color: #B69137 !important;
 }
@@ -45,6 +49,10 @@ button:focus {
 
 .RaptureDark, .RaptureBar::-webkit-scrollbar-thumb{
   background-color: #005C4A!important
+}
+
+.RaptureDarkOpacity{
+  background-color: rgba(0, 92, 74, 0.9) !important
 }
 
 .RaptureNavItem:hover{
@@ -63,6 +71,10 @@ background: linear-gradient(to right, #730055 50%, #A61C88 50%);
   background-color: #730055!important
 }
 
+.PollDarkOpacity{
+  background-color: rgb(115,0,85, .9) !important
+}
+
 .PollNavItem:hover{
   color: #730055 !important;
 }
@@ -77,6 +89,10 @@ background: linear-gradient(to right, #730055 50%, #A61C88 50%);
 
 .TMBGDark, .TMBGBar::-webkit-scrollbar-thumb{
   background-color: #00050D!important
+}
+
+.TMBGDarkOpacity{
+  background-color: rgb(0,5,13, .9) !important
 }
 
 .TMBGNavItem:hover{
@@ -95,6 +111,10 @@ background: linear-gradient(to right, #730055 50%, #A61C88 50%);
   background-color: #004559!important
 }
 
+.PennyDarkOpacity{
+  background-color: rgb(0,69,89, .9) !important
+}
+
 .PennyNavItem:hover{
   color: #004559 !important;
 }
@@ -109,6 +129,10 @@ background: linear-gradient(to right, #730055 50%, #A61C88 50%);
 
 .TwitchDark, .TwitchBar::-webkit-scrollbar-thumb{
   background-color: #310E71!important
+}
+
+.TwitchDarkOpacity{
+  background-color: rgb(49,14,113, .9) !important
 }
 
 .TwitchNavItem:hover{
@@ -127,6 +151,10 @@ background: linear-gradient(to right, #730055 50%, #A61C88 50%);
   background-color: #CC4C00!important
 }
 
+.C4DarkOpacity{
+  background-color: rgb(204,76,0, .9) !important
+}
+
 .C4NavItem:hover{
   color: #CC4C00 !important;
 }
@@ -141,6 +169,10 @@ background: linear-gradient(to right, #730055 50%, #A61C88 50%);
 
 .WeatherDark, .WeatherBar::-webkit-scrollbar-thumb{
   background-color: #004D00!important
+}
+
+.WeatherDarkOpacity{
+  background-color: rgb(0,77,0, .9) !important
 }
 
 .WeatherNavItem:hover{
@@ -159,6 +191,10 @@ background: linear-gradient(to right, #730055 50%, #A61C88 50%);
   background-color: #004D4D!important
 }
 
+.QuoteDarkOpacity{
+  background-color: rgb(0,77,77, .9) !important
+}
+
 .QuoteNavItem:hover{
   color: #004D4D !important;
 }
@@ -173,6 +209,10 @@ background: linear-gradient(to right, #730055 50%, #A61C88 50%);
 
 .NPCDark, .NPCBar::-webkit-scrollbar-thumb{
   background-color: #BC0000!important
+}
+
+.NPCDarkOpacity{
+  background-color: rgb(188,0,0, .9) !important
 }
 
 .NPCNavItem:hover{
@@ -191,6 +231,10 @@ background: linear-gradient(to right, #730055 50%, #A61C88 50%);
   background-color: #004983!important
 }
 
+.WikiDarkOpacity{
+  background-color: rgb(0,73,131, .9) !important
+}
+
 .WikiNavItem:hover{
   color: #004983 !important;
 }
@@ -207,6 +251,10 @@ background: linear-gradient(to right, #730055 50%, #A61C88 50%);
   background-color: #532A7C!important
 }
 
+.CalcDarkOpacity{
+  background-color: rgb(83,42,124, .9) !important
+}
+
 .CalcNavItem:hover{
   color: #532A7C !important;
 }
@@ -221,6 +269,10 @@ background: linear-gradient(to right, #730055 50%, #A61C88 50%);
 
 .ClockDark, .ClockBar::-webkit-scrollbar-thumb{
   background-color: #B60000!important
+}
+
+.ClockDarkOpacity{
+  background-color: rgb(182,0,0, .9) !important
 }
 
 .ClockNavItem:hover{
@@ -243,9 +295,13 @@ background: linear-gradient(to right, #730055 50%, #A61C88 50%);
 }
 #projectFrontEnd li, #overlayFrontEnd li {
   background: #C54E30;
+  border: 1px solid white; 
+  padding: 5px; 
 }
 #projectBackEnd li, #overlayBackEnd li {
   background: #9952B7;
+  border: 1px solid white; 
+  padding: 5px; 
 }
 #projectLinks {
   padding: 0px;
@@ -387,7 +443,7 @@ background: linear-gradient(to right, #730055 50%, #A61C88 50%);
   background: rgba(17, 17, 17, 0.9);
   color: white; 
   position: absolute;
-  top: 230px;
+  top: 250px;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -395,6 +451,12 @@ background: linear-gradient(to right, #730055 50%, #A61C88 50%);
   border-radius: 20px; 
   -webkit-transition: -webkit-transform 2s linear; 
   transition: transform 2s linear;
+  color: black;
+  background: white; 
+}
+
+.coloredTitleBody{
+  color: white; 
 }
 
 .landingTitle{
@@ -706,6 +768,7 @@ opacity: 0.01;
 .landingAdditionalInfoPills{
   font-size: 14px; 
   font-family: 'Yantramanav', sans-serif;
+  color: white; 
 }
 
 .recommendationSectionContainer{
@@ -717,11 +780,11 @@ opacity: 0.01;
   padding: 20px;
   border: 2px solid white; 
   border-radius: 15px; 
-  font-size: 16px;
+  font-size: 18px;
   color: white; 
   background: black; 
   font-family: 'Yantramanav', sans-serif;
-  font-style: italic; 
+  /*font-style: italic; */
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.285), 0px 10px 10px rgba(0, 0, 0, 0.394);
 }
 
@@ -759,7 +822,7 @@ opacity: 0.01;
 }
 
 .recommendationFooterCompany{
- 
+ font-style: italic; 
 }
 
 @media only screen and (max-width: 800px) {

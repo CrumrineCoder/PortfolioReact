@@ -190,7 +190,7 @@ class App extends Component {
   componentDidMount() {
     const links = ["https://cdn.rawgit.com/bradley/Blotter/3007fe6e/build/blotter.min.js", "https://cdn.rawgit.com/bradley/Blotter/3007fe6e/build/materials/channelSplitMaterial.js", "https://cdn.rawgit.com/bradley/Blotter/3007fe6e/build/materials/fliesMaterial.js"]
 
-    for (var i=0; i<links.length; i++){
+    for (var i = 0; i < links.length; i++) {
       const script = document.createElement("script");
       script.src = links[i];
       script.async = true;
@@ -253,12 +253,10 @@ class App extends Component {
   render() {
     // Define text style
 
-    
+
     return (
       <div className="App">
-     <Landing></Landing>
-      
-
+        <Landing></Landing>
       </div>
     );
   }

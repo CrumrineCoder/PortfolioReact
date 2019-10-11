@@ -288,7 +288,8 @@ class Landing extends Component {
             </Video>
             <ProjectInfo
               selectedProjectIndex={this.state.selectedProjectIndex}
-              projects={this.state.projects}>
+              projects={this.state.projects}
+              noProjectSelected={this.state.noProjectSelected}>
             </ProjectInfo>
           </div>
           <div className="landingBottomContainer">

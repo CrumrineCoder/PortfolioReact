@@ -1,7 +1,7 @@
 
 import React, { Component } from "react";
 //import { Spring } from 'react-spring/renderprops';
-import ReactCSSTransitionGroup  from 'react-addons-css-transition-group';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 class ProjectInfo extends Component {
     constructor(props) {
@@ -14,7 +14,12 @@ class ProjectInfo extends Component {
 
     render() {
         let child = (
-            <div key={this.props.selectedProjectIndex} className="landingTitleBody">
+            <div key={this.props.selectedProjectIndex} className={
+                !this.props.noProjectSelected
+                    ? this.props.projects[this.props.selectedProjectIndex].class +
+                    "DarkOpacity landingTitleBody coloredTitleBody"
+                    : "landingTitleBody"
+            }>
                 <div className="landingTitle">
                     {this.props.selectedProjectIndex !== null
                         ? this.props.projects[this.props.selectedProjectIndex].projectName
@@ -86,13 +91,13 @@ class ProjectInfo extends Component {
                     )}
             </div>
         )
-    return(
+        return (
             <ReactCSSTransitionGroup
-                transitionName = "projectInfo"
+                transitionName="projectInfo"
                 transitionEnterTimeout={100}
                 transitionLeaveTimeout={100}
             >
-              {child}
+                {child}
             </ReactCSSTransitionGroup>
         );
     }
