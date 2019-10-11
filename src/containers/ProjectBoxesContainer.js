@@ -11,7 +11,7 @@ class ProjectBoxesContainer extends Component {
                     !this.props.noProjectSelected
                         ? this.props.projects[this.props.selectedProjectIndex].class +
                         "Bar landingBoxesContainer customScrollBar"
-                        : "landingBoxesContainer customScrollBar"
+                        : "landingBoxesContainer customScrollBar defaultBar"
                 }
             >
                 {this.props.projects.map((project, idx) => (

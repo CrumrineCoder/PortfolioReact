@@ -1,17 +1,20 @@
 /* Entire Document */
 html, body {
   height: 100%;
-  background: black; 
+  background: white; 
   margin: 0;
   padding: 0;
   font-size: 14px;
   font-family: 'Roboto', sans-serif;
   z-index: 0;
-  background: black;
 }
 
 button:focus {
   outline: 0;
+}
+
+.defaultBar::-webkit-scrollbar-thumb{
+  background: black !important;
 }
 
 /* darken by 20% the base color https://www.cssfontstack.com/oldsites/hexcolortool/ */
@@ -410,7 +413,8 @@ background: linear-gradient(to right, #730055 50%, #A61C88 50%);
   overflow-x:scroll;
   white-space: nowrap;
   font-size: 0px;
-  margin-bottom: 10px;
+  padding-bottom: 20px;
+  background: white; 
 }
 
 .landingBox{
@@ -705,8 +709,7 @@ opacity: 0.01;
 }
 
 .recommendationSectionContainer{
-  background: black; 
-
+  background: white; 
 }
 
 .recommendationContainer{
@@ -716,8 +719,10 @@ opacity: 0.01;
   border-radius: 15px; 
   font-size: 16px;
   color: white; 
+  background: black; 
   font-family: 'Yantramanav', sans-serif;
   font-style: italic; 
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.285), 0px 10px 10px rgba(0, 0, 0, 0.394);
 }
 
 .recommendationQuoteIcon{
