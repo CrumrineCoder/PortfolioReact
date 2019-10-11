@@ -91,7 +91,7 @@ class Landing extends Component {
             "React.js, HTML5, CSS3, Responsive",
           productPaper:
             "Worked with another designer. Developed marketing strategy, wrote a competitive analysis, scheduled and wrote user stories with client.",
-          codeLink: "https://github.com/CrumrineCoder/PJRevised",
+          codeLink: "https://github.com/CrumrineCoder/PennyJaneReact",
           websiteLink: "http://pennyjanescookies.com/",
           video: "Videos\\PennyJanesCookies.mp4",
           class: "Penny"
