@@ -772,14 +772,20 @@ opacity: 0.01;
    }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 630px) {
   .landingTitleBody{
     width: 90%;
   }
- 
+  .landingNavProfileName{
+    font-size: 16px;
+    top: 10px;
+  }
 }
 
 @media only screen and (max-width: 380px) {
+  .recommendationContainer{
+    margin: 20px 5px;
+  }
   .landingNav{
     position: fixed;
     background-image: none; 
@@ -791,6 +797,7 @@ opacity: 0.01;
     color: black; 
     top: 9px;
     font-size: 14px;
+    display: none; 
   }
   .landingNavItem{
     background: black; 
