@@ -87,7 +87,7 @@ class ProjectInfo extends Component {
                         </div>
                     </div>
                 ) : (
-                        <div className="landingSubTitle">Front End Web Developer</div>
+                        <div className="landingSubTitle">Front-end Web Developer</div>
                     )}
             </div>
         )
