@@ -465,7 +465,7 @@ background: linear-gradient(to right, #730055 50%, #A61C88 50%);
 }
 
 .App{
-  background: black; 
+  background: white; 
 }
 
 body {
@@ -782,6 +782,21 @@ opacity: 0.01;
 @media only screen and (max-width: 380px) {
   .landingNav{
     position: fixed;
+    background-image: none; 
+    color: black; 
+    background: white;  
+    padding: 5px 0px 0px 0px;
+  }
+  .landingNavProfileName{
+    color: black; 
+    top: 9px;
+    font-size: 14px;
+  }
+  .landingNavItem{
+    background: black; 
+  }
+  .overlay{
+    background: white; 
   }
   .landingBottomContainer{
     position: relative; 
@@ -792,7 +807,7 @@ opacity: 0.01;
   }
   .landingTitleBody{
     width: 95%;
-    margin: 70px auto;
+    margin: 70px auto 0px auto;
     background: black; 
     padding: 5px; 
     position: relative; 
@@ -803,8 +818,8 @@ opacity: 0.01;
   transition: transform 0s linear;
   }
   .landingNavRightHandContainer{
-    float: left; 
-    padding-top: 30px; 
+   /* float: left; */
+    /*padding-top: 30px; */
   }
   .landingAdditionalInfoPills{
     padding-left: 0px; 
