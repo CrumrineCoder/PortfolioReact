@@ -4,13 +4,12 @@
   "private": true,
   "dependencies": {
     "react": "^16.6.3",
-    "react-addons-css-transition-group": "^15.6.2",
     "react-dom": "^16.6.3",
     "react-ga": "^2.5.7",
     "react-reveal": "^1.2.2",
-    "react-scripts": "^2.1.5",
+    "react-scripts": "^5.0.1",
     "react-spring": "^8.0.20",
-    "react-transition-group": "^4.1.0",
+    "react-transition-group": "^1.2.1",
     "webpack-dev-server": "3.1.14"
   },
   "scripts": {

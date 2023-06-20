@@ -1,7 +1,7 @@
 
 import React, { Component } from "react";
 //import { Spring } from 'react-spring/renderprops';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+// import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 
 class ProjectInfo extends Component {
     constructor(props) {
@@ -92,13 +92,9 @@ class ProjectInfo extends Component {
             </div>
         )
         return (
-            <ReactCSSTransitionGroup
-                transitionName="projectInfo"
-                transitionEnterTimeout={100}
-                transitionLeaveTimeout={100}
-            >
+            < >
                 {child}
-            </ReactCSSTransitionGroup>
+            </>
         );
     }
 }
